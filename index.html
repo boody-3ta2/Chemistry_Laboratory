@@ -1,0 +1,3879 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Chemistry laboratory</title>
+<meta name="description" content="اكتشف مختبر الكيمياء التفاعلي لتنفيذ تجارب كيميائية افتراضية آمنة، فهم العناصر والمركبات، وتطوير مهاراتك العلمية بطريقة تفاعلية ومجانية.">
+<meta name="keywords" content="مختبر كيمياء, تجارب كيميائية افتراضية, مختبر تفاعلي, تعليم الكيمياء, تفاعلات كيميائية, موقع كيمياء تعليمي, تجارب آمنة للطلاب">
+<meta name="google-site-verification" content="Cs4KPBr20TmAITxz5B6RFxgQd7-vcVHduLnM9bmsC-k" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%234dd0e1'/%3E%3Cstop offset='1' stop-color='%23c46bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M24 8v18L8 52c-2 4 1 8 5 8h38c4 0 7-4 5-8L40 26V8' fill='url(%23g)' stroke='%237fe3ff' stroke-width='3' stroke-linejoin='round'/%3E%3Crect x='20' y='4' width='24' height='6' rx='2' fill='%237fe3ff'/%3E%3C/svg%3E">
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yr3k0viqal");
+</script>
+
+
+
+
+<style>
+:root{--bg:#02070b}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+body{font-family:'Tajawal','Segoe UI',Tahoma,sans-serif;background:#050d12;color:#e6f2f7;user-select:none;
+  background-image:radial-gradient(circle at 20% 10%,rgba(120,220,255,.08),transparent 45%),
+                    radial-gradient(circle at 80% 80%,rgba(196,107,255,.07),transparent 45%),
+                    radial-gradient(circle at 50% 0%,#12303d 0%,#0a1a22 60%,#050d12 100%)}
+.app{display:flex;flex-direction:column;height:100%;width:100%;position:relative;z-index:1;opacity:0;transition:opacity 1.2s ease}
+.app.show{opacity:1}
+#startupOverlay{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;
+  background:var(--bg,#02070b);
+  background-image:radial-gradient(circle at 50% 40%,rgba(127,227,255,.14),transparent 50%),
+                    radial-gradient(circle at 50% 60%,rgba(196,107,255,.12),transparent 55%);
+  opacity:1;visibility:visible;transition:opacity .65s ease,visibility .65s ease}
+#startupOverlay.hide{opacity:0;visibility:hidden;pointer-events:none}
+#closeOverlay{position:fixed;inset:0;z-index:9999999;display:none;align-items:center;justify-content:center;
+  background:var(--bg,#02070b);
+  background-image:radial-gradient(circle at 50% 40%,rgba(127,227,255,.14),transparent 50%),
+                    radial-gradient(circle at 50% 60%,rgba(196,107,255,.12),transparent 55%);
+  opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s ease}
+#closeOverlay.show{display:flex;opacity:1;visibility:visible}
+#closeOverlay .startup-about-card{width:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+#startupOverlay .startup-about-card{width:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+.dev-credit{font-family:'Consolas','Courier New',monospace;font-size:clamp(14px,3.5vw,26px);font-weight:900;letter-spacing:.06em;display:inline-flex;align-items:center;gap:2px;direction:ltr}
+.dev-text{background:linear-gradient(90deg,#7fe3ff,#c46bff,#ff8a3d,#7fe3ff);background-size:300% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 7s linear infinite;
+  filter:drop-shadow(0 0 22px rgba(127,227,255,.65));white-space:pre}
+.dev-caret{display:inline-block;width:3px;height:1em;background:#7fe3ff;box-shadow:0 0 14px #7fe3ff;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+@keyframes shine{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:8px 12px;flex:0 0 auto;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.01));
+  border-bottom:1px solid rgba(120,220,255,.18);position:relative;z-index:100;backdrop-filter:blur(8px)}
+.brand{font-weight:900;font-size:16px;letter-spacing:.6px;display:flex;align-items:center;gap:8px;
+  background:linear-gradient(90deg,#7fe3ff,#c46bff,#7fe3ff);background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite;white-space:nowrap}
+.brand-icon{width:28px;height:28px;flex:0 0 auto;filter:drop-shadow(0 0 8px rgba(127,227,255,.6))}
+.toolbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap;flex:1;justify-content:flex-end}
+.tool-btn{display:flex;flex-direction:column;align-items:center;gap:1px;
+  background:linear-gradient(135deg,rgba(120,220,255,.14),rgba(196,107,255,.08));
+  border:1px solid rgba(127,227,255,.3);color:#cdf1ff;padding:5px 9px;border-radius:9px;
+  font-size:9.5px;font-weight:800;cursor:pointer;font-family:inherit;min-width:52px;transition:all .18s;white-space:nowrap}
+.tool-btn:hover:not(:disabled){background:linear-gradient(135deg,rgba(120,220,255,.3),rgba(196,107,255,.2));transform:translateY(-1px)}
+.tool-btn:disabled{opacity:.32;cursor:not-allowed;filter:grayscale(.7)}
+.tool-btn.on{background:linear-gradient(135deg,rgba(46,204,113,.35),rgba(39,174,96,.2));border-color:#2ecc71;color:#9ff0c8}
+.tool-btn.armed{animation:pulseBtn 1s ease-in-out infinite;background:linear-gradient(135deg,rgba(255,180,50,.35),rgba(255,120,40,.2));border-color:#ffb84d;color:#ffd88a}
+.tool-btn.primary{background:linear-gradient(135deg,rgba(56,189,248,.4),rgba(14,165,233,.3));border-color:#38bdf8;color:#e0f2fe;box-shadow:0 0 16px rgba(56,189,248,.4)}
+.tool-btn.stop{background:linear-gradient(135deg,rgba(244,63,94,.4),rgba(190,18,60,.3));border-color:#f43f5e;color:#fee2e2;box-shadow:0 0 16px rgba(244,63,94,.35)}
+.tool-btn.danger{background:linear-gradient(135deg,rgba(248,113,113,.25),rgba(220,38,38,.15));border-color:rgba(248,113,113,.5);color:#fecaca}
+@keyframes pulseBtn{0%,100%{box-shadow:0 0 8px rgba(255,184,77,.4)}50%{box-shadow:0 0 22px rgba(255,184,77,.9)}}
+.tool-btn .ico{font-size:17px;line-height:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+.tool-group-sep{width:1px;height:32px;background:linear-gradient(180deg,transparent,rgba(127,227,255,.35),transparent);margin:0 4px;flex:0 0 auto}
+.shelf-wrap{flex:0 0 auto;position:relative;z-index:1}
+.shelf-tabs{display:flex;gap:3px;padding:5px 10px 0;background:rgba(0,0,0,.25);overflow-x:auto;scrollbar-width:none}
+.shelf-tabs::-webkit-scrollbar{display:none}
+.shelf-tabs button{background:transparent;border:none;color:#7ea9b8;padding:6px 11px;border-radius:8px 8px 0 0;
+  font-family:inherit;font-size:10px;font-weight:800;cursor:pointer;white-space:nowrap;transition:all .18s}
+.shelf-tabs button.active{background:linear-gradient(180deg,rgba(120,220,255,.18),rgba(120,220,255,.05));color:#7fe3ff;border-bottom:2px solid #7fe3ff}
+.shelf-tabs .ltr{display:inline-block;direction:ltr;unicode-bidi:isolate}
+.shelf-container{position:relative;display:block}
+.shelf{display:flex;gap:4px;padding:8px 34px;overflow-x:auto;overflow-y:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.008));
+  border-bottom:2px solid rgba(140,200,220,.22);height:102px;scrollbar-width:thin;scrollbar-color:rgba(120,220,255,.3) transparent;
+  scroll-behavior:smooth}
+.shelf::-webkit-scrollbar{height:4px}
+.shelf::-webkit-scrollbar-thumb{background:rgba(120,220,255,.3);border-radius:2px}
+.shelf-arrow{position:absolute;top:50%;transform:translateY(-50%);
+  width:26px;height:70%;z-index:5;border-radius:8px;padding:0;line-height:1;
+  background:linear-gradient(180deg,rgba(10,30,45,.92),rgba(20,50,70,.92));
+  border:1px solid rgba(127,227,255,.45);
+  color:#7fe3ff;font-size:20px;font-weight:900;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.55);backdrop-filter:blur(4px);
+  transition:all .18s;font-family:inherit}
+.shelf-arrow:hover{background:rgba(127,227,255,.28);border-color:#7fe3ff;transform:translateY(-50%) scale(1.08);box-shadow:0 0 18px rgba(127,227,255,.5)}
+.shelf-arrow:active{transform:translateY(-50%) scale(.94)}
+.shelf-arrow-left{right:3px}
+.shelf-arrow-right{left:3px}
+.shelf-label{writing-mode:vertical-rl;font-size:9.5px;color:#6fb8cf;font-weight:800;display:flex;align-items:center;
+  padding:0 5px;flex:0 0 auto;letter-spacing:1px;border-inline-end:1px dashed rgba(120,220,255,.2)}
+.bottle-item{width:62px;flex:0 0 auto;cursor:grab;display:flex;flex-direction:column;align-items:center;
+  justify-content:flex-end;padding-bottom:2px;touch-action:none;transition:transform .2s cubic-bezier(.34,1.56,.64,1)}
+.bottle-item:hover{transform:translateY(-6px) scale(1.06)}
+.bottle-item .cap{width:15px;height:8px;border-radius:2px 2px 1px 1px;box-shadow:0 1px 3px rgba(0,0,0,.7)}
+.bottle-item .neck{width:10px;height:8px;background:rgba(200,235,255,.2)}
+.bottle-item .body{width:42px;height:56px;border-radius:7px 7px 9px 9px;position:relative;overflow:hidden;
+  border:1px solid rgba(190,235,255,.4);
+  background:linear-gradient(100deg,rgba(255,255,255,.22),rgba(255,255,255,.03) 35%,rgba(255,255,255,.02) 65%,rgba(255,255,255,.18));
+  box-shadow:inset -3px 0 7px rgba(255,255,255,.12),0 4px 10px rgba(0,0,0,.55)}
+.bottle-item .body .liq{position:absolute;bottom:0;left:0;right:0;height:62%}
+.bottle-item .name{font-size:7.5px;font-weight:800;color:#bfe9ff;margin-top:3px;text-align:center;direction:ltr;line-height:1;letter-spacing:.2px}
+.bottle-item .ar{font-size:6px;color:#79a8b8;text-align:center;line-height:1;max-width:58px;margin-top:1px}
+.paper-item{width:62px;flex:0 0 auto;cursor:grab;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:4px 3px;touch-action:none;transition:transform .2s cubic-bezier(.34,1.56,.64,1)}
+.paper-item:hover{transform:translateY(-6px) scale(1.06)}
+.paper-item .sheet{width:44px;height:56px;border-radius:4px;border:1px solid rgba(0,0,0,.4);box-shadow:0 3px 8px rgba(0,0,0,.55)}
+.paper-item .name{font-size:7.5px;font-weight:800;color:#bfe9ff;margin-top:4px;text-align:center;direction:ltr}
+.paper-item .ar{font-size:6px;color:#79a8b8;text-align:center;line-height:1;max-width:60px}
+.stage{flex:1 1 auto;display:flex;gap:8px;padding:8px;min-height:0;overflow:hidden;position:relative;z-index:1}
+.canvas-wrap{flex:1 1 auto;position:relative;min-width:0;min-height:0;overflow:hidden;border-radius:16px;
+  box-shadow:0 12px 45px rgba(0,0,0,.65),0 0 0 1px rgba(120,220,255,.15);
+  background:radial-gradient(circle at 20% 10%,rgba(120,220,255,.08),transparent 45%),
+             radial-gradient(circle at 80% 80%,rgba(196,107,255,.07),transparent 45%),
+             linear-gradient(180deg,#0f2a35,#08161d)}
+canvas{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;touch-action:none}
+.panel{width:240px;flex:0 0 auto;display:flex;flex-direction:column;gap:7px;overflow-y:auto;overflow-x:hidden;
+  scrollbar-width:thin;scrollbar-color:rgba(120,220,255,.3) transparent}
+.panel::-webkit-scrollbar{width:4px}
+.panel::-webkit-scrollbar-thumb{background:rgba(120,220,255,.3);border-radius:2px}
+.card{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  border:1px solid rgba(120,220,255,.18);border-radius:12px;padding:10px 12px;backdrop-filter:blur(6px);flex:0 0 auto}
+.card-title{font-size:11.5px;font-weight:800;color:#7fe3ff;margin-bottom:6px;letter-spacing:.4px;display:flex;align-items:center;gap:5px}
+.card-title .card-title-text{flex:1}
+.tempbar{height:11px;border-radius:6px;background:rgba(0,0,0,.5);overflow:hidden;border:1px solid rgba(120,220,255,.25)}
+#tempFill{height:100%;width:5%;border-radius:6px;transition:width .3s,background .3s;background:linear-gradient(90deg,#2196f3,#4dd0e1)}
+.tempval{text-align:center;font-size:22px;font-weight:900;color:#9fe9ff;margin-top:4px;direction:ltr;font-variant-numeric:tabular-nums}
+.temp-trend{display:flex;flex-direction:column;gap:4px;margin-top:7px;font-size:10.5px;font-weight:800;min-height:14px}
+.temp-trend .tag{padding:4px 9px;border-radius:10px;display:flex;align-items:center;gap:5px;border:1.5px solid;animation:slidein .35s ease}
+.temp-trend .tag.exo{color:#ff8552;border-color:rgba(255,107,61,.65);background:linear-gradient(90deg,rgba(255,107,61,.20),rgba(255,107,61,.08));
+  box-shadow:0 0 14px rgba(255,107,61,.4) inset,0 0 8px rgba(255,107,61,.3)}
+.temp-trend .tag.endo{color:#5cd2ff;border-color:rgba(76,199,255,.65);background:linear-gradient(90deg,rgba(76,199,255,.20),rgba(76,199,255,.08));
+  box-shadow:0 0 14px rgba(76,199,255,.4) inset,0 0 8px rgba(76,199,255,.3)}
+.temp-trend .tag .ico{font-size:13px;filter:drop-shadow(0 0 4px currentColor)}
+.temp-trend .tag .lbl{flex:1;font-size:10.5px}
+.temp-trend .tag .num{font-family:'Consolas',monospace;font-size:10px;padding:1px 6px;border-radius:6px;background:rgba(0,0,0,.35)}
+.temp-trend .empty{color:#6a8fa3;font-size:10px;text-align:center;padding:4px;font-weight:600}
+.ion-display{background:linear-gradient(135deg,rgba(80,200,255,.2),rgba(196,107,255,.12));
+  border:1.5px solid rgba(120,220,255,.5);border-radius:10px;padding:10px 8px;text-align:center;
+  min-height:78px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;
+  box-shadow:0 0 20px rgba(120,220,255,.15) inset}
+.ion-display.empty{opacity:.5;color:#6a8fa3;font-size:11.5px;font-weight:600;
+  background:linear-gradient(135deg,rgba(80,200,255,.05),rgba(196,107,255,.03));border-color:rgba(120,220,255,.2)}
+.ion-list{display:flex;flex-direction:column;gap:5px;width:100%}
+.ion-list-item{display:flex;align-items:center;gap:7px;padding:5px 8px;background:rgba(120,220,255,.08);
+  border-radius:8px;border-right:2px solid #7fe3ff;direction:ltr;justify-content:flex-start;flex-wrap:wrap}
+.ion-list-item .v-num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  border-radius:50%;background:#7fe3ff;color:#051018;font-weight:900;font-size:10px;flex:0 0 auto;
+  font-family:'Consolas',monospace;box-shadow:0 0 8px rgba(127,227,255,.5)}
+.ion-list-item .v-ion{font-size:16px;font-weight:900;color:#7fe3ff;font-family:'Consolas',monospace;
+  direction:ltr;unicode-bidi:isolate;line-height:1}
+.ion-list-item .v-ion sub{font-size:.62em;vertical-align:-.3em;color:#b8dff0;padding:0 .4px}
+.ion-list-item .v-ion sup{font-size:.62em;vertical-align:.55em;color:#ffd66b;padding:0 .4px}
+.ion-list-item .v-placeholder{font-size:11px;color:#6a8fa3;font-style:italic}
+.ion-list-item .v-precip-mini{display:flex;flex-wrap:wrap;gap:4px;margin-inline-start:auto}
+.precip-chip-mini{padding:1px 7px;border-radius:8px;font-family:'Consolas',monospace;font-size:10px;
+  font-weight:800;border:1.5px solid;background:rgba(0,0,0,.18);direction:ltr;unicode-bidi:isolate;
+  white-space:nowrap;line-height:1.4}
+.precip-chip-mini sub{font-size:.72em;vertical-align:-.28em;color:inherit;padding:0 .2px}
+.precip-chip-mini sup{font-size:.72em;vertical-align:.5em;color:inherit;padding:0 .2px}
+.log-card{flex:0 0 auto;min-height:70px;display:flex;flex-direction:column}
+.log{font-size:10.5px;line-height:1.7;overflow-y:auto;max-height:110px;color:#c8e4f4;padding-inline-end:4px}
+.log::-webkit-scrollbar{width:3px}
+.log::-webkit-scrollbar-thumb{background:rgba(120,220,255,.25);border-radius:2px}
+.log:empty::before{content:'لا توجد خواص بعد';color:#6a8fa3;font-size:10px;text-align:center;display:block;padding:10px}
+.log div{padding:6px 8px;margin-bottom:3px;border-radius:6px;background:rgba(120,220,255,.07);
+  border-right:3px solid #7fe3ff;animation:slidein .35s cubic-bezier(.34,1.56,.64,1);word-break:break-word;font-size:10.5px}
+.log div:first-child{color:#a5f3c4;border-right-color:#2ecc71;background:rgba(46,204,113,.12)}
+@keyframes slidein{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+.history-card{flex:1 1 180px;min-height:170px;display:flex;flex-direction:column;overflow:hidden}
+.mini-btn{background:rgba(255,80,80,.18);border:1px solid rgba(255,80,80,.45);color:#ffb0b0;border-radius:6px;
+  padding:2px 7px;font-size:11px;cursor:pointer;font-family:inherit;transition:all .2s;line-height:1.2}
+.mini-btn:hover{background:rgba(255,80,80,.35);border-color:#ff6b6b;color:#fff}
+.history-list{flex:1 1 auto;overflow-y:auto;font-size:10px;line-height:1.5;color:#c8e4f4;
+  padding-inline-end:4px;min-height:90px;scrollbar-width:thin;scrollbar-color:rgba(120,220,255,.25) transparent}
+.history-list::-webkit-scrollbar{width:3px}
+.history-list::-webkit-scrollbar-thumb{background:rgba(120,220,255,.25);border-radius:2px}
+.history-item{padding:6px 8px;margin-bottom:5px;border-radius:6px;background:rgba(120,220,255,.07);
+  border-right:2px solid #7fe3ff;animation:slidein .35s ease}
+.history-item .hi-eq{font-family:'Consolas',monospace;direction:ltr;font-size:10px;color:#a5f3c4;
+  word-break:break-word;text-align:left;line-height:1.5}
+.history-item .hi-note{font-size:9.5px;color:#ffd66b;margin-top:3px;text-align:right}
+.history-empty{color:#6a8fa3;font-size:10.5px;text-align:center;padding:14px 6px}
+#lightBtn{display:none;width:100%;margin-top:8px;padding:9px;border-radius:9px;
+  background:linear-gradient(135deg,#ffd54f,#ff8f00);border:none;color:#3e2000;font-weight:900;
+  font-size:12.5px;font-family:inherit;cursor:pointer;box-shadow:0 4px 15px rgba(255,193,7,.5);animation:pulseBtn 1.5s ease-in-out infinite}
+#lightBtn.show{display:block}
+.eqbar{padding:10px 14px;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35));flex:0 0 auto;
+  border-top:1px solid rgba(120,220,255,.25);min-height:64px;max-height:150px;overflow-y:auto;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  backdrop-filter:blur(8px);scrollbar-width:thin}
+.eqbar::-webkit-scrollbar{width:4px}
+.eqbar::-webkit-scrollbar-thumb{background:rgba(120,220,255,.3);border-radius:2px}
+.eq-line{font-family:'Consolas','Courier New','DejaVu Sans Mono',monospace;direction:ltr;font-size:13px;
+  color:#a5f3c4;font-weight:700;text-align:center;line-height:1.9;
+  text-shadow:0 0 12px rgba(80,255,180,.5);letter-spacing:.2px;
+  padding:3px 8px;border-radius:6px;background:rgba(46,204,113,.06);
+  border-right:2px solid rgba(46,204,113,.6);max-width:100%;word-break:break-word}
+.eq-line sub{font-size:.72em;vertical-align:-.35em;opacity:.85;color:#7ee0c0;padding:0 .5px}
+.eq-line .g{color:#ffd66b;font-weight:900;padding:0 .5px}
+.eq-line .p{color:#7ee0c0;font-weight:900;padding:0 .5px}
+.eq-line .ar{color:#7fe3ff;font-weight:900;padding:0 .4px;text-shadow:0 0 10px rgba(127,227,255,.5)}
+.eq-line .heat{color:#ff8a3d;font-weight:900;padding:0 .4px;text-shadow:0 0 10px rgba(255,138,61,.6)}
+.eq-line .light{color:#ffd66b;font-weight:900;padding:0 .4px;text-shadow:0 0 10px rgba(255,214,107,.6)}
+.eq-line .burn{color:#ff6b00;font-weight:900;padding:0 .4px;text-shadow:0 0 10px rgba(255,107,0,.6)}
+.eq-line .eq{color:#c46bff;font-weight:900;padding:0 .3px;text-shadow:0 0 10px rgba(196,107,255,.6)}
+.eq-list{display:flex;flex-direction:column;gap:4px;width:100%;max-height:110px;overflow-y:auto;scrollbar-width:thin}
+.eq-list::-webkit-scrollbar{width:3px}
+.eq-list::-webkit-scrollbar-thumb{background:rgba(120,220,255,.3);border-radius:2px}
+.eq-list-item{display:flex;align-items:flex-start;gap:8px;padding:4px 8px;
+  background:rgba(46,204,113,.06);border-radius:6px;border-right:2px solid rgba(46,204,113,.55)}
+.eq-num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  border-radius:50%;background:#7fe3ff;color:#051018;font-weight:900;font-size:10px;flex:0 0 auto;
+  margin-top:1px;font-family:'Consolas',monospace;box-shadow:0 0 8px rgba(127,227,255,.5)}
+.eq-line-inline{font-family:'Consolas',monospace;direction:ltr;font-size:11.5px;color:#a5f3c4;
+  text-align:left;line-height:1.6;word-break:break-word;flex:1;padding:0 2px;unicode-bidi:isolate}
+.eq-line-inline sub{font-size:.72em;vertical-align:-.35em;color:#7ee0c0;padding:0 .5px}
+.eq-line-inline .g{color:#ffd66b;font-weight:900}
+.eq-line-inline .p{color:#7ee0c0;font-weight:900}
+.eq-line-inline .ar{color:#7fe3ff;font-weight:900}
+.eq-line-inline .heat{color:#ff8a3d;font-weight:900}
+.eq-line-inline .light{color:#ffd66b;font-weight:900}
+.eq-line-inline .burn{color:#ff6b00;font-weight:900}
+.eq-line-inline .eq{color:#c46bff;font-weight:900}
+#eqnote{font-size:11.5px;color:#ffd66b;text-align:center}
+.dev-footer{padding:9px 16px;text-align:center;flex:0 0 auto;
+  background:linear-gradient(90deg,transparent,rgba(127,227,255,.1),rgba(196,107,255,.08),transparent);
+  border-top:1px solid rgba(120,220,255,.18);display:flex;justify-content:center;align-items:center;gap:12px;direction:ltr;font-family:'Consolas',monospace}
+.dev-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:20px;
+  background:linear-gradient(135deg,rgba(20,45,60,.9),rgba(15,32,45,.9));border:1px solid rgba(127,227,255,.35);
+  box-shadow:0 0 24px rgba(127,227,255,.15) inset,0 0 20px rgba(127,227,255,.1)}
+.dev-name-inline{font-weight:900;font-size:13px;letter-spacing:1.5px;font-family:'Consolas',monospace;
+  background:linear-gradient(90deg,#7fe3ff,#c46bff,#ff8a3d,#7fe3ff);background-size:300% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite;
+  filter:drop-shadow(0 0 10px rgba(127,227,255,.5));white-space:nowrap}
+.dev-heart{color:#ff4d6d;font-size:13px;animation:beat 1.2s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(255,77,109,.6))}
+#dragGhost{position:fixed;left:0;top:0;z-index:9999;pointer-events:none;display:none;opacity:.96;transform-origin:50% 10%;
+  filter:drop-shadow(0 12px 22px rgba(0,0,0,.7)) drop-shadow(0 0 18px rgba(127,227,255,.35))}
+#dragGhost .g-bottle{display:flex;flex-direction:column;align-items:center}
+#dragGhost .g-cap{width:20px;height:10px;border-radius:3px 3px 2px 2px}
+#dragGhost .g-neck{width:13px;height:10px;background:rgba(200,235,255,.22)}
+#dragGhost .g-body{width:56px;height:76px;border-radius:9px 9px 11px 11px;position:relative;overflow:hidden;
+  border:1px solid rgba(190,235,255,.45);
+  background:linear-gradient(100deg,rgba(255,255,255,.25),rgba(255,255,255,.03) 35%,rgba(255,255,255,.02) 65%,rgba(255,255,255,.2))}
+#dragGhost .g-body .g-liq{position:absolute;bottom:0;left:0;right:0;height:62%}
+#dragGhost .g-sheet{width:60px;height:76px;border-radius:5px;border:1px solid rgba(0,0,0,.4)}
+#errorBox{position:fixed;bottom:10px;left:10px;right:10px;
+  background:linear-gradient(135deg,rgba(200,40,40,.95),rgba(140,20,20,.95));color:#fff;
+  padding:10px 14px;border-radius:10px;font-size:12px;display:none;z-index:9999}
+#errorBox.show{display:block;animation:pop .3s ease}
+@keyframes pop{0%{transform:scale(.7);opacity:0}100%{transform:scale(1);opacity:1}}
+@media (max-width:1100px){.panel{width:215px}}
+@media (max-width:900px){
+  .panel{width:200px}
+  .bottle-item{width:56px}.bottle-item .body{width:38px;height:50px}
+  .paper-item{width:56px}.paper-item .sheet{width:40px;height:50px}
+  .shelf{height:92px;padding:8px 30px}.brand{font-size:13.5px}
+  .tool-btn{min-width:44px;font-size:9px;padding:4px 6px}.tool-btn .ico{font-size:15px}
+  .history-card{min-height:150px}
+  .log{max-height:90px}
+}
+@media (max-width:700px){
+  .stage{flex-direction:column;gap:6px;padding:6px}
+  .canvas-wrap{width:100%;min-height:200px;flex:1 1 auto;border-radius:12px}
+  .panel{width:100%;flex-direction:row;flex-wrap:wrap;max-height:280px;gap:6px;overflow-y:auto}
+  .panel .card{flex:1 1 45%;min-width:140px}
+  .log-card{flex:1 1 45%}
+  .history-card{flex:1 1 45%;min-height:140px}
+  .log{max-height:80px}
+  .history-list{min-height:70px;max-height:100px}
+  .shelf{height:88px;padding:8px 28px}
+  .shelf-arrow{width:22px;font-size:18px}
+  .shelf-tabs button{font-size:9px;padding:5px 8px}
+}
+@media (max-width:420px){
+  .panel .card{flex:1 1 100%}
+  .log-card,.history-card{flex:1 1 100%}
+  .canvas-wrap{min-height:180px}
+}
+</style>
+</head>
+<body>
+<div id="startupOverlay" aria-label="تحميل الموقع">
+  <div class="about-card startup-about-card">
+    <div class="dev-credit">
+      <span class="dev-text" id="startupText"></span>
+      <span class="dev-caret"></span>
+    </div>
+  </div>
+</div>
+<div id="closeOverlay" aria-label="إغلاق الموقع">
+  <div class="about-card startup-about-card">
+    <div class="dev-credit">
+      <span class="dev-text" id="closeText"></span>
+      <span class="dev-caret"></span>
+    </div>
+  </div>
+</div>
+<div class="app" id="app">
+  <header>
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 64 64">
+        <defs><linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#4dd0e1"/><stop offset="1" stop-color="#c46bff"/>
+        </linearGradient></defs>
+        <path d="M24 8v18L8 52c-2 4 1 8 5 8h38c4 0 7-4 5-8L40 26V8" fill="url(#bg1)" stroke="#7fe3ff" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="20" y="4" width="24" height="6" rx="2" fill="#7fe3ff"/>
+        <circle cx="28" cy="46" r="3" fill="#fff" opacity=".6"/>
+      </svg>
+      Chemistry laboratory
+    </div>
+<div class="toolbar" id="toolbar">
+  <button class="tool-btn on" data-action="sound"><span class="ico">🔔</span>صوت</button>
+  <div class="tool-group-sep"></div>
+  <button class="tool-btn danger" data-action="clear-all"><span class="ico">🗑️</span>مسح</button>
+  <button class="tool-btn" data-action="clean"><span class="ico">🫗</span>تفريغ</button>
+  <div class="tool-group-sep"></div>
+  <button class="tool-btn" data-action="reset-reaction"><span class="ico">🔄</span>إعادة</button>
+  <button class="tool-btn" data-action="straight"><span class="ico">📐</span>استقامة</button>
+  <div class="tool-group-sep"></div>
+  <button class="tool-btn primary" data-action="react-toggle" id="reactToggle"><span class="ico">▶️</span>ابدأ</button>
+  <div class="tool-group-sep"></div>
+  <button class="tool-btn" data-action="flame-test" disabled><span class="ico">✨</span>لهب</button>
+  <button class="tool-btn" data-action="gas-tube"><span class="ico">🔗</span>توصيل</button>
+  <div class="tool-group-sep"></div>
+  <button class="tool-btn" data-action="add-thermo"><span class="ico">🌡️</span>حرارة</button>
+  <button class="tool-btn" data-action="add-burner"><span class="ico">🔥</span>موقد</button>
+  <button class="tool-btn" data-action="add-beaker"><span class="ico">🥃</span>كأس</button>
+  <button class="tool-btn" data-action="add-tube"><span class="ico">🧪</span>أنبوب</button>
+</div>
+  </header>
+  <div class="shelf-wrap">
+    <div class="shelf-tabs" id="shelfTabs">
+      <button class="active" data-tab="g1">أنيونات (<span class="ltr">HCl</span>)</button>
+      <button data-tab="g2">أنيونات (<span class="ltr">H₂SO₄</span> مركز)</button>
+      <button data-tab="g3">أنيونات (<span class="ltr">BaCl₂</span>)</button>
+      <button data-tab="cat">كاتيونات</button>
+      <button data-tab="rea">كواشف</button>
+      <button data-tab="pap">📜 ورق الكشف</button>
+    </div>
+    <div class="shelf-container">
+      <button class="shelf-arrow shelf-arrow-left" id="shelfArrowLeft" aria-label="تمرير">‹</button>
+      <section class="shelf" id="shelf"></section>
+      <button class="shelf-arrow shelf-arrow-right" id="shelfArrowRight" aria-label="تمرير">›</button>
+    </div>
+  </div>
+  <main class="stage">
+    <div class="canvas-wrap" id="canvasWrap"><canvas id="lab"></canvas></div>
+    <aside class="panel">
+      <div class="card" id="thermoCard" style="display:none">
+        <div class="card-title"><span class="card-title-text">🌡️ ميزان الحرارة</span></div>
+        <div class="tempbar"><div id="tempFill"></div></div>
+        <div class="tempval"><span id="tempVal">25</span> °C</div>
+        <div id="tempTrend" class="temp-trend"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="card-title-text">🔬 الأيونات المكتشفة</span></div>
+        <div id="ionDisplay" class="ion-display empty">— لم يُكتشف بعد —</div>
+        <button id="lightBtn">☀️ تعريض للضوء</button>
+      </div>
+      <div class="card log-card">
+        <div class="card-title">
+          <span class="card-title-text">📋 خواص النواتج</span>
+          <button id="clearLogBtn" class="mini-btn" title="مسح الخواص">🗑️</button>
+        </div>
+        <div id="log" class="log"></div>
+      </div>
+      <div class="card history-card">
+        <div class="card-title">
+          <span class="card-title-text">📜 سجل التفاعلات</span>
+          <button id="clearHistoryBtn" class="mini-btn" title="مسح السجل">🗑️</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </aside>
+  </main>
+  <footer class="eqbar" id="eqbar">
+    <div id="equation" class="eq-line">— المعادلة ستظهر هنا —</div>
+    <span id="eqnote"></span>
+  </footer>
+  <footer class="dev-footer">
+    <span class="dev-badge">
+      <span class="dev-name-inline">&lt;DEVELOPED-BY&gt;boody_3ta&lt;/DEVELOPING&gt;</span>
+      <span class="dev-heart">❤</span>
+    </span>
+  </footer>
+</div>
+<div id="dragGhost"></div>
+<div id="errorBox"></div>
+<script>
+
+
+'use strict';
+
+const DEV_TEXT='<DEVELOPED-BY>boody_3ta</DEVELOPING>';
+
+function finishStartup(){
+  const overlay=document.getElementById('startupOverlay');
+  if(!overlay)return;
+  overlay.classList.add('hide');
+  setTimeout(function(){if(overlay.parentNode)overlay.remove();},700);
+}
+
+function startStartupTyping(){
+  return new Promise(function(resolve){
+    const textEl=document.getElementById('startupText');
+    if(!textEl){resolve();return;}
+    textEl.textContent='';
+    let i=0;
+    const t=setInterval(function(){
+      textEl.textContent=DEV_TEXT.slice(0,++i);
+      if(i>=DEV_TEXT.length){
+        clearInterval(t);
+        setTimeout(resolve,300);
+      }
+    },75);
+  });
+}
+
+function startCloseTyping(){
+  const overlay=document.getElementById('closeOverlay');
+  const textEl=document.getElementById('closeText');
+  if(!overlay||!textEl)return;
+  if(overlay.dataset.active==='1')return;
+  overlay.dataset.active='1';
+  overlay.classList.add('show');
+  textEl.textContent=DEV_TEXT;
+  let i=DEV_TEXT.length;
+  const t=setInterval(function(){
+    if(i>0){i--;textEl.textContent=DEV_TEXT.slice(0,i);}
+    else{clearInterval(t);}
+  },55);
+}
+
+(async function startApp(){
+  await startStartupTyping();
+  await new Promise(function(resolve){setTimeout(resolve,1800);});
+  await boot();
+  finishStartup();
+})();
+
+window.addEventListener('beforeunload',function(){startCloseTyping();});
+window.addEventListener('pagehide',function(){startCloseTyping();});
+
+(function polyfillRoundRect(){
+  if(typeof CanvasRenderingContext2D==='undefined')return;
+  if(CanvasRenderingContext2D.prototype.roundRect)return;
+  CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){
+    if(typeof r==='number')r=[r,r,r,r];
+    else if(!Array.isArray(r))r=[0,0,0,0];
+    else if(r.length===1)r=[r[0],r[0],r[0],r[0]];
+    const tl=r[0],tr=r[1],br=r[2],bl=r[3];
+    this.moveTo(x+tl,y);this.lineTo(x+w-tr,y);this.quadraticCurveTo(x+w,y,x+w,y+tr);
+    this.lineTo(x+w,y+h-br);this.quadraticCurveTo(x+w,y+h,x+w-br,y+h);
+    this.lineTo(x+bl,y+h);this.quadraticCurveTo(x,y+h,x,y+h-bl);this.lineTo(x,y+tl);
+    this.quadraticCurveTo(x,y,x+tl,y);return this;
+  };
+})();
+
+const ID_IONS={
+  na2co3:{cat:['Na+'],an:['CO3^2-']},nahco3:{cat:['Na+'],an:['HCO3^-']},
+  na2so3:{cat:['Na+'],an:['SO3^2-']},na2s:{cat:['Na+'],an:['S^2-']},
+  na2s2o3:{cat:['Na+'],an:['S2O3^2-']},nano2:{cat:['Na+'],an:['NO2^-']},
+  nacl:{cat:['Na+'],an:['Cl-']},nabr:{cat:['Na+'],an:['Br-']},nai:{cat:['Na+'],an:['I-']},
+  nano3:{cat:['Na+'],an:['NO3-']},na2so4:{cat:['Na+'],an:['SO4^2-']},
+  na3po4:{cat:['Na+'],an:['PO4^3-']},na2c2o4:{cat:['Na+'],an:['C2O4^2-']},naf:{cat:['Na+'],an:['F-']},
+  pbno3:{cat:['Pb2+'],an:['NO3-']},agno3:{cat:['Ag+'],an:['NO3-']},
+  cuso4:{cat:['Cu2+'],an:['SO4^2-']},cdso4:{cat:['Cd2+'],an:['SO4^2-']},
+  alcl3:{cat:['Al3+'],an:['Cl-']},znso4:{cat:['Zn2+'],an:['SO4^2-']},
+  feso4:{cat:['Fe2+'],an:['SO4^2-']},fecl3:{cat:['Fe3+'],an:['Cl-']},
+  cacl2:{cat:['Ca2+'],an:['Cl-']},bacl2:{cat:['Ba2+'],an:['Cl-']},
+  srcl2:{cat:['Sr2+'],an:['Cl-']},mgcl2:{cat:['Mg2+'],an:['Cl-']},
+  nh4cl:{cat:['NH4+'],an:['Cl-']},nacl_c:{cat:['Na+'],an:['Cl-']},kcl:{cat:['K+'],an:['Cl-']},
+  hcl:{cat:['H+'],an:['Cl-']},h2so4c:{cat:['H+'],an:['SO4^2-']},hno3:{cat:['H+'],an:['NO3-']},
+  naoh:{cat:['Na+'],an:['OH-']},nh4oh:{cat:['NH4+'],an:['OH-']},
+  bacl2_r:{cat:['Ba2+'],an:['Cl-']},agno3_r:{cat:['Ag+'],an:['NO3-']},
+  cacl2_r:{cat:['Ca2+'],an:['Cl-']},nh42co3:{cat:['NH4+'],an:['CO3^2-']},
+  mgso4:{cat:['Mg2+'],an:['SO4^2-']},leadac:{cat:['Pb2+'],an:['CH3COO-']},
+  limewater:{cat:['Ca2+'],an:['OH-']},ki:{cat:['K+'],an:['I-']},
+  kscn:{cat:['K+'],an:['SCN-']},k2cr2o7:{cat:['K+'],an:['Cr2O7^2-']},kmno4:{cat:['K+'],an:['MnO4-']}
+};
+
+const ACID_EQ_MAP={
+  'na2co3|hcl':'Na₂CO₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)↑',
+  'na2co3|h2so4c':'Na₂CO₃(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + H₂O(l) + CO₂(g)↑',
+  'na2co3|hno3':'Na₂CO₃(aq) + 2HNO₃(aq) → 2NaNO₃(aq) + H₂O(l) + CO₂(g)↑',
+  'nahco3|hcl':'NaHCO₃(aq) + HCl(aq) → NaCl(aq) + H₂O(l) + CO₂(g)↑',
+  'nahco3|h2so4c':'2NaHCO₃(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + 2H₂O(l) + 2CO₂(g)↑',
+  'nahco3|hno3':'NaHCO₃(aq) + HNO₃(aq) → NaNO₃(aq) + H₂O(l) + CO₂(g)↑',
+  'na2so3|hcl':'Na₂SO₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + SO₂(g)↑',
+  'na2so3|h2so4c':'Na₂SO₃(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + H₂O(l) + SO₂(g)↑',
+  'na2so3|hno3':'Na₂SO₃(aq) + 2HNO₃(aq) → 2NaNO₃(aq) + H₂O(l) + SO₂(g)↑',
+  'na2s|hcl':'Na₂S(aq) + 2HCl(aq) → 2NaCl(aq) + H₂S(g)↑',
+  'na2s|h2so4c':'Na₂S(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + H₂S(g)↑',
+  'na2s|hno3':'Na₂S(aq) + 2HNO₃(aq) → 2NaNO₃(aq) + H₂S(g)↑',
+  'na2s2o3|hcl':'Na₂S₂O₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + SO₂(g)↑ + S(s)↓',
+  'na2s2o3|h2so4c':'Na₂S₂O₃(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + H₂O(l) + SO₂(g)↑ + S(s)↓',
+  'na2s2o3|hno3':'Na₂S₂O₃(aq) + 2HNO₃(aq) → 2NaNO₃(aq) + H₂O(l) + SO₂(g)↑ + S(s)↓',
+  'nano2|hcl':'NaNO₂(aq) + HCl(aq) → NaCl(aq) + HNO₂(aq)\n3HNO₂(aq) → HNO₃(aq) + H₂O(l) + 2NO(g)↑',
+  'nano2|h2so4c':'2NaNO₂(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + 2HNO₂(aq)\n3HNO₂(aq) → HNO₃(aq) + H₂O(l) + 2NO(g)↑',
+  'nano2|hno3':'NaNO₂(aq) + HNO₃(aq) → NaNO₃(aq) + HNO₂(aq)\n3HNO₂(aq) → HNO₃(aq) + H₂O(l) + 2NO(g)↑'
+};
+
+const PRECIPITATE_TABLE={
+  'Ag+|Cl-':{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',note:'أبيض جبني يسود بالضوء',light:true,arColor:'أبيض ناصع'},
+  'Ag+|Br-':{formula:'AgBr',color:'#fbe7a1',ar:'بروميد الفضة',note:'أبيض مصفر يسود بالضوء',light:true,arColor:'أبيض مُصفر'},
+  'Ag+|I-':{formula:'AgI',color:'#ffcc00',ar:'يوديد الفضة',note:'أصفر ذهبي',light:true,arColor:'أصفر ذهبي'},
+  'Ag+|S^2-':{formula:'Ag₂S',color:'#0a0a0a',ar:'كبريتيد الفضة',note:'أسود',arColor:'أسود'},
+  'Ag+|CO3^2-':{formula:'Ag₂CO₃',color:'#f4f4f5',ar:'كربونات الفضة',note:'أبيض',arColor:'أبيض'},
+  'Ag+|SO3^2-':{formula:'Ag₂SO₃',color:'#f8f8f8',ar:'كبريتيت الفضة',note:'أبيض يسود بالتسخين',arColor:'أبيض',
+    onHeat:{color:'#0a0a0a',note:'اسودّ الراسب بالتسخين',eq:'Ag₂SO₃(s) --Δ--> Ag₂S(s) + SO₃(g)↑',arColor:'أسود'}},
+  'Ag+|PO4^3-':{formula:'Ag₃PO₄',color:'#ffd400',ar:'فوسفات الفضة',note:'أصفر',arColor:'أصفر ذهبي'},
+  'Ag+|C2O4^2-':{formula:'Ag₂C₂O₄',color:'#f8fafc',ar:'أكسالات الفضة',note:'أبيض',arColor:'أبيض'},
+  'Ag+|OH-':{formula:'AgOH',color:'#8b4513',ar:'هيدروكسيد الفضة',note:'بني غير ثابت',arColor:'بني',
+    onStand:{color:'#0a0a0a',note:'تحول إلى Ag₂O الأسود',arColor:'أسود'}},
+  'Ag+|CrO4^2-':{formula:'Ag₂CrO₄',color:'#b91c1c',ar:'كرومات الفضة',note:'أحمر قرمزي',arColor:'أحمر قرمزي'},
+  'Ag+|SCN-':{formula:'AgSCN',color:'#ffffff',ar:'ثيوسيانات الفضة',note:'أبيض جبني',arColor:'أبيض'},
+  'Ag+|NO2-':{formula:'AgNO₂',color:'#f8fafc',ar:'نيتريت الفضة',note:'أبيض شحيح',arColor:'أبيض'},
+  'Pb2+|Cl-':{formula:'PbCl₂',color:'#ffffff',ar:'كلوريد الرصاص',note:'أبيض يذوب ساخنًا',arColor:'أبيض'},
+  'Pb2+|I-':{formula:'PbI₂',color:'#ffd700',ar:'يوديد الرصاص',note:'أصفر ذهبي',arColor:'أصفر ذهبي'},
+  'Pb2+|S^2-':{formula:'PbS',color:'#0a0a0a',ar:'كبريتيد الرصاص',note:'أسود',arColor:'أسود'},
+  'Pb2+|SO4^2-':{formula:'PbSO₄',color:'#ffffff',ar:'كبريتات الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Pb2+|CO3^2-':{formula:'PbCO₃',color:'#ffffff',ar:'كربونات الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Pb2+|Cr2O7^2-':{formula:'PbCr₂O₇',color:'#ff6b00',ar:'ثاني كرومات الرصاص',note:'برتقالي',arColor:'برتقالي'},
+  'Pb2+|OH-':{formula:'Pb(OH)₂',color:'#ffffff',ar:'هيدروكسيد الرصاص',note:'أبيض مذبذب',arColor:'أبيض'},
+  'Pb2+|Br-':{formula:'PbBr₂',color:'#ffffff',ar:'بروميد الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Pb2+|SCN-':{formula:'Pb(SCN)₂',color:'#ffffff',ar:'ثيوسيانات الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Pb2+|SO3^2-':{formula:'PbSO₃',color:'#ffffff',ar:'كبريتيت الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Pb2+|F-':{formula:'PbF₂',color:'#ffffff',ar:'فلوريد الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Pb2+|C2O4^2-':{formula:'PbC₂O₄',color:'#ffffff',ar:'أكسالات الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Pb2+|CrO4^2-':{formula:'PbCrO₄',color:'#ffd400',ar:'كرومات الرصاص',note:'أصفر ذهبي',arColor:'أصفر ذهبي'},
+  'Pb2+|PO4^3-':{formula:'Pb₃(PO₄)₂',color:'#ffffff',ar:'فوسفات الرصاص',note:'أبيض',arColor:'أبيض'},
+  'Cu2+|OH-':{formula:'Cu(OH)₂',color:'#22a6f2',ar:'هيدروكسيد النحاس II',note:'أزرق — يذوب في NH₄OH',arColor:'أزرق سماوي'},
+  'Cu2+|S^2-':{formula:'CuS',color:'#0a0a0a',ar:'كبريتيد النحاس',note:'أسود',arColor:'أسود'},
+  'Cu2+|CO3^2-':{formula:'CuCO₃',color:'#0fa896',ar:'كربونات النحاس',note:'أخضر مزرق',arColor:'أخضر مزرق'},
+  'Cu2+|SO3^2-':{formula:'CuSO₃',color:'#00b0d6',ar:'كبريتيت النحاس',note:'أزرق مخضر',arColor:'أزرق مخضر'},
+  'Cu2+|PO4^3-':{formula:'Cu₃(PO₄)₂',color:'#22a6f2',ar:'فوسفات النحاس',note:'أزرق',arColor:'أزرق سماوي'},
+  'Cu2+|C2O4^2-':{formula:'CuC₂O₄',color:'#1580cc',ar:'أكسالات النحاس',note:'أزرق',arColor:'أزرق'},
+  'Cu2+|SCN-':{formula:'Cu(SCN)₂',color:'#0a0a0a',ar:'ثيوسيانات النحاس',note:'أسود',arColor:'أسود'},
+  'Fe2+|OH-':{formula:'Fe(OH)₂',color:'#7ed957',ar:'هيدروكسيد الحديد II',note:'أبيض مخضر يتأكسد',oxidize:true,arColor:'أبيض مخضر'},
+  'Fe2+|S^2-':{formula:'FeS',color:'#0a0a0a',ar:'كبريتيد الحديد II',note:'أسود',arColor:'أسود'},
+  'Fe2+|CO3^2-':{formula:'FeCO₃',color:'#7a8a75',ar:'كربونات الحديد II',note:'رمادي مخضر',arColor:'رمادي مخضر'},
+  'Fe2+|PO4^3-':{formula:'Fe₃(PO₄)₂',color:'#7ed957',ar:'فوسفات الحديد II',note:'أخضر شاحب',arColor:'أخضر شاحب'},
+  'Fe2+|C2O4^2-':{formula:'FeC₂O₄',color:'#fde047',ar:'أكسالات الحديد II',note:'أصفر',arColor:'أصفر'},
+  'Fe2+|SO3^2-':{formula:'FeSO₃',color:'#7ed957',ar:'كبريتيت الحديد II',note:'أخضر شاحب',arColor:'أخضر شاحب'},
+  'Fe3+|OH-':{formula:'Fe(OH)₃',color:'#a83232',ar:'هيدروكسيد الحديد III',note:'بني محمر',arColor:'بني محمر'},
+  'Fe3+|S^2-':{formula:'Fe₂S₃',color:'#0a0a0a',ar:'كبريتيد الحديد III',note:'أسود',arColor:'أسود'},
+  'Fe3+|CO3^2-':{formula:'Fe₂(CO₃)₃',color:'#8f4a0a',ar:'كربونات الحديد III',note:'بني محمر',arColor:'بني محمر'},
+  'Fe3+|PO4^3-':{formula:'FePO₄',color:'#fde047',ar:'فوسفات الحديد III',note:'أصفر فاتح',arColor:'أصفر فاتح'},
+  'Fe3+|C2O4^2-':{formula:'Fe₂(C₂O₄)₃',color:'#a3d89a',ar:'أكسالات الحديد III',note:'أصفر مخضر',arColor:'أصفر مخضر'},
+  'Al3+|OH-':{formula:'Al(OH)₃',color:'#ffffff',ar:'هيدروكسيد الألومنيوم',note:'أبيض هلامي مذبذب',arColor:'أبيض هلامي'},
+  'Al3+|CO3^2-':{formula:'Al(OH)₃',color:'#ffffff',ar:'هيدروكسيد الألومنيوم (تحلل مائي)',note:'أبيض هلامي',arColor:'أبيض هلامي'},
+  'Al3+|PO4^3-':{formula:'AlPO₄',color:'#ffffff',ar:'فوسفات الألومنيوم',note:'أبيض',arColor:'أبيض'},
+  'Zn2+|OH-':{formula:'Zn(OH)₂',color:'#ffffff',ar:'هيدروكسيد الزنك',note:'أبيض مذبذب',arColor:'أبيض'},
+  'Zn2+|S^2-':{formula:'ZnS',color:'#ffffff',ar:'كبريتيد الزنك',note:'أبيض',arColor:'أبيض'},
+  'Zn2+|CO3^2-':{formula:'ZnCO₃',color:'#ffffff',ar:'كربونات الزنك',note:'أبيض',arColor:'أبيض'},
+  'Zn2+|PO4^3-':{formula:'Zn₃(PO₄)₂',color:'#ffffff',ar:'فوسفات الزنك',note:'أبيض',arColor:'أبيض'},
+  'Zn2+|C2O4^2-':{formula:'ZnC₂O₄',color:'#ffffff',ar:'أكسالات الزنك',note:'أبيض',arColor:'أبيض'},
+  'Zn2+|SO3^2-':{formula:'ZnSO₃',color:'#ffffff',ar:'كبريتيت الزنك',note:'أبيض',arColor:'أبيض'},
+  'Ca2+|CO3^2-':{formula:'CaCO₃',color:'#ffffff',ar:'كربونات الكالسيوم',note:'أبيض',arColor:'أبيض',
+    onHeat:{color:'#9c948f',note:'يتحلل بالتسخين إلى CaO',eq:'CaCO₃(s) --Δ--> CaO(s) + CO₂(g)↑',arColor:'رمادي فاتح'}},
+  'Ca2+|SO4^2-':{formula:'CaSO₄',color:'#ffffff',ar:'كبريتات الكالسيوم',note:'أبيض شحيح',arColor:'أبيض'},
+  'Ca2+|C2O4^2-':{formula:'CaC₂O₄',color:'#ffffff',ar:'أكسالات الكالسيوم',note:'أبيض شحيح',arColor:'أبيض'},
+  'Ca2+|F-':{formula:'CaF₂',color:'#ffffff',ar:'فلوريد الكالسيوم',note:'أبيض شحيح',arColor:'أبيض'},
+  'Ca2+|PO4^3-':{formula:'Ca₃(PO₄)₂',color:'#ffffff',ar:'فوسفات الكالسيوم',note:'أبيض',arColor:'أبيض'},
+  'Ca2+|CrO4^2-':{formula:'CaCrO₄',color:'#fde047',ar:'كرومات الكالسيوم',note:'أصفر',arColor:'أصفر'},
+  'Ca2+|Cr2O7^2-':{formula:'CaCr₂O₇',color:'#ff8c30',ar:'ثاني كرومات الكالسيوم',note:'برتقالي',arColor:'برتقالي'},
+  'Ca2+|SO3^2-':{formula:'CaSO₃',color:'#ffffff',ar:'كبريتيت الكالسيوم',note:'أبيض',arColor:'أبيض'},
+  'Ca2+|OH-':{formula:'Ca(OH)₂',color:'#ffffff',ar:'هيدروكسيد الكالسيوم',note:'أبيض شحيح',arColor:'أبيض'},
+  'Ba2+|SO4^2-':{formula:'BaSO₄',color:'#ffffff',ar:'كبريتات الباريوم',note:'أبيض لا يذوب في HCl',arColor:'أبيض'},
+  'Ba2+|CO3^2-':{formula:'BaCO₃',color:'#ffffff',ar:'كربونات الباريوم',note:'أبيض يذوب في HCl',arColor:'أبيض'},
+  'Ba2+|SO3^2-':{formula:'BaSO₃',color:'#ffffff',ar:'كبريتيت الباريوم',note:'أبيض',arColor:'أبيض'},
+  'Ba2+|C2O4^2-':{formula:'BaC₂O₄',color:'#ffffff',ar:'أكسالات الباريوم',note:'أبيض',arColor:'أبيض'},
+  'Ba2+|PO4^3-':{formula:'Ba₃(PO₄)₂',color:'#ffffff',ar:'فوسفات الباريوم',note:'أبيض',arColor:'أبيض'},
+  'Ba2+|CrO4^2-':{formula:'BaCrO₄',color:'#ffd400',ar:'كرومات الباريوم',note:'أصفر',arColor:'أصفر ذهبي'},
+  'Ba2+|Cr2O7^2-':{formula:'BaCr₂O₇',color:'#ff8c30',ar:'ثاني كرومات الباريوم',note:'برتقالي',arColor:'برتقالي'},
+  'Ba2+|F-':{formula:'BaF₂',color:'#ffffff',ar:'فلوريد الباريوم',note:'أبيض',arColor:'أبيض'},
+  'Sr2+|SO4^2-':{formula:'SrSO₄',color:'#ffffff',ar:'كبريتات السترونشيوم',note:'أبيض',arColor:'أبيض'},
+  'Sr2+|CO3^2-':{formula:'SrCO₃',color:'#ffffff',ar:'كربونات السترونشيوم',note:'أبيض',arColor:'أبيض'},
+  'Sr2+|CrO4^2-':{formula:'SrCrO₄',color:'#fde047',ar:'كرومات السترونشيوم',note:'أصفر',arColor:'أصفر'},
+  'Sr2+|C2O4^2-':{formula:'SrC₂O₄',color:'#ffffff',ar:'أكسالات السترونشيوم',note:'أبيض',arColor:'أبيض'},
+  'Sr2+|SO3^2-':{formula:'SrSO₃',color:'#ffffff',ar:'كبريتيت السترونشيوم',note:'أبيض',arColor:'أبيض'},
+  'Sr2+|F-':{formula:'SrF₂',color:'#ffffff',ar:'فلوريد السترونشيوم',note:'أبيض',arColor:'أبيض'},
+  'Sr2+|PO4^3-':{formula:'Sr₃(PO₄)₂',color:'#ffffff',ar:'فوسفات السترونشيوم',note:'أبيض',arColor:'أبيض'},
+  'Sr2+|OH-':{formula:'Sr(OH)₂',color:'#ffffff',ar:'هيدروكسيد السترونشيوم',note:'أبيض شحيح',arColor:'أبيض'},
+  'Mg2+|OH-':{formula:'Mg(OH)₂',color:'#ffffff',ar:'هيدروكسيد المغنيسيوم',note:'أبيض',arColor:'أبيض'},
+  'Mg2+|CO3^2-':{formula:'MgCO₃',color:'#ffffff',ar:'كربونات المغنيسيوم',note:'أبيض',arColor:'أبيض'},
+  'Mg2+|PO4^3-':{formula:'Mg₃(PO₄)₂',color:'#ffffff',ar:'فوسفات المغنيسيوم',note:'أبيض',arColor:'أبيض'},
+  'Mg2+|SO3^2-':{formula:'MgSO₃',color:'#ffffff',ar:'كبريتيت المغنيسيوم',note:'أبيض',arColor:'أبيض'},
+  'Mg2+|C2O4^2-':{formula:'MgC₂O₄',color:'#ffffff',ar:'أكسالات المغنيسيوم',note:'أبيض',arColor:'أبيض'},
+  'Mg2+|F-':{formula:'MgF₂',color:'#ffffff',ar:'فلوريد المغنيسيوم',note:'أبيض',arColor:'أبيض'},
+  'Cd2+|S^2-':{formula:'CdS',color:'#ffd400',ar:'كبريتيد الكادميوم',note:'أصفر مميز',arColor:'أصفر ذهبي'},
+  'Cd2+|OH-':{formula:'Cd(OH)₂',color:'#ffffff',ar:'هيدروكسيد الكادميوم',note:'أبيض',arColor:'أبيض'},
+  'Cd2+|CO3^2-':{formula:'CdCO₃',color:'#ffffff',ar:'كربونات الكادميوم',note:'أبيض',arColor:'أبيض'},
+  'Cd2+|C2O4^2-':{formula:'CdC₂O₄',color:'#ffffff',ar:'أكسالات الكادميوم',note:'أبيض',arColor:'أبيض'},
+  'Cd2+|SO3^2-':{formula:'CdSO₃',color:'#ffffff',ar:'كبريتيت الكادميوم',note:'أبيض',arColor:'أبيض'},
+  'Cd2+|PO4^3-':{formula:'Cd₃(PO₄)₂',color:'#fde047',ar:'فوسفات الكادميوم',note:'أصفر',arColor:'أصفر'},
+  'Ni2+|OH-':{formula:'Ni(OH)₂',color:'#4ade80',ar:'هيدروكسيد النيكل II',note:'أخضر فاتح',arColor:'أخضر فاتح'},
+  'Co2+|OH-':{formula:'Co(OH)₂',color:'#3b82f6',ar:'هيدروكسيد الكوبالت II',note:'أزرق',arColor:'أزرق'},
+  'Mn2+|OH-':{formula:'Mn(OH)₂',color:'#f5deb3',ar:'هيدروكسيد المنغنيز II',note:'وردي فاتح',arColor:'وردي فاتح'},
+  'Hg2+|S^2-':{formula:'HgS',color:'#0a0a0a',ar:'كبريتيد الزئبق',note:'أسود',arColor:'أسود'}
+};
+
+const HEAT_REACTIONS={
+  'nahco3':{gas:'CO2',eq:'2NaHCO₃(s) --Δ--> Na₂CO₃(s) + H₂O(g)↑ + CO₂(g)↑',note:'يتحلل بالحرارة إلى كربونات الصوديوم',thermic:'endo'},
+  'nano3':{gas:'O2',eq:'2NaNO₃(s) --Δ--> 2NaNO₂(s) + O₂(g)↑',note:'يتحلل بالحرارة إلى نيتريت الصوديوم',thermic:'endo'},
+  'cuso4':{tint:'#e0e8f0',eq:'CuSO₄·5H₂O(s) --Δ--> CuSO₄(s) + 5H₂O(g)↑',note:'فقدان ماء التبلور — يتحول للأبيض',thermic:'endo'},
+  'caco3':{gas:'CO2',eq:'CaCO₃(s) --Δ--> CaO(s) + CO₂(g)↑',note:'يتحلل إلى أكسيد الكالسيوم',thermic:'endo'}
+};
+
+const GAS_LIQUID_REACTIONS={
+  'CO2|limewater':{precip:{formula:'CaCO₃',color:'#ffffff',ar:'كربونات الكالسيوم',arColor:'أبيض حليبي'},
+    eq:'Ca(OH)₂(aq) + CO₂(g) → CaCO₃(s)↓ + H₂O(l)',note:'تعكّر ماء الجير الرائق براسب أبيض حليبي',progressive:true,thermic:'exo'},
+  'CO2|naoh':{tint:'#f0f0f0',eq:'2NaOH(aq) + CO₂(g) → Na₂CO₃(aq) + H₂O(l)',note:'امتصاص CO₂ في الصودا الكاوية',thermic:'exo'},
+  'CO2|bacl2_r':{precip:{formula:'BaCO₃',color:'#ffffff',ar:'كربونات الباريوم',arColor:'أبيض'},
+    eq:'BaCl₂(aq) + CO₂(g) + H₂O(l) → BaCO₃(s)↓ + 2HCl(aq)',note:'راسب أبيض شحيح',thermic:'exo'},
+  'CO2|cacl2_r':{precip:{formula:'CaCO₃',color:'#ffffff',ar:'كربونات الكالسيوم',arColor:'أبيض'},
+    eq:'CaCl₂(aq) + CO₂(g) + H₂O(l) → CaCO₃(s)↓ + 2HCl(aq)',note:'راسب أبيض شحيح',thermic:'exo'},
+  'SO2|limewater':{precip:{formula:'CaSO₃',color:'#ffffff',ar:'كبريتيت الكالسيوم',arColor:'أبيض'},
+    eq:'Ca(OH)₂(aq) + SO₂(g) → CaSO₃(s)↓ + H₂O(l)',note:'راسب أبيض',thermic:'exo'},
+  'SO2|kmno4':{tint:'#f5f5f5',eq:'2KMnO₄(aq) + 5SO₂(g) + 2H₂O(l) → K₂SO₄(aq) + 2MnSO₄(aq) + 2H₂SO₄(aq)',note:'زوال اللون البنفسجي',thermic:'exo'},
+  'SO2|i2':{tint:'#f5f5f5',eq:'SO₂(g) + I₂(aq) + 2H₂O(l) → H₂SO₄(aq) + 2HI(aq)',note:'زوال لون اليود البني',thermic:'exo'},
+  'SO2|k2cr2o7':{tint:'#22c55e',eq:'K₂Cr₂O₇(aq) + 3SO₂(g) + H₂SO₄(aq) → K₂SO₄(aq) + Cr₂(SO₄)₃(aq) + H₂O(l)',note:'تحوّل برتقالي إلى أخضر',thermic:'exo'},
+  'SO2|naoh':{tint:'#f0f0f0',eq:'2NaOH(aq) + SO₂(g) → Na₂SO₃(aq) + H₂O(l)',note:'امتصاص SO₂ في القلويات',thermic:'exo'},
+  'H2S|leadac':{precip:{formula:'PbS',color:'#0a0a0a',ar:'كبريتيد الرصاص',arColor:'أسود'},
+    eq:'(CH₃COO)₂Pb(aq) + H₂S(g) → PbS(s)↓ + 2CH₃COOH(aq)',note:'راسب أسود',thermic:'exo'},
+  'H2S|cuso4':{precip:{formula:'CuS',color:'#0a0a0a',ar:'كبريتيد النحاس',arColor:'أسود'},
+    eq:'CuSO₄(aq) + H₂S(g) → CuS(s)↓ + H₂SO₄(aq)',note:'راسب أسود',thermic:'exo'},
+  'H2S|cdso4':{precip:{formula:'CdS',color:'#ffd400',ar:'كبريتيد الكادميوم',arColor:'أصفر ذهبي'},
+    eq:'CdSO₄(aq) + H₂S(g) → CdS(s)↓ + H₂SO₄(aq)',note:'راسب أصفر',thermic:'exo'},
+  'H2S|pbno3':{precip:{formula:'PbS',color:'#0a0a0a',ar:'كبريتيد الرصاص',arColor:'أسود'},
+    eq:'Pb(NO₃)₂(aq) + H₂S(g) → PbS(s)↓ + 2HNO₃(aq)',note:'راسب أسود',thermic:'exo'},
+  'H2S|znso4':{precip:{formula:'ZnS',color:'#ffffff',ar:'كبريتيد الزنك',arColor:'أبيض'},
+    eq:'ZnSO₄(aq) + H₂S(g) → ZnS(s)↓ + H₂SO₄(aq)',note:'راسب أبيض',thermic:'exo'},
+  'H2S|feso4':{precip:{formula:'FeS',color:'#0a0a0a',ar:'كبريتيد الحديد II',arColor:'أسود'},
+    eq:'FeSO₄(aq) + H₂S(g) → FeS(s)↓ + H₂SO₄(aq)',note:'راسب أسود',thermic:'exo'},
+  'NO2|naoh':{tint:'#f0f0f0',eq:'2NO₂(g) + 2NaOH(aq) → NaNO₃(aq) + NaNO₂(aq) + H₂O(l)',note:'امتصاص NO₂ في القلويات',thermic:'exo'},
+  'NH3|hcl':{smoke:true,eq:'NH₃(g) + HCl(aq) → NH₄Cl(s)',note:'سحب بيضاء من NH₄Cl',thermic:'exo'},
+  'HCl|nh4oh':{smoke:true,eq:'HCl(g) + NH₄OH(aq) → NH₄Cl(s) + H₂O(l)',note:'سحب بيضاء من NH₄Cl',thermic:'exo'},
+  'NH3|cuso4':{precip:{formula:'Cu(OH)₂',color:'#22a6f2',ar:'هيدروكسيد النحاس',arColor:'أزرق سماوي'},
+    eq:'CuSO₄(aq) + 2NH₃(g) + 2H₂O(l) → Cu(OH)₂(s)↓ + (NH₄)₂SO₄(aq)',note:'راسب أزرق',thermic:'exo'},
+  'NH3|feso4':{precip:{formula:'Fe(OH)₂',color:'#7ed957',ar:'هيدروكسيد الحديد II',arColor:'أبيض مخضر'},
+    eq:'FeSO₄(aq) + 2NH₃(g) + 2H₂O(l) → Fe(OH)₂(s)↓ + (NH₄)₂SO₄(aq)',note:'راسب أبيض مخضر',thermic:'exo'},
+  'NH3|fecl3':{precip:{formula:'Fe(OH)₃',color:'#a83232',ar:'هيدروكسيد الحديد III',arColor:'بني محمر'},
+    eq:'FeCl₃(aq) + 3NH₃(g) + 3H₂O(l) → Fe(OH)₃(s)↓ + 3NH₄Cl(aq)',note:'راسب بني محمر',thermic:'exo'},
+  'NH3|alcl3':{precip:{formula:'Al(OH)₃',color:'#ffffff',ar:'هيدروكسيد الألومنيوم',arColor:'أبيض هلامي'},
+    eq:'AlCl₃(aq) + 3NH₃(g) + 3H₂O(l) → Al(OH)₃(s)↓ + 3NH₄Cl(aq)',note:'راسب أبيض هلامي',thermic:'exo'},
+  'NH3|agno3_r':{precip:{formula:'AgOH',color:'#8b4513',ar:'هيدروكسيد الفضة',arColor:'بني'},
+    eq:'AgNO₃(aq) + NH₃(g) + H₂O(l) → AgOH(s)↓ + NH₄NO₃(aq)',note:'راسب بني غير ثابت',thermic:'exo'},
+  'NH3|znso4':{precip:{formula:'Zn(OH)₂',color:'#ffffff',ar:'هيدروكسيد الزنك',arColor:'أبيض'},
+    eq:'ZnSO₄(aq) + 2NH₃(g) + 2H₂O(l) → Zn(OH)₂(s)↓ + (NH₄)₂SO₄(aq)',note:'راسب أبيض',thermic:'exo'},
+  'NH3|cdso4':{precip:{formula:'Cd(OH)₂',color:'#ffffff',ar:'هيدروكسيد الكادميوم',arColor:'أبيض'},
+    eq:'CdSO₄(aq) + 2NH₃(g) + 2H₂O(l) → Cd(OH)₂(s)↓ + (NH₄)₂SO₄(aq)',note:'راسب أبيض',thermic:'exo'},
+  'NH3|mgcl2':{precip:{formula:'Mg(OH)₂',color:'#ffffff',ar:'هيدروكسيد المغنيسيوم',arColor:'أبيض'},
+    eq:'MgCl₂(aq) + 2NH₃(g) + 2H₂O(l) → Mg(OH)₂(s)↓ + 2NH₄Cl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'Cl2|ki':{tint:'#8b3a0a',eq:'Cl₂(g) + 2KI(aq) → 2KCl(aq) + I₂(aq)',note:'انطلاق اليود البني',thermic:'exo'},
+  'Cl2|nabr':{tint:'#ff8c00',eq:'Cl₂(g) + 2NaBr(aq) → 2NaCl(aq) + Br₂(aq)',note:'انطلاق البروم البرتقالي',thermic:'exo'},
+  'Cl2|nai':{tint:'#8b3a0a',eq:'Cl₂(g) + 2NaI(aq) → 2NaCl(aq) + I₂(aq)',note:'انطلاق اليود البني',thermic:'exo'},
+  'Cl2|na2s':{precip:{formula:'S',color:'#ffcc00',ar:'كبريت',arColor:'أصفر ذهبي'},
+    eq:'Cl₂(g) + Na₂S(aq) → 2NaCl(aq) + S(s)↓',note:'راسب كبريت أصفر',thermic:'exo'},
+  'Cl2|na2so3':{tint:'#f5f5f5',eq:'Cl₂(g) + Na₂SO₃(aq) + H₂O(l) → 2HCl(aq) + Na₂SO₄(aq)',note:'أكسدة كبريتيت إلى كبريتات',thermic:'exo'},
+  'Br2|ki':{tint:'#8b3a0a',eq:'Br₂(g) + 2KI(aq) → 2KBr(aq) + I₂(aq)',note:'انطلاق اليود البني',thermic:'exo'},
+  'Br2|nai':{tint:'#8b3a0a',eq:'Br₂(g) + 2NaI(aq) → 2NaBr(aq) + I₂(aq)',note:'انطلاق اليود البني',thermic:'exo'},
+  'Br2|na2s':{precip:{formula:'S',color:'#ffcc00',ar:'كبريت',arColor:'أصفر ذهبي'},
+    eq:'Br₂(g) + Na₂S(aq) → 2NaBr(aq) + S(s)↓',note:'راسب كبريت أصفر',thermic:'exo'},
+  'I2|na2s2o3':{tint:'#f5f5f5',eq:'I₂(g) + 2Na₂S₂O₃(aq) → Na₂S₄O₆(aq) + 2NaI(aq)',note:'زوال لون اليود',thermic:'exo'},
+  'I2|na2s':{precip:{formula:'S',color:'#ffcc00',ar:'كبريت',arColor:'أصفر ذهبي'},
+    eq:'I₂(g) + Na₂S(aq) → 2NaI(aq) + S(s)↓',note:'راسب كبريت أصفر',thermic:'exo'}
+};
+
+const SPECIAL_PAIR_REACTIONS={
+  'fecl3|nai':{tint:'#8b3a0a',eq:'2FeCl₃(aq) + 2NaI(aq) → 2FeCl₂(aq) + I₂(aq) + 2NaCl(aq)',note:'انطلاق اليود البني — أكسدة يوديد',thermic:'exo'},
+  'fecl3|ki':{tint:'#8b3a0a',eq:'2FeCl₃(aq) + 2KI(aq) → 2FeCl₂(aq) + I₂(aq) + 2KCl(aq)',note:'انطلاق اليود البني',thermic:'exo'},
+  'fecl3|na2s':{precip:{formula:'S',color:'#ffcc00',ar:'كبريت',arColor:'أصفر ذهبي'},tint:'#68a860',
+    eq:'2FeCl₃(aq) + Na₂S(aq) → 2FeCl₂(aq) + S(s)↓ + 2NaCl(aq)',note:'راسب كبريت أصفر + Fe²⁺',thermic:'exo'},
+  'fecl3|na2so3':{tint:'#68a860',
+    eq:'2FeCl₃(aq) + Na₂SO₃(aq) + H₂O(l) → 2FeCl₂(aq) + Na₂SO₄(aq) + 2HCl(aq)',note:'اختزال Fe³⁺ إلى Fe²⁺',thermic:'exo'},
+  'fecl3|na2s2o3':{tint:'#68a860',
+    eq:'2FeCl₃(aq) + 2Na₂S₂O₃(aq) → 2FeCl₂(aq) + Na₂S₄O₆(aq) + 2NaCl(aq)',note:'اختزال Fe³⁺ — زوال اللون البني',thermic:'exo'},
+  'fecl3|nahco3':{precip:{formula:'Fe(OH)₃',color:'#a83232',ar:'هيدروكسيد الحديد III',arColor:'بني محمر'},
+    gas:'CO2',eq:'FeCl₃(aq) + 3NaHCO₃(aq) → Fe(OH)₃(s)↓ + 3CO₂(g)↑ + 3NaCl(aq)',note:'راسب بني + تصاعد CO₂',thermic:'exo'},
+  'fecl3|na2co3':{precip:{formula:'Fe(OH)₃',color:'#a83232',ar:'هيدروكسيد الحديد III',arColor:'بني محمر'},
+    gas:'CO2',eq:'2FeCl₃(aq) + 3Na₂CO₃(aq) + 3H₂O(l) → 2Fe(OH)₃(s)↓ + 3CO₂(g)↑ + 6NaCl(aq)',note:'تحلل مائي — راسب بني + CO₂',thermic:'exo'},
+  'fecl3|kscn':{tint:'#b91c1c',eq:'FeCl₃(aq) + 3KSCN(aq) → Fe(SCN)₃(aq) + 3KCl(aq)',note:'لون أحمر دموي مميز — كشف Fe³⁺',thermic:'exo'},
+  'cuso4|ki':{precip:{formula:'CuI',color:'#ffffff',ar:'يوديد النحاس I',arColor:'أبيض'},tint:'#8b3a0a',
+    eq:'2CuSO₄(aq) + 4KI(aq) → 2CuI(s)↓ + I₂(aq) + 2K₂SO₄(aq)',note:'راسب أبيض CuI + انطلاق يود بني',thermic:'exo'},
+  'cuso4|kscn':{precip:{formula:'Cu(SCN)₂',color:'#0a0a0a',ar:'ثيوسيانات النحاس II',arColor:'أسود'},
+    eq:'CuSO₄(aq) + 2KSCN(aq) → Cu(SCN)₂(s)↓ + K₂SO₄(aq)',note:'راسب أسود',thermic:'exo'},
+  'cuso4|na2s':{precip:{formula:'CuS',color:'#0a0a0a',ar:'كبريتيد النحاس',arColor:'أسود'},
+    eq:'CuSO₄(aq) + Na₂S(aq) → CuS(s)↓ + Na₂SO₄(aq)',note:'راسب أسود',thermic:'exo'},
+  'pbno3|k2cr2o7':{precip:{formula:'PbCr₂O₇',color:'#ff6b00',ar:'ثاني كرومات الرصاص',arColor:'برتقالي'},
+    eq:'2Pb(NO₃)₂(aq) + K₂Cr₂O₇(aq) → 2PbCr₂O₇(s)↓ + 2KNO₃(aq)',note:'راسب برتقالي',thermic:'exo'},
+  'pbno3|ki':{precip:{formula:'PbI₂',color:'#ffd700',ar:'يوديد الرصاص',arColor:'أصفر ذهبي'},
+    eq:'Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s)↓ + 2KNO₃(aq)',note:'راسب أصفر ذهبي',thermic:'exo'},
+  'pbno3|kscn':{precip:{formula:'Pb(SCN)₂',color:'#ffffff',ar:'ثيوسيانات الرصاص',arColor:'أبيض'},
+    eq:'Pb(NO₃)₂(aq) + 2KSCN(aq) → Pb(SCN)₂(s)↓ + 2KNO₃(aq)',note:'راسب أبيض',thermic:'exo'},
+  'pbno3|na2s':{precip:{formula:'PbS',color:'#0a0a0a',ar:'كبريتيد الرصاص',arColor:'أسود'},
+    eq:'Pb(NO₃)₂(aq) + Na₂S(aq) → PbS(s)↓ + 2NaNO₃(aq)',note:'راسب أسود',thermic:'exo'},
+  'agno3|kscn':{precip:{formula:'AgSCN',color:'#ffffff',ar:'ثيوسيانات الفضة',arColor:'أبيض'},
+    eq:'AgNO₃(aq) + KSCN(aq) → AgSCN(s)↓ + KNO₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'agno3|ki':{precip:{formula:'AgI',color:'#ffcc00',ar:'يوديد الفضة',arColor:'أصفر ذهبي',light:true},
+    eq:'AgNO₃(aq) + KI(aq) → AgI(s)↓ + KNO₃(aq)',note:'راسب أصفر ذهبي',thermic:'exo'},
+  'agno3|k2cr2o7':{precip:{formula:'Ag₂Cr₂O₇',color:'#b91c1c',ar:'ثاني كرومات الفضة',arColor:'أحمر قرمزي'},
+    eq:'2AgNO₃(aq) + K₂Cr₂O₇(aq) → Ag₂Cr₂O₇(s)↓ + 2KNO₃(aq)',note:'راسب أحمر قرمزي',thermic:'exo'},
+  'agno3|na2s':{precip:{formula:'Ag₂S',color:'#0a0a0a',ar:'كبريتيد الفضة',arColor:'أسود'},
+    eq:'2AgNO₃(aq) + Na₂S(aq) → Ag₂S(s)↓ + 2NaNO₃(aq)',note:'راسب أسود',thermic:'exo'},
+  'ki|kmno4':{tint:'#8b3a0a',
+    eq:'10KI(aq) + 2KMnO₄(aq) + 8H₂SO₄(aq) → 5I₂(aq) + 2MnSO₄(aq) + 6K₂SO₄(aq) + 8H₂O(l)',
+    note:'انطلاق يود بني — اختزال برمنغنات',thermic:'exo'},
+  'ki|k2cr2o7':{tint:'#8b3a0a',
+    eq:'6KI(aq) + K₂Cr₂O₇(aq) + 7H₂SO₄(aq) → 3I₂(aq) + Cr₂(SO₄)₃(aq) + 4K₂SO₄(aq) + 7H₂O(l)',
+    note:'انطلاق يود بني — اختزال ثاني كرومات',thermic:'exo'},
+  'ki|i2':{tint:'#5c2a0a',eq:'I₂(aq) + KI(aq) → KI₃(aq)',note:'ذوبان اليود — لون بني داكن',thermic:'exo'},
+  'ki_starch|i2':{tint:'#1e3a8a',eq:'I₂(aq) + نشا(aq) → معقد أزرق داكن',note:'لون أزرق داكن مميز — كشف اليود',thermic:'exo'},
+  'feso4|k2cr2o7':{tint:'#22c55e',
+    eq:'6FeSO₄(aq) + K₂Cr₂O₇(aq) + 7H₂SO₄(aq) → 3Fe₂(SO₄)₃(aq) + Cr₂(SO₄)₃(aq) + K₂SO₄(aq) + 7H₂O(l)',
+    note:'تحوّل برتقالي إلى أخضر — أكسدة Fe²⁺',thermic:'exo'},
+  'feso4|kmno4':{tint:'#f5f5f5',
+    eq:'10FeSO₄(aq) + 2KMnO₄(aq) + 8H₂SO₄(aq) → 5Fe₂(SO₄)₃(aq) + K₂SO₄(aq) + 2MnSO₄(aq) + 8H₂O(l)',
+    note:'زوال اللون البنفسجي — أكسدة Fe²⁺',thermic:'exo'},
+  'feso4|na2s':{precip:{formula:'FeS',color:'#0a0a0a',ar:'كبريتيد الحديد II',arColor:'أسود'},
+    eq:'FeSO₄(aq) + Na₂S(aq) → FeS(s)↓ + Na₂SO₄(aq)',note:'راسب أسود',thermic:'exo'},
+  'feso4|na2co3':{precip:{formula:'FeCO₃',color:'#7a8a75',ar:'كربونات الحديد II',arColor:'رمادي مخضر'},
+    eq:'FeSO₄(aq) + Na₂CO₃(aq) → FeCO₃(s)↓ + Na₂SO₄(aq)',note:'راسب رمادي مخضر',thermic:'exo'},
+  'na2s2o3|i2':{tint:'#f5f5f5',
+    eq:'2Na₂S₂O₃(aq) + I₂(aq) → Na₂S₄O₆(aq) + 2NaI(aq)',
+    note:'زوال لون اليود البني — تفاعل معايرة',thermic:'exo'},
+  'na2s2o3|kmno4':{tint:'#f5f5f5',
+    eq:'8KMnO₄(aq) + 3Na₂S₂O₃(aq) + H₂O(l) → 8MnO₂(s)↓ + 3Na₂SO₄(aq) + 3K₂SO₄(aq) + 2KOH(aq)',
+    note:'راسب بني MnO₂ + زوال بنفسجي',thermic:'exo'},
+  'kmno4|na2so3':{tint:'#f5f5f5',
+    eq:'2KMnO₄(aq) + 5Na₂SO₃(aq) + 3H₂SO₄(aq) → K₂SO₄(aq) + 2MnSO₄(aq) + 5Na₂SO₄(aq) + 3H₂O(l)',
+    note:'زوال اللون البنفسجي',thermic:'exo'},
+  'kmno4|na2s':{precip:{formula:'S',color:'#ffcc00',ar:'كبريت',arColor:'أصفر ذهبي'},tint:'#f5f5f5',
+    eq:'2KMnO₄(aq) + 5Na₂S(aq) + 8H₂SO₄(aq) → K₂SO₄(aq) + 2MnSO₄(aq) + 5S(s)↓ + 5Na₂SO₄(aq) + 8H₂O(l)',
+    note:'راسب كبريت أصفر + زوال البنفسجي',thermic:'exo'},
+  'kmno4|na2c2o4':{tint:'#f5f5f5',gas:'CO2',
+    eq:'2KMnO₄(aq) + 5Na₂C₂O₄(aq) + 8H₂SO₄(aq) → K₂SO₄(aq) + 2MnSO₄(aq) + 5Na₂SO₄(aq) + 10CO₂(g)↑ + 8H₂O(l)',
+    note:'زوال البنفسجي + تصاعد CO₂',thermic:'exo'},
+  'k2cr2o7|na2so3':{tint:'#22c55e',
+    eq:'K₂Cr₂O₇(aq) + 3Na₂SO₃(aq) + 4H₂SO₄(aq) → K₂SO₄(aq) + Cr₂(SO₄)₃(aq) + 3Na₂SO₄(aq) + 4H₂O(l)',
+    note:'تحوّل برتقالي إلى أخضر',thermic:'exo'},
+  'k2cr2o7|na2s':{tint:'#22c55e',precip:{formula:'S',color:'#ffcc00',ar:'كبريت',arColor:'أصفر ذهبي'},
+    eq:'K₂Cr₂O₇(aq) + 3Na₂S(aq) + 7H₂SO₄(aq) → K₂SO₄(aq) + Cr₂(SO₄)₃(aq) + 3S(s)↓ + 3Na₂SO₄(aq) + 7H₂O(l)',
+    note:'اختزال برتقالي إلى أخضر + راسب كبريت',thermic:'exo'},
+  'phen|naoh':{tint:'#ff2d78',eq:'HIn(aq) + OH⁻(aq) ⇌ In⁻(aq) + H₂O(l)',note:'الفينول فثالين يتحول للون الوردي',thermic:'exo'},
+  'phen|nh4oh':{tint:'#ff2d78',eq:'HIn(aq) + NH₄OH(aq) ⇌ In⁻(aq) + NH₄⁺(aq) + H₂O(l)',note:'الفينول فثالين يتحول للون الوردي',thermic:'exo'},
+  'phen|limewater':{tint:'#ff2d78',eq:'HIn(aq) + Ca(OH)₂(aq) ⇌ In⁻(aq) + Ca²⁺(aq) + H₂O(l)',note:'لون وردي',thermic:'exo'},
+  'phen|na2co3':{tint:'#ff8fb0',eq:'HIn(aq) + CO₃²⁻(aq) ⇌ In⁻(aq) + HCO₃⁻(aq)',note:'الفينول فثالين يتحول للون وردي فاتح',thermic:'exo'},
+  'hcl|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'HCl(aq) + AgNO₃(aq) → AgCl(s)↓ + HNO₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'h2so4c|agno3_r':{precip:{formula:'Ag₂SO₄',color:'#ffffff',ar:'كبريتات الفضة',arColor:'أبيض شحيح'},
+    eq:'H₂SO₄(aq) + 2AgNO₃(aq) → Ag₂SO₄(s)↓ + 2HNO₃(aq)',note:'راسب أبيض شحيح الذوبان',thermic:'exo'},
+  'nh4cl|naoh':{gas:'NH3',eq:'NH₄Cl(aq) + NaOH(aq) --Δ--> NaCl(aq) + H₂O(l) + NH₃(g)↑',
+    note:'تصاعد NH₃ برائحة نفاذة',heat:10,thermic:'endo'},
+  'nh4cl|limewater':{gas:'NH3',eq:'2NH₄Cl(aq) + Ca(OH)₂(aq) → CaCl₂(aq) + 2H₂O(l) + 2NH₃(g)↑',
+    note:'تصاعد NH₃ برائحة نفاذة',heat:5,thermic:'endo'},
+  'mgso4|bacl2':{precip:{formula:'BaSO₄',color:'#ffffff',ar:'كبريتات الباريوم',arColor:'أبيض'},
+    eq:'MgSO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + MgCl₂(aq)',note:'راسب أبيض لا يذوب في HCl',thermic:'exo'},
+  'cacl2|na2so4':{precip:{formula:'CaSO₄',color:'#ffffff',ar:'كبريتات الكالسيوم',arColor:'أبيض شحيح'},
+    eq:'CaCl₂(aq) + Na₂SO₄(aq) → CaSO₄(s)↓ + 2NaCl(aq)',note:'راسب أبيض شحيح الذوبان',thermic:'exo'},
+  'cacl2|na2c2o4':{precip:{formula:'CaC₂O₄',color:'#ffffff',ar:'أكسالات الكالسيوم',arColor:'أبيض'},
+    eq:'CaCl₂(aq) + Na₂C₂O₄(aq) → CaC₂O₄(s)↓ + 2NaCl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'cuso4|bacl2':{precip:{formula:'BaSO₄',color:'#ffffff',ar:'كبريتات الباريوم',arColor:'أبيض'},
+    eq:'CuSO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + CuCl₂(aq)',note:'راسب أبيض',thermic:'exo'},
+  'feso4|bacl2':{precip:{formula:'BaSO₄',color:'#ffffff',ar:'كبريتات الباريوم',arColor:'أبيض'},
+    eq:'FeSO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + FeCl₂(aq)',note:'راسب أبيض',thermic:'exo'},
+  'znso4|bacl2':{precip:{formula:'BaSO₄',color:'#ffffff',ar:'كبريتات الباريوم',arColor:'أبيض'},
+    eq:'ZnSO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + ZnCl₂(aq)',note:'راسب أبيض',thermic:'exo'},
+  'cdso4|bacl2':{precip:{formula:'BaSO₄',color:'#ffffff',ar:'كبريتات الباريوم',arColor:'أبيض'},
+    eq:'CdSO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + CdCl₂(aq)',note:'راسب أبيض',thermic:'exo'},
+  'cdso4|na2s':{precip:{formula:'CdS',color:'#ffd400',ar:'كبريتيد الكادميوم',arColor:'أصفر ذهبي'},
+    eq:'CdSO₄(aq) + Na₂S(aq) → CdS(s)↓ + Na₂SO₄(aq)',note:'راسب أصفر مميز — كشف Cd²⁺',thermic:'exo'},
+  'cdso4|na2co3':{precip:{formula:'CdCO₃',color:'#ffffff',ar:'كربونات الكادميوم',arColor:'أبيض'},
+    eq:'CdSO₄(aq) + Na₂CO₃(aq) → CdCO₃(s)↓ + Na₂SO₄(aq)',note:'راسب أبيض',thermic:'exo'},
+  'alcl3|na2co3':{precip:{formula:'Al(OH)₃',color:'#ffffff',ar:'هيدروكسيد الألومنيوم',arColor:'أبيض هلامي'},
+    gas:'CO2',eq:'2AlCl₃(aq) + 3Na₂CO₃(aq) + 3H₂O(l) → 2Al(OH)₃(s)↓ + 3CO₂(g)↑ + 6NaCl(aq)',
+    note:'تحلل مائي كامل — راسب أبيض + CO₂',thermic:'exo'},
+  'alcl3|nahco3':{precip:{formula:'Al(OH)₃',color:'#ffffff',ar:'هيدروكسيد الألومنيوم',arColor:'أبيض هلامي'},
+    gas:'CO2',eq:'AlCl₃(aq) + 3NaHCO₃(aq) → Al(OH)₃(s)↓ + 3CO₂(g)↑ + 3NaCl(aq)',
+    note:'راسب أبيض + تصاعد CO₂',thermic:'exo'},
+  'alcl3|na2s':{precip:{formula:'Al(OH)₃',color:'#ffffff',ar:'هيدروكسيد الألومنيوم',arColor:'أبيض هلامي'},
+    gas:'H2S',eq:'2AlCl₃(aq) + 3Na₂S(aq) + 6H₂O(l) → 2Al(OH)₃(s)↓ + 3H₂S(g)↑ + 6NaCl(aq)',
+    note:'تحلل مائي — راسب أبيض + H₂S',thermic:'exo'},
+  'alcl3|na2so3':{precip:{formula:'Al(OH)₃',color:'#ffffff',ar:'هيدروكسيد الألومنيوم',arColor:'أبيض هلامي'},
+    gas:'SO2',eq:'2AlCl₃(aq) + 3Na₂SO₃(aq) + 3H₂O(l) → 2Al(OH)₃(s)↓ + 3SO₂(g)↑ + 6NaCl(aq)',
+    note:'تحلل مائي — راسب أبيض + SO₂',thermic:'exo'},
+  'znso4|na2co3':{precip:{formula:'ZnCO₃',color:'#ffffff',ar:'كربونات الزنك',arColor:'أبيض'},
+    eq:'ZnSO₄(aq) + Na₂CO₃(aq) → ZnCO₃(s)↓ + Na₂SO₄(aq)',note:'راسب أبيض',thermic:'exo'},
+  'znso4|na2s':{precip:{formula:'ZnS',color:'#ffffff',ar:'كبريتيد الزنك',arColor:'أبيض'},
+    eq:'ZnSO₄(aq) + Na₂S(aq) → ZnS(s)↓ + Na₂SO₄(aq)',note:'راسب أبيض',thermic:'exo'},
+  'leadac|na2s':{precip:{formula:'PbS',color:'#0a0a0a',ar:'كبريتيد الرصاص',arColor:'أسود'},
+    eq:'(CH₃COO)₂Pb(aq) + Na₂S(aq) → PbS(s)↓ + 2CH₃COONa(aq)',note:'راسب أسود',thermic:'exo'},
+  'leadac|ki':{precip:{formula:'PbI₂',color:'#ffd700',ar:'يوديد الرصاص',arColor:'أصفر ذهبي'},
+    eq:'(CH₃COO)₂Pb(aq) + 2KI(aq) → PbI₂(s)↓ + 2CH₃COOK(aq)',note:'راسب أصفر ذهبي',thermic:'exo'},
+  'leadac|k2cr2o7':{precip:{formula:'PbCr₂O₇',color:'#ff6b00',ar:'ثاني كرومات الرصاص',arColor:'برتقالي'},
+    eq:'2(CH₃COO)₂Pb(aq) + K₂Cr₂O₇(aq) → 2PbCr₂O₇(s)↓ + 4CH₃COOK(aq)',note:'راسب برتقالي',thermic:'exo'},
+  'nacl|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'NaCl(aq) + AgNO₃(aq) → AgCl(s)↓ + NaNO₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'nabr|agno3_r':{precip:{formula:'AgBr',color:'#fbe7a1',ar:'بروميد الفضة',arColor:'أبيض مُصفر',light:true},
+    eq:'NaBr(aq) + AgNO₃(aq) → AgBr(s)↓ + NaNO₃(aq)',note:'راسب أبيض مُصفر',thermic:'exo'},
+  'nai|agno3_r':{precip:{formula:'AgI',color:'#ffcc00',ar:'يوديد الفضة',arColor:'أصفر ذهبي',light:true},
+    eq:'NaI(aq) + AgNO₃(aq) → AgI(s)↓ + NaNO₃(aq)',note:'راسب أصفر ذهبي',thermic:'exo'},
+  'nacl_c|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'NaCl(aq) + AgNO₃(aq) → AgCl(s)↓ + NaNO₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'kcl|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'KCl(aq) + AgNO₃(aq) → AgCl(s)↓ + KNO₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'nh4cl|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'NH₄Cl(aq) + AgNO₃(aq) → AgCl(s)↓ + NH₄NO₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'cacl2|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'CaCl₂(aq) + 2AgNO₃(aq) → 2AgCl(s)↓ + Ca(NO₃)₂(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'bacl2|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'BaCl₂(aq) + 2AgNO₃(aq) → 2AgCl(s)↓ + Ba(NO₃)₂(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'alcl3|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'AlCl₃(aq) + 3AgNO₃(aq) → 3AgCl(s)↓ + Al(NO₃)₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'fecl3|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'FeCl₃(aq) + 3AgNO₃(aq) → 3AgCl(s)↓ + Fe(NO₃)₃(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'mgcl2|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'MgCl₂(aq) + 2AgNO₃(aq) → 2AgCl(s)↓ + Mg(NO₃)₂(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'srcl2|agno3_r':{precip:{formula:'AgCl',color:'#ffffff',ar:'كلوريد الفضة',arColor:'أبيض ناصع',light:true},
+    eq:'SrCl₂(aq) + 2AgNO₃(aq) → 2AgCl(s)↓ + Sr(NO₃)₂(aq)',note:'راسب أبيض جبني',thermic:'exo'},
+  'na2co3|bacl2_r':{precip:{formula:'BaCO₃',color:'#ffffff',ar:'كربونات الباريوم',arColor:'أبيض'},
+    eq:'Na₂CO₃(aq) + BaCl₂(aq) → BaCO₃(s)↓ + 2NaCl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'na2so4|bacl2_r':{precip:{formula:'BaSO₄',color:'#ffffff',ar:'كبريتات الباريوم',arColor:'أبيض'},
+    eq:'Na₂SO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + 2NaCl(aq)',note:'راسب أبيض لا يذوب في HCl',thermic:'exo'},
+  'na2so3|bacl2_r':{precip:{formula:'BaSO₃',color:'#ffffff',ar:'كبريتيت الباريوم',arColor:'أبيض'},
+    eq:'Na₂SO₃(aq) + BaCl₂(aq) → BaSO₃(s)↓ + 2NaCl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'na2co3|cacl2_r':{precip:{formula:'CaCO₃',color:'#ffffff',ar:'كربونات الكالسيوم',arColor:'أبيض'},
+    eq:'Na₂CO₃(aq) + CaCl₂(aq) → CaCO₃(s)↓ + 2NaCl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'na2c2o4|cacl2_r':{precip:{formula:'CaC₂O₄',color:'#ffffff',ar:'أكسالات الكالسيوم',arColor:'أبيض'},
+    eq:'Na₂C₂O₄(aq) + CaCl₂(aq) → CaC₂O₄(s)↓ + 2NaCl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'na3po4|cacl2_r':{precip:{formula:'Ca₃(PO₄)₂',color:'#ffffff',ar:'فوسفات الكالسيوم',arColor:'أبيض'},
+    eq:'2Na₃PO₄(aq) + 3CaCl₂(aq) → Ca₃(PO₄)₂(s)↓ + 6NaCl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'naf|cacl2_r':{precip:{formula:'CaF₂',color:'#ffffff',ar:'فلوريد الكالسيوم',arColor:'أبيض'},
+    eq:'2NaF(aq) + CaCl₂(aq) → CaF₂(s)↓ + 2NaCl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'nh42co3|cacl2_r':{precip:{formula:'CaCO₃',color:'#ffffff',ar:'كربونات الكالسيوم',arColor:'أبيض'},
+    eq:'(NH₄)₂CO₃(aq) + CaCl₂(aq) → CaCO₃(s)↓ + 2NH₄Cl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'nh42co3|bacl2_r':{precip:{formula:'BaCO₃',color:'#ffffff',ar:'كربونات الباريوم',arColor:'أبيض'},
+    eq:'(NH₄)₂CO₃(aq) + BaCl₂(aq) → BaCO₃(s)↓ + 2NH₄Cl(aq)',note:'راسب أبيض',thermic:'exo'},
+  'nh42co3|agno3_r':{precip:{formula:'Ag₂CO₃',color:'#f4f4f5',ar:'كربونات الفضة',arColor:'أبيض'},
+    eq:'(NH₄)₂CO₃(aq) + 2AgNO₃(aq) → Ag₂CO₃(s)↓ + 2NH₄NO₃(aq)',note:'راسب أبيض',thermic:'exo'},
+  'ki|agno3_r':{precip:{formula:'AgI',color:'#ffcc00',ar:'يوديد الفضة',arColor:'أصفر ذهبي',light:true},
+    eq:'KI(aq) + AgNO₃(aq) → AgI(s)↓ + KNO₃(aq)',note:'راسب أصفر ذهبي',thermic:'exo'},
+  'kscn|agno3_r':{precip:{formula:'AgSCN',color:'#ffffff',ar:'ثيوسيانات الفضة',arColor:'أبيض'},
+    eq:'KSCN(aq) + AgNO₃(aq) → AgSCN(s)↓ + KNO₃(aq)',note:'راسب أبيض',thermic:'exo'},
+  'kscn|fecl3':{tint:'#b91c1c',eq:'3KSCN(aq) + FeCl₃(aq) → Fe(SCN)₃(aq) + 3KCl(aq)',note:'لون أحمر دموي — كشف Fe³⁺',thermic:'exo'},
+  'limewater|na2co3':{precip:{formula:'CaCO₃',color:'#ffffff',ar:'كربونات الكالسيوم',arColor:'أبيض'},
+    eq:'Ca(OH)₂(aq) + Na₂CO₃(aq) → CaCO₃(s)↓ + 2NaOH(aq)',note:'راسب أبيض',thermic:'exo'},
+  'limewater|na2so3':{precip:{formula:'CaSO₃',color:'#ffffff',ar:'كبريتيت الكالسيوم',arColor:'أبيض'},
+    eq:'Ca(OH)₂(aq) + Na₂SO₃(aq) → CaSO₃(s)↓ + 2NaOH(aq)',note:'راسب أبيض',thermic:'exo'},
+  'limewater|cuso4':{precip:{formula:'Cu(OH)₂',color:'#22a6f2',ar:'هيدروكسيد النحاس',arColor:'أزرق سماوي'},
+    eq:'Ca(OH)₂(aq) + CuSO₄(aq) → Cu(OH)₂(s)↓ + CaSO₄(aq)',note:'راسب أزرق',thermic:'exo'},
+  'limewater|fecl3':{precip:{formula:'Fe(OH)₃',color:'#a83232',ar:'هيدروكسيد الحديد III',arColor:'بني محمر'},
+    eq:'3Ca(OH)₂(aq) + 2FeCl₃(aq) → 2Fe(OH)₃(s)↓ + 3CaCl₂(aq)',note:'راسب بني محمر',thermic:'exo'}
+};
+
+const ANIONS_G1={
+  na2co3:{ion:'CO₃²⁻',label:'Na₂CO₃',ar:'كربونات الصوديوم',c:'#d8e8ff',a:0.30,glass:'#b8d4f0',cap:'#00897b'},
+  nahco3:{ion:'HCO₃⁻',label:'NaHCO₃',ar:'بيكربونات الصوديوم',c:'#dceafc',a:0.28,glass:'#c0d8f0',cap:'#26a69a'},
+  na2so3:{ion:'SO₃²⁻',label:'Na₂SO₃',ar:'كبريتيت الصوديوم',c:'#dceaf8',a:0.30,glass:'#c0d8f0',cap:'#ef6c00'},
+  na2s:{ion:'S²⁻',label:'Na₂S',ar:'كبريتيد الصوديوم',c:'#ffeeb0',a:0.40,glass:'#ffd860',cap:'#f9a825'},
+  na2s2o3:{ion:'S₂O₃²⁻',label:'Na₂S₂O₃',ar:'ثيوكبريتات الصوديوم',c:'#e4eefc',a:0.28,glass:'#c8dcf0',cap:'#795548'},
+  nano2:{ion:'NO₂⁻',label:'NaNO₂',ar:'نيتريت الصوديوم',c:'#ffeaa8',a:0.40,glass:'#ffd870',cap:'#e65100'}
+};
+const ANIONS_G2={
+  nacl:{ion:'Cl⁻',label:'NaCl',ar:'كلوريد الصوديوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#78909c'},
+  nabr:{ion:'Br⁻',label:'NaBr',ar:'بروميد الصوديوم',c:'#ffd9a8',a:0.40,glass:'#ffb870',cap:'#8d6e63'},
+  nai:{ion:'I⁻',label:'NaI',ar:'يوديد الصوديوم',c:'#fff0a0',a:0.40,glass:'#ffe070',cap:'#fdd835'},
+  nano3:{ion:'NO₃⁻',label:'NaNO₃',ar:'نترات الصوديوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#546e7a'}
+};
+const ANIONS_G3={
+  na2so4:{ion:'SO₄²⁻',label:'Na₂SO₄',ar:'كبريتات الصوديوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#1e88e5'},
+  na3po4:{ion:'PO₄³⁻',label:'Na₃PO₄',ar:'فوسفات الصوديوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#ab47bc'},
+  na2c2o4:{ion:'C₂O₄²⁻',label:'Na₂C₂O₄',ar:'أكسالات الصوديوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#26c6da'},
+  naf:{ion:'F⁻',label:'NaF',ar:'فلوريد الصوديوم',c:'#e0ebf8',a:0.15,glass:'#c0d4e8',cap:'#5c6bc0'}
+};
+const CATIONS={
+  pbno3:{ion:'Pb²⁺',label:'Pb(NO₃)₂',ar:'نترات الرصاص II',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#455a64'},
+  agno3:{ion:'Ag⁺',label:'AgNO₃',ar:'نترات الفضة',c:'#dee6ee',a:0.25,glass:'#c0ccd8',cap:'#546e7a'},
+  cuso4:{ion:'Cu²⁺',label:'CuSO₄',ar:'كبريتات النحاس II',c:'#1580cc',a:0.95,glass:'#4db8f5',cap:'#0d47a1',flame:'#4caf50'},
+  cdso4:{ion:'Cd²⁺',label:'CdSO₄',ar:'كبريتات الكادميوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#ffb300'},
+  alcl3:{ion:'Al³⁺',label:'AlCl₃',ar:'كلوريد الألومنيوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#b0bec5'},
+  znso4:{ion:'Zn²⁺',label:'ZnSO₄',ar:'كبريتات الزنك',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#90a4ae'},
+  feso4:{ion:'Fe²⁺',label:'FeSO₄',ar:'كبريتات الحديد II',c:'#68a860',a:0.70,glass:'#a3d89a',cap:'#2e7d32'},
+  fecl3:{ion:'Fe³⁺',label:'FeCl₃',ar:'كلوريد الحديد III',c:'#c05a1a',a:0.85,glass:'#e8a865',cap:'#8d6e63',flame:'#ffca28'},
+  cacl2:{ion:'Ca²⁺',label:'CaCl₂',ar:'كلوريد الكالسيوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#ff7043',flame:'#ff6d3a'},
+  bacl2:{ion:'Ba²⁺',label:'BaCl₂',ar:'كلوريد الباريوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#5c6bc0',flame:'#a5d6a7'},
+  srcl2:{ion:'Sr²⁺',label:'SrCl₂',ar:'كلوريد السترونشيوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#26c6da',flame:'#ff1744'},
+  mgcl2:{ion:'Mg²⁺',label:'MgCl₂',ar:'كلوريد المغنيسيوم',c:'#e0ebf8',a:0.15,glass:'#c0d4e8',cap:'#66bb6a'},
+  nh4cl:{ion:'NH₄⁺',label:'NH₄Cl',ar:'كلوريد الأمونيوم',c:'#e0ebf8',a:0.15,glass:'#c0d4e8',cap:'#26a69a'},
+  nacl_c:{ion:'Na⁺',label:'NaCl',ar:'كلوريد الصوديوم',c:'#e0ebf8',a:0.15,glass:'#c0d4e8',cap:'#78909c',flame:'#ffb300'},
+  kcl:{ion:'K⁺',label:'KCl',ar:'كلوريد البوتاسيوم',c:'#e0ebf8',a:0.15,glass:'#c0d4e8',cap:'#7e57c2',flame:'#b388ff'}
+};
+const REAGENTS={
+  hcl:{label:'HCl',ar:'حمض الهيدروكلوريك المخفف',c:'#d8ecfc',a:0.35,glass:'#b8d8f0',cap:'#e53935',strongAcid:true},
+  mysteryA:{label:'K₄[Fe(CN)₆]',ar:'فيروسيانيد البوتاسيوم',c:'#f5e6a8',a:0.35,glass:'#e8d890',cap:'#f9a825'},
+  h2so4c:{label:'H₂SO₄ مركّز',ar:'حمض الكبريتيك المركز',c:'#ecd8b0',a:0.50,glass:'#d8c4a0',cap:'#bf360c',concentrated:true,strongAcid:true},
+  hno3:{label:'HNO₃',ar:'حمض النيتريك المخفف',c:'#dceafc',a:0.35,glass:'#c4dcf0',cap:'#ef6c00',strongAcid:true},
+  naoh:{label:'NaOH',ar:'هيدروكسيد الصوديوم',c:'#dceafc',a:0.30,glass:'#c4dcf0',cap:'#1e88e5'},
+  nh4oh:{label:'NH₄OH',ar:'محلول الأمونيا',c:'#dceafc',a:0.22,glass:'#c4dcf0',cap:'#26a69a'},
+  bacl2_r:{label:'BaCl₂',ar:'كلوريد الباريوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#1e88e5'},
+  agno3_r:{label:'AgNO₃',ar:'نترات الفضة',c:'#dee6ee',a:0.25,glass:'#c0ccd8',cap:'#546e7a'},
+  cacl2_r:{label:'CaCl₂',ar:'كلوريد الكالسيوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#ff7043'},
+  nh42co3:{label:'(NH₄)₂CO₃',ar:'كربونات الأمونيوم',c:'#e0ebf8',a:0.22,glass:'#c0d4e8',cap:'#00897b'},
+  mgso4:{label:'MgSO₄',ar:'كبريتات المغنيسيوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#7e57c2'},
+  leadac:{label:'(CH₃COO)₂Pb',ar:'خلات الرصاص II',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#616161'},
+  limewater:{label:'ماء الجير',ar:'ماء الجير الرائق Ca(OH)₂',c:'#b8e0fc',a:0.42,glass:'#a0d4f5',cap:'#0288d1'},
+  ki:{label:'KI',ar:'يوديد البوتاسيوم',c:'#e0ebf8',a:0.20,glass:'#c0d4e8',cap:'#8e24aa'},
+  i2:{label:'I₂',ar:'محلول اليود البني',c:'#8b3a0a',a:0.95,glass:'#c47238',cap:'#3e2723'},
+  kmno4:{label:'KMnO₄',ar:'برمنغنات البوتاسيوم',c:'#7c1fa0',a:1.0,glass:'#c477d8',cap:'#4a148c'},
+  kscn:{label:'KSCN',ar:'ثيوسيانات البوتاسيوم',c:'#e0ebf8',a:0.15,glass:'#c0d4e8',cap:'#c62828'},
+  mysteryB:{label:'Na₂[Fe(CN)₅NO]',ar:'نيتروبروسيد الصوديوم',c:'#8b2c2c',a:0.55,glass:'#c45858',cap:'#7f1d1d'},
+  k2cr2o7:{label:'K₂Cr₂O₇',ar:'ثاني كرومات البوتاسيوم',c:'#ff7300',a:0.80,glass:'#ffa860',cap:'#e65100'},
+  phen:{label:'Ph.Ph',ar:'فينول فثالين',c:'#fafafa',a:0.10,glass:'#eeeeee',cap:'#ec407a'},
+  ki_starch:{label:'KI+نشا',ar:'يوديد البوتاسيوم والنشا',c:'#f8f8e8',a:0.15,glass:'#e8e8d8',cap:'#6a1b9a'}
+};
+const PAPERS={
+  mysteryPaper:{label:'؟؟؟',ar:'ورقة غامضة',color:'#a855f7',cap:'#6b21a8'},
+  litmusRed:{label:'عبّاد حمراء',ar:'ورقة عبّاد حمراء',color:'#f4615a',cap:'#c62828'},
+  litmusBlue:{label:'عبّاد زرقاء',ar:'ورقة عبّاد زرقاء',color:'#3b82f6',cap:'#1565c0'},
+  leadAcetate:{label:'خلات Pb',ar:'ورقة خلات الرصاص',color:'#f5f5f5',cap:'#616161'},
+  starch:{label:'نشا',ar:'ورقة نشا مبللة',color:'#fbe46a',cap:'#f9a825'},
+  k2cr2o7Paper:{label:'K₂Cr₂O₇',ar:'ورقة ثاني كرومات محمضة',color:'#ff8c30',cap:'#e65100'},
+  kmno4Paper:{label:'KMnO₄',ar:'ورقة برمنغنات البوتاسيوم',color:'#8e24aa',cap:'#4a148c'},
+  ammoniaRod:{label:'ساق NH₃',ar:'ساق مبللة بـ NH₃',color:'#6fd474',cap:'#2e7d32'},
+  hclRod:{label:'ساق HCl',ar:'ساق مبللة بـ HCl',color:'#f08888',cap:'#c62828'}
+};
+const GAS_TESTS={
+  CO2:{
+    litmusBlue:{result:'red',color:'#ef4444',note:'CO₂ حمضي يحوّل العبّاد الأزرق إلى أحمر',eq:'CO₂(g) + H₂O(l) ⇌ H₂CO₃(aq)'},
+    litmusRed:{result:'red',color:'#f4615a',note:'CO₂ حمضي — لا تغير'},
+    ammoniaRod:{result:'whiteSmoke',color:'#f5f5f5',note:'تفاعل ضعيف جداً',eq:'CO₂(g) + 2NH₃(g) → NH₄CO₂NH₂(s)'}
+  },
+  SO2:{
+    k2cr2o7Paper:{result:'green',color:'#22c55e',note:'تحوّل البرتقالي إلى أخضر',eq:'K₂Cr₂O₇(aq) + 3SO₂(g) + H₂SO₄(aq) → K₂SO₄(aq) + Cr₂(SO₄)₃(aq) + H₂O(l)'},
+    kmno4Paper:{result:'white',color:'#f5f5f5',note:'زوال اللون البنفسجي',eq:'2KMnO₄(aq) + 5SO₂(g) + 2H₂O(l) → K₂SO₄(aq) + 2MnSO₄(aq) + 2H₂SO₄(aq)'},
+    litmusBlue:{result:'red',color:'#ef4444',note:'SO₂ حمضي'},
+    starch:{result:'yellow',color:'#fde047',note:'تصفّر ورقة النشا بفعل SO₂'}
+  },
+  H2S:{
+    leadAcetate:{result:'black',color:'#0a0a0a',note:'اسوداد الورقة — راسب PbS',eq:'(CH₃COO)₂Pb(aq) + H₂S(g) → 2CH₃COOH(aq) + PbS(s)↓'},
+    litmusBlue:{result:'red',color:'#ef4444',note:'H₂S حمضي'},
+    kmno4Paper:{result:'white',color:'#f5f5f5',note:'زوال اللون البنفسجي',eq:'2KMnO₄(aq) + 5H₂S(g) + 3H₂SO₄(aq) → K₂SO₄(aq) + 2MnSO₄(aq) + 5S(s)↓ + 8H₂O(l)'},
+    k2cr2o7Paper:{result:'green',color:'#22c55e',note:'تحوّل برتقالي إلى أخضر',eq:'K₂Cr₂O₇(aq) + 3H₂S(g) + 4H₂SO₄(aq) → K₂SO₄(aq) + Cr₂(SO₄)₃(aq) + 3S(s)↓ + 7H₂O(l)'}
+  },
+  HCl:{
+    ammoniaRod:{result:'whiteSmoke',color:'#f5f5f5',note:'سحب بيضاء من NH₄Cl',eq:'HCl(g) + NH₃(g) → NH₄Cl(s)'},
+    litmusBlue:{result:'red',color:'#ef4444',note:'HCl حمضي'},
+    leadAcetate:{result:'#f5f5f5',color:'#f5f5f5',note:'لا يتفاعل مع خلات الرصاص'}
+  },
+  NO2:{
+    litmusBlue:{result:'red',color:'#ef4444',note:'NO₂ حمضي'},
+    kmno4Paper:{result:'white',color:'#f5f5f5',note:'اختزال ضعيف لـ KMnO₄'}
+  },
+  NH3:{
+    litmusRed:{result:'blue',color:'#3b82f6',note:'NH₃ قاعدي يحوّل الأحمر إلى أزرق'},
+    hclRod:{result:'whiteSmoke',color:'#f5f5f5',note:'سحب بيضاء من NH₄Cl',eq:'NH₃(g) + HCl(g) → NH₄Cl(s)'},
+    kmno4Paper:{result:'#8e24aa',color:'#8e24aa',note:'لا يتفاعل مباشر'}
+  },
+  I2:{
+    starch:{result:'blue',color:'#1e3a8a',note:'تزرق ورقة النشا',eq:'I₂ + نشا → معقد أزرق داكن'},
+    litmusBlue:{result:'red',color:'#ef4444',note:'بخار اليود حمضي قليلاً'}
+  },
+  Br2:{
+    starch:{result:'yellow',color:'#fde047',note:'تصفّر ورقة النشا ببخار البروم'},
+    litmusBlue:{result:'red',color:'#ef4444',note:'بخار البروم حمضي'}
+  },
+  Cl2:{
+    ki_starch:{result:'blue',color:'#1e3a8a',note:'تزرق ورقة KI+نشا',eq:'Cl₂(g) + 2KI(aq) → 2KCl(aq) + I₂(aq)'},
+    litmusBlue:{result:'red',color:'#ef4444',note:'Cl₂ حمضي — ثم يبيض'},
+    litmusRed:{result:'red',color:'#f4615a',note:'Cl₂ يبيّض الألوان تدريجياً'}
+  },
+  O2:{
+    litmusBlue:{result:'#3b82f6',color:'#3b82f6',note:'لا تفاعل — O₂ محايد'}
+  }
+};
+const FLAME_TEST={
+  nacl_c:{color:'#ffb300',ion:'Na⁺',note:'لهب أصفر ذهبي — أيون Na⁺'},
+  kcl:{color:'#a855f7',ion:'K⁺',note:'لهب بنفسجي فاتح — أيون K⁺'},
+  cacl2:{color:'#ff6d3a',ion:'Ca²⁺',note:'لهب أحمر طوبي — أيون Ca²⁺'},
+  srcl2:{color:'#ff1744',ion:'Sr²⁺',note:'لهب أحمر قرمزي — أيون Sr²⁺'},
+  bacl2:{color:'#84cc16',ion:'Ba²⁺',note:'لهب أخضر مصفر — أيون Ba²⁺'},
+  cuso4:{color:'#10b981',ion:'Cu²⁺',note:'لهب أخضر مزرق — أيون Cu²⁺'},
+  fecl3:{color:'#fbbf24',ion:'Fe³⁺',note:'لهب أصفر برتقالي — أيون Fe³⁺'},
+  mgcl2:{color:'#f5f5f5',ion:'Mg²⁺',note:'لهب أبيض ساطع — أيون Mg²⁺'},
+  alcl3:{color:'#f5f5f5',ion:'Al³⁺',note:'لهب أبيض — أيون Al³⁺'},
+  nh4cl:{color:'#a5f3a5',ion:'NH₄⁺',note:'لهب أخضر فاتح خفيف — أيون NH₄⁺'}
+};
+
+const SUB_DIGITS={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9'};
+const SUP_CHARS={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁺':'+','⁻':'-'};
+
+function ionHTML(str){
+  let html='';
+  let i=0;
+  while(i<str.length){
+    const ch=str[i];
+    if(SUB_DIGITS[ch]){
+      let buf='';
+      while(i<str.length&&SUB_DIGITS[str[i]]){buf+=SUB_DIGITS[str[i]];i++;}
+      html+='<sub>'+buf+'</sub>';
+    }else if(SUP_CHARS[ch]){
+      let buf='';
+      while(i<str.length&&SUP_CHARS[str[i]]){buf+=SUP_CHARS[str[i]];i++;}
+      if(buf.indexOf('-')>0&&buf.charAt(0)!=='-')buf='-'+buf.replace('-','');
+      if(buf.indexOf('+')>0&&buf.charAt(0)!=='+')buf='+'+buf.replace('+','');
+      html+='<sup>'+buf+'</sup>';
+    }else{
+      html+=ch;i++;
+    }
+  }
+  return html;
+}
+
+function smartReact(vesselIds){
+  const ions={cat:[],an:[]};
+  for(const id of vesselIds){
+    const map=ID_IONS[id];
+    if(map){
+      ions.cat.push(...map.cat.map(c=>({ion:c,from:id})));
+      ions.an.push(...map.an.map(a=>({ion:a,from:id})));
+    }
+  }
+  const reactions=[];
+  const seen=new Set();
+  const presentIds=vesselIds.slice();
+
+  for(let i=0;i<presentIds.length;i++){
+    for(let j=i+1;j<presentIds.length;j++){
+      const a=presentIds[i],b=presentIds[j];
+      const k1=a+'|'+b,k2=b+'|'+a;
+      const sp=SPECIAL_PAIR_REACTIONS[k1]||SPECIAL_PAIR_REACTIONS[k2];
+      if(!sp||sp.skip)continue;
+      const spKey=(k1<k2)?k1:k2;
+      if(seen.has('SP|'+spKey))continue;
+      seen.add('SP|'+spKey);
+      reactions.push({
+        gas:sp.gas||null,
+        tint:sp.tint||null,
+        heat:sp.heat||null,
+        precip:sp.precip?{
+          formula:sp.precip.formula,
+          color:sp.precip.color,
+          ar:sp.precip.ar,
+          arColor:sp.precip.arColor||colorName(sp.precip.color),
+          light:sp.precip.light,
+          onHeat:sp.precip.onHeat,
+          onStand:sp.precip.onStand,
+          oxidize:sp.precip.oxidize
+        }:null,
+        eq:sp.eq,note:sp.note,
+        identifiedFrom:a,
+        thermic:sp.thermic||'exo'
+      });
+    }
+  }
+
+  const strongAcidIds=['hcl','h2so4c','hno3'];
+  const presentAcid=strongAcidIds.find(a=>vesselIds.includes(a));
+
+  if(presentAcid){
+    for(const srcId of vesselIds){
+      const srcInfo=ID_IONS[srcId];
+      if(!srcInfo)continue;
+      for(const anion of srcInfo.an){
+        const key='H+|'+anion;
+        if(seen.has(key))continue;
+        const eqKey=srcId+'|'+presentAcid;
+        const eqText=ACID_EQ_MAP[eqKey];
+        if(!eqText)continue;
+        const gasFromAnion={
+          'CO3^2-':'CO2','HCO3^-':'CO2','SO3^2-':'SO2','S^2-':'H2S','S2O3^2-':'SO2','NO2^-':'NO'
+        }[anion];
+        if(!gasFromAnion)continue;
+        seen.add(key);
+        const note={
+          'CO2':'تصاعد CO₂ — يعكّر ماء الجير',
+          'SO2':'تصاعد SO₂ — رائحة نفاذة',
+          'H2S':'تصاعد H₂S — رائحة عفن البيض',
+          'NO':'تصاعد NO — يتأكسد في الهواء إلى NO₂ بني محمر'
+        }[gasFromAnion]||'تصاعد غاز';
+        const precip=(anion==='S2O3^2-')?{formula:'S',color:'#ffcc00',ar:'كبريت',arColor:'أصفر ذهبي'}:null;
+        reactions.push({gas:gasFromAnion,precip,eq:eqText,note,identifiedFrom:srcId,thermic:'exo'});
+      }
+    }
+  }
+
+  for(const c of ions.cat){
+    for(const a of ions.an){
+      if(c.from===a.from)continue;
+      const key=c.ion+'|'+a.ion;
+      if(seen.has(key))continue;
+      seen.add(key);
+      const p=PRECIPITATE_TABLE[key];
+      if(p){
+        reactions.push({
+          precip:{
+            formula:p.formula,color:p.color,ar:p.ar,note:p.note,light:p.light,
+            onHeat:p.onHeat,onStand:p.onStand,oxidize:p.oxidize,arColor:p.arColor
+          },
+          eq:c.ion+' + '+a.ion+' → '+p.formula+'(s)↓',
+          note:p.note,identifiedFrom:c.from,thermic:'exo'
+        });
+      }
+    }
+  }
+
+  const has=id=>vesselIds.includes(id);
+  if(has('kmno4')&&has('na2c2o4')&&presentAcid){
+    const key='kmno4+na2c2o4+acid';
+    if(!seen.has(key)){
+      seen.add(key);
+      reactions.push({tint:'#f5f5f5',gas:'CO2',
+        eq:'2MnO₄⁻(aq) + 16H⁺(aq) + 5C₂O₄²⁻(aq) → 2Mn²⁺(aq) + 10CO₂(g)↑ + 8H₂O(l)',
+        note:'زوال اللون البنفسجي (تكوّن CO₂)',thermic:'exo'});
+    }
+  }
+  if(has('i2')&&has('naoh')){
+    const key='i2+naoh';
+    if(!seen.has(key)){
+      seen.add(key);
+      reactions.push({tint:'#f5f5f5',
+        eq:'3I₂(aq) + 6NaOH(aq) → 5NaI(aq) + NaIO₃(aq) + 3H₂O(l)',
+        note:'زوال لون اليود في القلويات',thermic:'exo'});
+    }
+  }
+
+  let identifiedIon=null,identifiedItem=null;
+  for(const id of vesselIds){
+    if(ANIONS_G1[id]||ANIONS_G2[id]||ANIONS_G3[id]){
+      identifiedIon=findItem(id).ion;
+      identifiedItem=findItem(id);
+      break;
+    }
+    if(CATIONS[id]){
+      identifiedIon=CATIONS[id].ion;
+      identifiedItem=CATIONS[id];
+      break;
+    }
+  }
+
+  const precipitates=reactions.filter(r=>r.precip).map(r=>({
+    formula:r.precip.formula,color:r.precip.color,ar:r.precip.ar||'',
+    arColor:r.precip.arColor||colorName(r.precip.color)
+  }));
+
+  return {reactions,identifiedIon,identifiedItem,precipitates};
+}
+
+let actx=null,soundOn=true;
+
+function A(){
+  if(!actx){try{actx=new (window.AudioContext||window.webkitAudioContext)();}catch(e){return null;}}
+  if(actx.state==='suspended')actx.resume();
+  return actx;
+}
+function noiseBuf(a,dur){
+  const n=Math.floor(a.sampleRate*dur),b=a.createBuffer(1,n,a.sampleRate),d=b.getChannelData(0);
+  for(let i=0;i<n;i++)d[i]=Math.random()*2-1;
+  return b;
+}
+function playPour(){
+  if(!soundOn)return;
+  const a=A();if(!a)return;
+  const t=a.currentTime,src=a.createBufferSource();
+  src.buffer=noiseBuf(a,0.45);
+  const f=a.createBiquadFilter();
+  f.type='bandpass';f.frequency.setValueAtTime(600,t);
+  f.frequency.exponentialRampToValueAtTime(1500,t+0.4);f.Q.value=1.4;
+  const g=a.createGain();
+  g.gain.setValueAtTime(0.001,t);
+  g.gain.exponentialRampToValueAtTime(0.14,t+0.05);
+  g.gain.exponentialRampToValueAtTime(0.001,t+0.45);
+  src.connect(f).connect(g).connect(a.destination);
+  src.start(t);src.stop(t+0.5);
+}
+function playFizz(dur){
+  dur=dur||1.2;
+  if(!soundOn)return;
+  const a=A();if(!a)return;
+  const t=a.currentTime,src=a.createBufferSource();
+  src.buffer=noiseBuf(a,dur);
+  const f=a.createBiquadFilter();f.type='highpass';f.frequency.value=3200;
+  const g=a.createGain();
+  g.gain.setValueAtTime(0.001,t);
+  g.gain.exponentialRampToValueAtTime(0.1,t+0.12);
+  g.gain.exponentialRampToValueAtTime(0.001,t+dur);
+  src.connect(f).connect(g).connect(a.destination);
+  src.start(t);src.stop(t+dur);
+}
+function playDing(){
+  if(!soundOn)return;
+  const a=A();if(!a)return;
+  const t=a.currentTime;
+  [880,1320].forEach((fr,i)=>{
+    const o=a.createOscillator();o.type='sine';o.frequency.value=fr;
+    const g=a.createGain();
+    g.gain.setValueAtTime(0.0001,t+i*0.05);
+    g.gain.exponentialRampToValueAtTime(0.09,t+i*0.05+0.01);
+    g.gain.exponentialRampToValueAtTime(0.0001,t+i*0.05+0.4);
+    o.connect(g).connect(a.destination);
+    o.start(t+i*0.05);o.stop(t+i*0.05+0.45);
+  });
+}
+
+function hexToRgb(h){
+  h=h.replace('#','');
+  if(h.length===3)h=h.split('').map(c=>c+c).join('');
+  const n=parseInt(h,16);
+  return{r:(n>>16)&255,g:(n>>8)&255,b:n&255};
+}
+function rgbToHex(r,g,b){
+  return '#'+[r,g,b].map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,'0')).join('');
+}
+const lerp=(a,b,t)=>a+(b-a)*t;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function lerpColor(c1,c2,t){
+  const a=hexToRgb(c1),b=hexToRgb(c2);
+  return rgbToHex(lerp(a.r,b.r,t),lerp(a.g,b.g,t),lerp(a.b,b.b,t));
+}
+function allReagents(){return Object.assign({},ANIONS_G1,ANIONS_G2,ANIONS_G3,CATIONS,REAGENTS,PAPERS);}
+function findItem(id){return allReagents()[id];}
+function isPaper(id){return !!PAPERS[id];}
+function hexA(hex,a){const c=hexToRgb(hex);return 'rgba('+c.r+','+c.g+','+c.b+','+a+')';}
+function colorName(hex){
+  const n={
+    '#ffffff':'أبيض ناصع','#fafafa':'أبيض','#f5f5f5':'أبيض','#f4f4f5':'أبيض',
+    '#fbe7a1':'أبيض مُصفر','#fde047':'أصفر','#ffd400':'أصفر ذهبي','#ffd700':'أصفر ذهبي','#ffcc00':'أصفر ذهبي',
+    '#0a0a0a':'أسود','#111827':'أسود','#374151':'رمادي داكن',
+    '#22a6f2':'أزرق سماوي','#00b0d6':'أزرق مخضر','#0d7fd4':'أزرق','#1e3a8a':'أزرق داكن',
+    '#0fa896':'أخضر مزرق','#7ed957':'أبيض مخضر','#5ea856':'أخضر','#22c55e':'أخضر',
+    '#a83232':'بني محمر','#b8541c':'بني برتقالي','#8f4a0a':'بني','#8b4513':'بني',
+    '#ff6b00':'برتقالي','#ff8c30':'برتقالي','#ff7300':'برتقالي','#9c948f':'رمادي فاتح',
+    '#7a8a75':'رمادي مخضر','#f4615a':'أحمر','#ef4444':'أحمر','#ff1744':'أحمر قرمزي',
+    '#3b82f6':'أزرق','#8e24aa':'أرجواني','#ff2d78':'وردي','#c05a1a':'بني محمر',
+    '#68a860':'أخضر','#1580cc':'أزرق','#b8e0fc':'أزرق فاتح شفاف','#f5deb3':'وردي فاتح','#4ade80':'أخضر فاتح',
+    '#b91c1c':'أحمر قرمزي','#a3d89a':'أصفر مخضر','#ff8fb0':'وردي فاتح','#5c2a0a':'بني داكن',
+    '#a855f7':'بنفسجي','#ec4899':'وردي فاقع'
+  };
+  return n[(hex||'').toLowerCase()]||hex;
+}
+
+class Vessel{
+  constructor(o){
+    Object.assign(this,o);
+    this.contents=[];
+    this.volume=0;
+    this.dispVol=0;
+    this.temp=25;
+    this.mixed=true;
+    this.color={r:220,g:235,b:245,a:0};
+    this.colorTarget=null;
+    this.precip=null;
+    this.precipAmt=0;
+    this.precipTarget=0;
+    this.bubbles=[];
+    this.shakeT=0;
+    this.heating=false;
+    this.activeGas=null;
+    this.angle=0;
+    this.heatReacted=false;
+    this.smokeStarted=false;
+    this.dissolveTimer=0;
+    this.exposed=false;
+    this.heatTimer=0;
+    this.standTimer=0;
+    this.onHeatTriggered=false;
+    this.onStandTriggered=false;
+    this.oxidizeTimer=0;
+    this.oxidized=false;
+    this.reactionStarted=false;
+    this.reactedGases={};
+    this.co2DissolveStage=0;
+    this.reactionQueue=[];
+    this.reactionTimer=0;
+    this.heatReactionDone=false;
+    this.naturalHeatTimer=0;
+    this.discIon=null;
+    this.discPrecip=null;
+    this.lastEq=null;
+    this.lastNote=null;
+    this.gasAmount=0;
+    this.gasType=null;
+    this.hasStopper=false;
+    this.thermic=null;
+    this.thermicT=0;
+    this.gasConsumed=false;
+  }
+  get cx(){return this.x+this.w/2;}
+  get bottom(){return this.y+this.h;}
+  get opening(){
+    const h=this.h,ca=Math.cos(this.angle),sa=Math.sin(this.angle);
+    return{x:this.cx+h*sa,y:this.bottom-h*ca};
+  }
+}
+class PaperStrip{
+  constructor(paperId,x,y){
+    this.paperId=paperId;
+    this.w=60;
+    this.h=76;
+    this.x=x-this.w/2;
+    this.y=y-this.h/2;
+    this.angle=(Math.random()-0.5)*0.35;
+    this.color=PAPERS[paperId].color;
+    this.progress=0;
+    this.reacted=false;
+    this.contactGas=null;
+    this.animT=Math.random()*10;
+    this.burning=false;
+    this.burnProgress=0;
+    this.burnt=false;
+    this.dead=false;
+    this.isMystery=false;
+    this.mysteryStage=0;
+    this.easterShown=false;
+    this.spawnTime=0;
+    this.spawnScale=1;
+    this.gasFlash=0;
+    this.gasPassed=false;
+  }
+}
+
+const vessels=[],papers=[],tubes=[];
+const reactionHistory=[];
+const state={
+  burnerOn:false,
+  showBurner:false,
+  showThermo:false,
+  burner:{x:780,base:432,flameH:105},
+  wire:{active:false,loaded:null,color:null},
+  gasTubeArmed:false,
+  gasTubeSource:null,
+  time:0,
+  currentTab:'g1',
+  running:false,
+  equation:null
+};
+
+const cvs=document.getElementById('lab');
+const ctx=cvs.getContext('2d');
+let W=950,H=520;
+const BASE_W=950,BASE_H=520;
+const BENCH_TOP=432;
+const BENCH_H=88;
+
+const bgParticles=[];
+for(let i=0;i<40;i++){
+  bgParticles.push({
+    x:Math.random()*BASE_W,y:Math.random()*BASE_H,r:0.8+Math.random()*1.8,
+    vy:-6-Math.random()*10,phase:Math.random()*Math.PI*2,alpha:0.05+Math.random()*0.12
+  });
+}
+
+const MYSTERY_COMBO=['mysteryA','mysteryB'];
+let mysteryComboActivated=false;
+let easterEggTriggered=false;
+let mysteryShaking=null;
+
+function resize(){
+  const wrap=cvs.parentElement;
+  if(!wrap)return;
+  const aw=wrap.clientWidth,ah=wrap.clientHeight;
+  if(aw<10||ah<10)return;
+  const s=Math.min(aw/BASE_W,ah/BASE_H);
+  W=Math.max(BASE_W,Math.floor(aw/s));
+  H=Math.max(BASE_H,Math.floor(ah/s));
+  const dpr=Math.min(window.devicePixelRatio||1,2);
+  cvs.style.width=(W*s)+'px';
+  cvs.style.height=(H*s)+'px';
+  cvs.width=Math.round(W*s*dpr);
+  cvs.height=Math.round(H*s*dpr);
+  ctx.setTransform(s*dpr,0,0,s*dpr,0,0);
+  state.burner.x=W-170;
+}
+window.addEventListener('resize',resize);
+
+function toCanvas(clientX,clientY){
+  const r=cvs.getBoundingClientRect();
+  return{x:(clientX-r.left)*(W/r.width),y:(clientY-r.top)*(H/r.height)};
+}
+
+function mixColor(contents){
+  let r=0,g=0,b=0,w=0,a=0;
+  const all=allReagents();
+  for(const c of contents){
+    const R=all[c.id];
+    if(!R||isPaper(c.id))continue;
+    const rgb=hexToRgb(R.c);
+    const wt=c.vol*(R.a+0.35);
+    r+=rgb.r*wt;g+=rgb.g*wt;b+=rgb.b*wt;w+=wt;
+    a=Math.max(a,R.a);
+  }
+  if(w===0)return{r:220,g:235,b:245,a:0};
+  const fr=r/w,fg=g/w,fb=b/w;
+  const brightness=(fr+fg+fb)/3;
+  const saturation=Math.max(fr,fg,fb)-Math.min(fr,fg,fb);
+  let finalAlpha=Math.min(1,a+0.35);
+  if(saturation<22&&brightness>195)finalAlpha=Math.min(finalAlpha,0.24);
+  if(saturation<12&&brightness>210)finalAlpha=Math.min(finalAlpha,0.16);
+  return{r:Math.round(fr),g:Math.round(fg),b:Math.round(fb),a:finalAlpha};
+}
+
+function startMysterySequence(v){
+  state.running=true;
+  updateReactBtn();
+  v.reactionStarted=true;
+  v.shakeT=2.0;
+  v.mixed=true;
+  v.thermic='exo';
+  v.thermicT=2.0;
+  playFizz(2.0);
+  playDing();
+  for(let i=0;i<20;i++){
+    setTimeout(function(){
+      if(!vessels.includes(v))return;
+      const sp=document.createElement('div');
+      sp.className='mystery-sparkle';
+      sp.textContent=['✨','💜','⭐','💫','🌀'][Math.floor(Math.random()*5)];
+      const r=cvs.getBoundingClientRect();
+      const sx=r.left+(v.cx/W)*r.width+(Math.random()-0.5)*100;
+      const sy=r.top+(v.y/H)*r.height+(Math.random()-0.5)*60;
+      sp.style.left=sx+'px';
+      sp.style.top=sy+'px';
+      sp.style.animationDelay=(Math.random()*0.5)+'s';
+      document.body.appendChild(sp);
+      setTimeout(function(){sp.remove();},2500);
+    },i*90);
+  }
+  mysteryShaking={vessel:v,startTime:performance.now(),duration:2000};
+}
+
+function vanishVesselAndSpawnPaper(v){
+  const paperX=v.cx;
+  const paperY=v.y+90;
+  for(let i=tubes.length-1;i>=0;i--){
+    if(tubes[i].from===v||tubes[i].to===v)tubes.splice(i,1);
+  }
+  const idx=vessels.indexOf(v);
+  if(idx>=0)vessels.splice(idx,1);
+  mysteryComboActivated=false;
+  for(let i=0;i<30;i++){
+    setTimeout(function(){
+      const sp=document.createElement('div');
+      sp.className='mystery-sparkle';
+      sp.textContent=['✨','💜','⭐','💫','🌀','💖','🌟'][Math.floor(Math.random()*7)];
+      const r=cvs.getBoundingClientRect();
+      const sx=r.left+(paperX/W)*r.width+(Math.random()-0.5)*150;
+      const sy=r.top+(v.y/H)*r.height+(Math.random()-0.5)*100;
+      sp.style.left=sx+'px';
+      sp.style.top=sy+'px';
+      sp.style.animationDelay=(Math.random()*0.6)+'s';
+      document.body.appendChild(sp);
+      setTimeout(function(){sp.remove();},2500);
+    },i*60);
+  }
+  spawnMysteryPaperAt(paperX,paperY);
+}
+
+function spawnMysteryPaperAt(cx,cy){
+  const pp=new PaperStrip('mysteryPaper',cx,clamp(cy,60,BENCH_TOP-24));
+  pp.isMystery=true;
+  pp.mysteryStage=0;
+  pp.easterShown=false;
+  pp.spawnTime=performance.now();
+  pp.spawnScale=0;
+  papers.push(pp);
+  playDing();
+  playFizz(0.8);
+  setTimeout(playDing,300);
+}
+
+function showEasterEgg(){
+  if(easterEggTriggered)return;
+  easterEggTriggered=true;
+  let overlay=document.getElementById('easterEggOverlay');
+  if(!overlay){
+    overlay=document.createElement('div');
+    overlay.id='easterEggOverlay';
+    overlay.innerHTML='<div class="dev-credit"><span class="dev-text" id="devLabel"></span><span class="dev-text" id="devName"></span><span class="dev-caret"></span></div>';
+    document.body.appendChild(overlay);
+    const st=document.createElement('style');
+    st.textContent='#easterEggOverlay{position:fixed;inset:0;z-index:9999998;display:none;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,rgba(139,92,246,.22),transparent 55%),radial-gradient(circle at 50% 60%,rgba(236,72,153,.18),transparent 60%),rgba(2,7,11,.94);opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s ease}#easterEggOverlay.show{display:flex;opacity:1;visibility:visible}.dev-credit{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:11px;padding:18px 26px;border-radius:20px;background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(236,72,153,.11));border:1px solid rgba(139,92,246,.45);box-shadow:0 16px 46px rgba(139,92,246,.32),inset 0 1px 0 rgba(255,255,255,.1);direction:ltr;font-family:ui-monospace,Consolas,monospace}.dev-credit::before{content:"";position:absolute;top:0;left:-70%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.24),transparent);transform:skewX(-22deg);animation:devShine 3.4s ease-in-out infinite;pointer-events:none}@keyframes devShine{0%{left:-70%}55%{left:130%}100%{left:130%}}.dev-text{font-size:clamp(15px,4vw,20px);font-weight:900;letter-spacing:1.2px;background:linear-gradient(90deg,#8b5cf6,#ec4899,#38bdf8,#8b5cf6);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:devFlow 3.6s linear infinite;white-space:nowrap}@keyframes devFlow{to{background-position:300% 0}}.dev-caret{display:inline-block;width:2.5px;height:1em;border-radius:2px;background:linear-gradient(180deg,#8b5cf6,#ec4899);animation:caretBlink 1s steps(1) infinite;flex-shrink:0;box-shadow:0 0 10px rgba(139,92,246,.7)}@keyframes caretBlink{0%,49%{opacity:1}50%,100%{opacity:0}}';
+    document.head.appendChild(st);
+  }
+  const labelEl=document.getElementById('devLabel');
+  const nameEl=document.getElementById('devName');
+  if(!labelEl||!nameEl)return;
+  labelEl.textContent='';
+  nameEl.textContent='';
+  overlay.classList.add('show');
+  const labelTxt='DEVELOPED-BY';
+  const nameTxt=' boody_3ta';
+  let i=0;
+  const t1=setInterval(function(){
+    labelEl.textContent=labelTxt.slice(0,++i);
+    if(i>=labelTxt.length){
+      clearInterval(t1);
+      let j=0;
+      const t2=setInterval(function(){
+        nameEl.textContent=nameTxt.slice(0,++j);
+        if(j>=nameTxt.length){
+          clearInterval(t2);
+          setTimeout(function(){
+            overlay.classList.remove('show');
+            easterEggTriggered=false;
+          },5500);
+        }
+      },80);
+    }
+  },70);
+  playDing();
+  setTimeout(playDing,400);
+  setTimeout(playDing,800);
+}
+
+function startReactions(v){
+  const ids=v.contents.map(c=>c.id);
+  const hasMystery=MYSTERY_COMBO.every(x=>ids.includes(x));
+  if(hasMystery&&!mysteryShaking){
+    startMysterySequence(v);
+    return true;
+  }
+  const result=smartReact(ids);
+  if(result.identifiedIon){
+    v.discIon=result.identifiedIon;
+    v.discPrecip=result.precipitates;
+    renderIonDisplay();
+  }
+  if(result.reactions.length){
+    v.reactionQueue=result.reactions.slice();
+    v.reactionTimer=0;
+    applyNextReaction(v);
+    return true;
+  }
+  return false;
+}
+
+function applyNextReaction(v){
+  if(!v.reactionQueue.length)return;
+  const rxn=v.reactionQueue.shift();
+  applyReaction(v,rxn);
+  v.reactionTimer=0;
+}
+
+function applyReaction(v,rxn){
+  if(rxn.precip){
+    v.precip=Object.assign({},rxn.precip);
+    v.precipTarget=1;
+    if(v.precipAmt>0.4)v.precipAmt=0.2;
+  }
+  if(rxn.gas){
+    v.activeGas={type:rxn.gas,life:25,viaTube:false};
+    v.gasType=rxn.gas;
+    if(state.running)playFizz(1.5);
+    if(rxn.gas==='NO'){
+      setTimeout(function(){
+        if(v.activeGas&&v.activeGas.type==='NO')v.activeGas.type='NO2';
+      },2500);
+    }
+  }
+  if(rxn.tint){
+    v.colorTarget=Object.assign({},hexToRgb(rxn.tint),{a:rxn.tint==='#f5f5f5'?0.22:1});
+  }
+  if(rxn.heat)v.temp=Math.min(98,v.temp+rxn.heat);
+  if(rxn.eq)setVesselEquation(v,rxn.eq,rxn.note);
+  if(rxn.precip)addLog('🧪 راسب '+rxn.precip.formula+' — لونه: '+(rxn.precip.arColor||colorName(rxn.precip.color)));
+  if(rxn.gas)addLog('💨 غاز '+rxn.gas+' — '+(gasNote(rxn.gas)||''));
+  if(rxn.tint&&rxn.tint!=='#f5f5f5')addLog('🎨 لون المحلول: '+colorName(rxn.tint));
+  if(rxn.thermic){
+    v.thermic=rxn.thermic;
+    v.thermicT=8;
+    if(rxn.thermic==='exo'){addLog('🔥 تفاعل طارد للحرارة');v.temp=Math.min(98,v.temp+4);}
+    else if(rxn.thermic==='endo'){addLog('❄️ تفاعل ماص للحرارة');v.temp=Math.max(10,v.temp-4);}
+  }
+  playDing();
+  if(rxn.precip&&rxn.precip.light&&!v.exposed){
+    document.getElementById('lightBtn').classList.add('show');
+    document.getElementById('lightBtn').onclick=function(){
+      v.exposed=true;
+      v.precip=Object.assign({},v.precip,{color:'#374151'});
+      document.getElementById('lightBtn').classList.remove('show');
+      addLog('☀️ '+v.precip.formula+' تعرّض للضوء فاسودّ');
+      setVesselEquation(v,'2'+v.precip.formula+'(s) --ضوء--> 2Ag(s) + X₂(g)↑','تحلل ضوئي');
+      playDing();
+    };
+  }
+}
+
+function gasNote(g){
+  const map={
+    CO2:'يعكّر ماء الجير الرائق',
+    SO2:'رائحة نفاذة — يخضر ورقة K₂Cr₂O₇',
+    H2S:'رائحة عفن البيض — يسوّد ورقة خلات الرصاص',
+    HCl:'أبخرة بيضاء مع ساق NH₃',
+    NO:'عديم اللون — يتأكسد إلى NO₂ بني محمر',
+    NO2:'بني محمر — حمضي',
+    NH3:'رائحة نفاذة — قاعدي',
+    Br2:'أبخرة برتقالية حمراء',
+    I2:'أبخرة بنفسجية',
+    O2:'يدعم الاحتراق',
+    Cl2:'أصفر مخضر — مؤكسد قوي'
+  };
+  return map[g]||'';
+}
+
+function renderIonDisplay(){
+  const el=document.getElementById('ionDisplay');
+  if(!el)return;
+  const active=vessels.map(function(v,i){return{v:v,i:i};}).filter(function(x){return x.v.contents.length>0;});
+  if(!active.length){
+    el.classList.add('empty');
+    el.textContent='— لم يُكتشف بعد —';
+    return;
+  }
+  el.classList.remove('empty');
+  let html='<div class="ion-list">';
+  for(const x of active){
+    const v=x.v;
+    const idx=x.i+1;
+    html+='<div class="ion-list-item">';
+    html+='<span class="v-num">'+idx+'</span>';
+    if(v.discIon){
+      html+='<span class="v-ion">'+ionHTML(v.discIon)+'</span>';
+    }else{
+      html+='<span class="v-placeholder">بانتظار التفاعل</span>';
+    }
+    if(v.discPrecip&&v.discPrecip.length){
+      html+='<span class="v-precip-mini">';
+      for(const p of v.discPrecip){
+        const c=p.color;
+        html+='<span class="precip-chip-mini" style="color:'+c+';border-color:'+c+';'+
+          'background:'+hexA(c,0.13)+';box-shadow:0 0 8px '+hexA(c,0.55)+',inset 0 0 6px '+hexA(c,0.25)+';'+
+          'text-shadow:0 0 6px '+hexA(c,0.85)+'" '+
+          'title="'+(p.ar||'')+(p.arColor?' — '+p.arColor:'')+'">'+
+          ionHTML(p.formula)+'</span>';
+      }
+      html+='</span>';
+    }
+    html+='</div>';
+  }
+  html+='</div>';
+  el.innerHTML=html;
+}
+
+function resetVesselReaction(v){
+  v.reactionStarted=false;
+  v.activeGas=null;
+  v.precip=null;
+  v.precipAmt=0;
+  v.precipTarget=0;
+  v.bubbles=[];
+  v.colorTarget=null;
+  v.color=mixColor(v.contents);
+  v.reactionQueue=[];
+  v.reactionTimer=0;
+  v.co2DissolveStage=0;
+  v.dissolveTimer=0;
+  v.reactedGases={};
+  v.heatTimer=0;
+  v.standTimer=0;
+  v.onHeatTriggered=false;
+  v.onStandTriggered=false;
+  v.oxidizeTimer=0;
+  v.oxidized=false;
+  v.exposed=false;
+  v.heatReactionDone=false;
+  v.naturalHeatTimer=0;
+  v.discIon=null;
+  v.discPrecip=null;
+  v.lastEq=null;
+  v.lastNote=null;
+  v.gasAmount=0;
+  v.gasType=null;
+  v.hasStopper=false;
+  v.thermic=null;
+  v.thermicT=0;
+  v.gasConsumed=false;
+}
+
+let droplets=[],pourDrips=[],smokeClouds=[],sparks=[];
+
+function spawnDroplets(v,id){
+  const R=findItem(id);
+  if(!R)return;
+  for(let i=0;i<6;i++){
+    droplets.push({
+      x:v.cx+(Math.random()-0.5)*26,
+      y:v.y-30-i*13-Math.random()*8,
+      vy:90+Math.random()*70,
+      r:1.8+Math.random()*2.4,
+      color:R.c||'#fff',
+      alpha:0.95,
+      target:v.y+v.h-10,
+      dead:false
+    });
+  }
+}
+
+function spawnSparks(x,y,count){
+  for(let i=0;i<count;i++){
+    sparks.push({
+      x:x+(Math.random()-0.5)*20,
+      y:y+(Math.random()-0.5)*20,
+      vx:(Math.random()-0.5)*120,
+      vy:-40-Math.random()*80,
+      life:0.6+Math.random()*0.6,
+      maxLife:1.2,
+      r:1.5+Math.random()*2.5,
+      color:['#ff6b00','#ffa500','#ffd700','#ff4500'][Math.floor(Math.random()*4)]
+    });
+  }
+}
+
+function vesselPath(c,v){
+  const x=v.x,y=v.y,w=v.w,h=v.h;
+  const r=v.type==='tube'?w/2:13;
+  c.beginPath();
+  c.moveTo(x,y);
+  c.lineTo(x,y+h-r);
+  c.quadraticCurveTo(x,y+h,x+r,y+h);
+  c.lineTo(x+w-r,y+h);
+  c.quadraticCurveTo(x+w,y+h,x+w,y+h-r);
+  c.lineTo(x+w,y);
+  c.closePath();
+}
+
+function drawBackdrop(t){
+  const g=ctx.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,'#0f2a35');
+  g.addColorStop(1,'#08161d');
+  ctx.fillStyle=g;
+  ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle='rgba(120,220,255,.05)';
+  ctx.lineWidth=1;
+  for(let x=0;x<W;x+=64){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,BENCH_TOP);ctx.stroke();}
+  for(let y=0;y<BENCH_TOP;y+=64){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+  const rg=ctx.createRadialGradient(W/2,-60,20,W/2,-60,520);
+  rg.addColorStop(0,'rgba(140,230,255,.16)');
+  rg.addColorStop(1,'rgba(140,230,255,0)');
+  ctx.fillStyle=rg;
+  ctx.fillRect(0,0,W,BENCH_TOP+8);
+  for(const p of bgParticles){
+    const px=((((p.x+Math.sin(t*0.4+p.phase)*8)%W)+W)%W);
+    const py=((((p.y+t*p.vy*0.4)%BENCH_TOP)+BENCH_TOP)%BENCH_TOP);
+    ctx.beginPath();
+    ctx.arc(px,py,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(140,230,255,'+p.alpha+')';
+    ctx.fill();
+  }
+}
+
+function drawBench(){
+  const g=ctx.createLinearGradient(0,BENCH_TOP,0,BENCH_TOP+BENCH_H);
+  g.addColorStop(0,'#7a5a41');
+  g.addColorStop(.09,'#5b4029');
+  g.addColorStop(1,'#2a1d12');
+  ctx.fillStyle=g;
+  ctx.fillRect(0,BENCH_TOP,W,BENCH_H);
+  ctx.fillStyle='rgba(255,225,180,.28)';
+  ctx.fillRect(0,BENCH_TOP,W,2.5);
+  const below=BENCH_TOP+BENCH_H;
+  if(H>below){
+    const g2=ctx.createLinearGradient(0,below,0,H);
+    g2.addColorStop(0,'#1a1208');
+    g2.addColorStop(1,'#050302');
+    ctx.fillStyle=g2;
+    ctx.fillRect(0,below,W,H-below);
+  }
+}
+
+function flamePath(c,cx,baseY,w,h){
+  c.beginPath();
+  c.moveTo(cx,baseY-h);
+  c.bezierCurveTo(cx+w*0.95,baseY-h*0.62,cx+w,baseY-h*0.13,cx,baseY);
+  c.bezierCurveTo(cx-w,baseY-h*0.13,cx-w*0.95,baseY-h*0.62,cx,baseY-h);
+  c.closePath();
+}
+
+function drawBurner(t){
+  if(!state.showBurner)return;
+  const b=state.burner;
+  ctx.save();
+  ctx.fillStyle='#2b3138';
+  ctx.beginPath();
+  ctx.ellipse(b.x,b.base+4,50,11,0,0,Math.PI*2);
+  ctx.fill();
+  const g=ctx.createLinearGradient(b.x-46,0,b.x+46,0);
+  g.addColorStop(0,'#4b535c');
+  g.addColorStop(.35,'#8b949e');
+  g.addColorStop(.6,'#5d666f');
+  g.addColorStop(1,'#2f353b');
+  ctx.fillStyle=g;
+  ctx.beginPath();
+  ctx.moveTo(b.x-30,b.base);
+  ctx.lineTo(b.x-18,b.base-26);
+  ctx.lineTo(b.x+18,b.base-26);
+  ctx.lineTo(b.x+30,b.base);
+  ctx.closePath();
+  ctx.fill();
+  const g2=ctx.createLinearGradient(b.x-9,0,b.x+9,0);
+  g2.addColorStop(0,'#6e767e');
+  g2.addColorStop(.4,'#c3cbd3');
+  g2.addColorStop(1,'#565d64');
+  ctx.fillStyle=g2;
+  ctx.fillRect(b.x-8,b.base-92,16,68);
+  ctx.fillStyle='#3a4046';
+  ctx.fillRect(b.x-11,b.base-96,22,8);
+  ctx.restore();
+
+  if(state.burnerOn){
+    const fc=state.wire.color||null;
+    const h=b.flameH*(1+Math.sin(t*11)*0.035);
+    const w=28*(1+Math.sin(t*9+1)*0.05);
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    const halo=ctx.createRadialGradient(b.x,b.base-30,4,b.x,b.base-30,130);
+    halo.addColorStop(0,fc?hexA(fc,0.35):'rgba(255,150,50,.32)');
+    halo.addColorStop(1,'rgba(255,120,30,0)');
+    ctx.fillStyle=halo;
+    ctx.fillRect(b.x-140,b.base-160,280,220);
+    const fg=ctx.createLinearGradient(b.x,b.base-h,b.x,b.base);
+    if(fc){
+      fg.addColorStop(0,hexA(fc,0.95));
+      fg.addColorStop(.55,hexA(fc,0.7));
+      fg.addColorStop(1,'rgba(255,255,255,.25)');
+    }else{
+      fg.addColorStop(0,'rgba(255,220,120,.9)');
+      fg.addColorStop(.45,'rgba(255,150,40,.8)');
+      fg.addColorStop(1,'rgba(255,90,20,.35)');
+    }
+    ctx.fillStyle=fg;
+    flamePath(ctx,b.x,b.base-78,w,h);
+    ctx.fill();
+    const ig=ctx.createLinearGradient(b.x,b.base-78-h*0.5,b.x,b.base-78);
+    ig.addColorStop(0,fc?hexA(fc,0.9):'rgba(190,235,255,.95)');
+    ig.addColorStop(1,fc?hexA(fc,0.5):'rgba(90,170,255,.6)');
+    ctx.fillStyle=ig;
+    flamePath(ctx,b.x,b.base-78,w*0.45,h*0.5);
+    ctx.fill();
+    ctx.restore();
+  }else{
+    ctx.save();
+    ctx.fillStyle='rgba(255,193,7,'+(0.6+0.4*Math.sin(t*3))+')';
+    ctx.font='bold 12px Tahoma';
+    ctx.textAlign='center';
+    ctx.fillText('🔥 اضغط للاشتعال',b.x,b.base-110);
+    ctx.restore();
+  }
+}
+
+function drawGasFill(v,t){
+  if(v.gasAmount<=0)return;
+  if(v.volume>2)return;
+  const gasColor={
+    CO2:'#e8f5ff',SO2:'#fff0a8',H2S:'#dadada',HCl:'#ffffff',
+    NO:'#f5f5f5',NO2:'#d2691e',NH3:'#a5f3a5',Br2:'#ff8c00',I2:'#c466ff',O2:'#e0f4ff',Cl2:'#c4e8a5'
+  }[v.gasType]||'#e8f5ff';
+  const intensity=Math.min(1,v.gasAmount/100);
+  if(intensity<0.01)return;
+  const baseAlpha=0.55*intensity;
+  ctx.save();
+  vesselPath(ctx,v);
+  ctx.clip();
+  const fillH=(v.h-12)*intensity;
+  const top=v.y+6+(v.h-12)-fillH;
+  const g=ctx.createLinearGradient(v.x,top,v.x,v.y+v.h-6);
+  g.addColorStop(0,hexA(gasColor,baseAlpha*0.55));
+  g.addColorStop(.4,hexA(gasColor,baseAlpha*0.92));
+  g.addColorStop(1,hexA(gasColor,baseAlpha*0.75));
+  ctx.fillStyle=g;
+  ctx.fillRect(v.x-3,top,v.w+6,fillH);
+  ctx.globalCompositeOperation='lighter';
+  for(let i=0;i<6;i++){
+    const ph=(t*0.55+i*0.17)%1;
+    const px=v.x+8+((i+0.5)/6)*(v.w-16)+Math.sin(t*1.3+i*2.1)*4;
+    const py=top+ph*fillH;
+    if(py<top||py>v.y+v.h-8)continue;
+    const rr=6+Math.sin(t*1.8+i)*2.5;
+    const ag=ctx.createRadialGradient(px,py,0,px,py,rr*2.4);
+    ag.addColorStop(0,hexA(gasColor,baseAlpha*0.65));
+    ag.addColorStop(1,hexA(gasColor,0));
+    ctx.fillStyle=ag;
+    ctx.beginPath();
+    ctx.arc(px,py,rr*2.4,0,Math.PI*2);
+    ctx.fill();
+  }
+  ctx.globalCompositeOperation='source-over';
+  ctx.restore();
+}
+
+function drawStopper(v,t){
+  if(!v.hasStopper)return;
+  const op=v.opening;
+  ctx.save();
+  ctx.translate(op.x,op.y);
+  ctx.rotate(v.angle);
+  const g=ctx.createLinearGradient(-14,0,14,0);
+  g.addColorStop(0,'#3d2817');
+  g.addColorStop(.4,'#8b6b47');
+  g.addColorStop(.6,'#a07a52');
+  g.addColorStop(1,'#4a3320');
+  ctx.beginPath();
+  ctx.ellipse(0,-4,14,8,0,0,Math.PI*2);
+  ctx.fillStyle=g;
+  ctx.fill();
+  ctx.strokeStyle='rgba(255,220,180,.75)';
+  ctx.lineWidth=2;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.ellipse(0,-4,10,5.5,0,0,Math.PI*2);
+  ctx.strokeStyle='rgba(0,0,0,.4)';
+  ctx.lineWidth=1.2;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(-11,0);
+  ctx.quadraticCurveTo(0,10,11,0);
+  ctx.strokeStyle=g;
+  ctx.lineWidth=3;
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawLiquid(v,t){
+  const level=Math.min(v.h-8,(v.dispVol/v.cap)*(v.h-10));
+  if(level<1.5)return;
+  ctx.save();
+  vesselPath(ctx,v);
+  ctx.clip();
+  const top=v.y+v.h-level;
+  const c=v.color;
+  const g=ctx.createLinearGradient(v.x,top,v.x+v.w,v.y+v.h);
+  g.addColorStop(0,'rgba('+c.r+','+c.g+','+c.b+','+Math.min(1,c.a*0.9)+')');
+  g.addColorStop(.5,'rgba('+Math.round(c.r*.95)+','+Math.round(c.g*.97)+','+c.b+','+Math.min(1,c.a)+')');
+  g.addColorStop(1,'rgba('+Math.round(c.r*.75)+','+Math.round(c.g*.82)+','+Math.round(c.b*.95)+','+Math.min(1,c.a)+')');
+  ctx.fillStyle=g;
+  ctx.fillRect(v.x-3,top,v.w+6,level+3);
+  ctx.fillStyle='rgba(255,255,255,.45)';
+  ctx.fillRect(v.x-3,top,v.w+6,2.5);
+
+  if(v.precipAmt>0.02&&v.precip){
+    const ph=v.precipAmt*Math.min(58,level*0.88);
+    const pc=hexToRgb(v.precip.color);
+    const isWhite=pc.r>230&&pc.g>230&&pc.b>230;
+    if(isWhite){
+      ctx.save();
+      const lw=Math.min(1,v.precipAmt);
+      const tl=ctx.createLinearGradient(v.x,top,v.x,top+level);
+      tl.addColorStop(0,'rgba(250,252,255,'+(0.72*lw)+')');
+      tl.addColorStop(.5,'rgba(242,248,255,'+(0.60*lw)+')');
+      tl.addColorStop(1,'rgba(228,238,250,'+(0.55*lw)+')');
+      ctx.fillStyle=tl;
+      ctx.fillRect(v.x-3,top,v.w+6,level+3);
+      ctx.restore();
+    }
+    ctx.beginPath();
+    ctx.moveTo(v.x-3,v.y+v.h+3);
+    for(let i=0;i<=24;i++){
+      const px=v.x-3+(v.w+6)*i/24;
+      const py=v.y+v.h-ph+Math.sin(i*0.8+t*1.6)*1.8+Math.sin(i*2.3)*1.1;
+      ctx.lineTo(px,py);
+    }
+    ctx.lineTo(v.x+v.w+3,v.y+v.h+3);
+    ctx.closePath();
+    const pg=ctx.createLinearGradient(0,v.y+v.h-ph,0,v.y+v.h);
+    if(isWhite){
+      pg.addColorStop(0,'rgba(255,255,255,1)');
+      pg.addColorStop(.5,'rgba(248,251,255,1)');
+      pg.addColorStop(1,'rgba(228,238,250,1)');
+    }else{
+      pg.addColorStop(0,'rgba('+pc.r+','+pc.g+','+pc.b+',1)');
+      pg.addColorStop(.5,'rgba('+pc.r+','+pc.g+','+pc.b+',1)');
+      pg.addColorStop(1,'rgba('+Math.round(pc.r*.75)+','+Math.round(pc.g*.75)+','+Math.round(pc.b*.75)+',1)');
+    }
+    ctx.fillStyle=pg;
+    ctx.fill();
+    ctx.strokeStyle=isWhite?'rgba(190,210,230,.95)':'rgba('+Math.round(pc.r*.6)+','+Math.round(pc.g*.6)+','+Math.round(pc.b*.6)+',.9)';
+    ctx.lineWidth=1.4;
+    ctx.stroke();
+    if(isWhite){
+      ctx.save();
+      ctx.globalCompositeOperation='lighter';
+      for(let i=0;i<7;i++){
+        const px=v.x-3+(v.w+6)*((i+0.5)/7);
+        const py=v.y+v.h-ph*0.5-Math.sin(t*1.4+i)*2;
+        const rr=2.5+Math.sin(t*2+i*1.3)*1.2;
+        const sg=ctx.createRadialGradient(px,py,0,px,py,rr*3);
+        sg.addColorStop(0,'rgba(255,255,255,'+(0.55*v.precipAmt)+')');
+        sg.addColorStop(1,'rgba(255,255,255,0)');
+        ctx.fillStyle=sg;
+        ctx.beginPath();
+        ctx.arc(px,py,rr*3,0,Math.PI*2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+  }
+
+  for(const b of v.bubbles){
+    ctx.beginPath();
+    ctx.arc(b.x,b.y,b.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(255,255,255,'+(b.a*0.8)+')';
+    ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,'+(b.a*0.95)+')';
+    ctx.lineWidth=1;
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawVessel(v,t){
+  ctx.save();
+  if(v.shakeT>0){
+    const intensity=(v.shakeT>1.5)?0.4:0.26;
+    const a=Math.sin(v.shakeT*38)*intensity*v.shakeT;
+    ctx.translate(v.cx,v.bottom);
+    ctx.rotate(a);
+    ctx.translate(-v.cx,-v.bottom);
+  }
+  if(Math.abs(v.angle)>0.001){
+    ctx.translate(v.cx,v.bottom);
+    ctx.rotate(v.angle);
+    ctx.translate(-v.cx,-v.bottom);
+  }
+  ctx.save();
+  ctx.shadowColor='rgba(0,0,0,.6)';
+  ctx.shadowBlur=20;
+  ctx.shadowOffsetY=8;
+  ctx.fillStyle='rgba(255,255,255,.035)';
+  vesselPath(ctx,v);
+  ctx.fill();
+  ctx.restore();
+
+  drawGasFill(v,t);
+  drawLiquid(v,t);
+
+  ctx.save();
+  vesselPath(ctx,v);
+  const gg=ctx.createLinearGradient(v.x,0,v.x+v.w,0);
+  gg.addColorStop(0,'rgba(255,255,255,.25)');
+  gg.addColorStop(.18,'rgba(255,255,255,.04)');
+  gg.addColorStop(.82,'rgba(255,255,255,.03)');
+  gg.addColorStop(1,'rgba(255,255,255,.20)');
+  ctx.fillStyle=gg;
+  ctx.fill();
+  ctx.strokeStyle='rgba(200,240,255,.75)';
+  ctx.lineWidth=2.4;
+  ctx.stroke();
+  ctx.restore();
+
+  ctx.save();
+  vesselPath(ctx,v);
+  ctx.clip();
+  ctx.fillStyle='rgba(255,255,255,.25)';
+  ctx.fillRect(v.x+8,v.y+14,5,v.h-44);
+  ctx.restore();
+
+  ctx.beginPath();
+  ctx.ellipse(v.cx,v.y,v.w/2,5.5,0,0,Math.PI*2);
+  ctx.strokeStyle='rgba(210,245,255,.85)';
+  ctx.lineWidth=2.2;
+  ctx.stroke();
+
+  const hasTube=tubes.some(tb=>tb.from===v||tb.to===v);
+  if(v.activeGas&&v.activeGas.life>0&&!hasTube&&state.running&&!v.hasStopper){
+    const gasColor={
+      CO2:'#f5f5f5',SO2:'#fff0a8',H2S:'#c8c8c8',HCl:'#ffffff',
+      NO:'#f5f5f5',NO2:'#d2691e',NH3:'#a5f3a5',Br2:'#ff8c00',I2:'#c466ff',O2:'#e0f4ff',Cl2:'#c4e8a5'
+    }[v.activeGas.type]||'#f5f5f5';
+    const alpha=Math.min(0.6,v.activeGas.life/25*0.6);
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    for(let i=0;i<5;i++){
+      const ph=(t*0.6+i*0.22)%1;
+      const px=v.cx+Math.sin(ph*5+i*1.9)*14;
+      const py=v.y-10-ph*70;
+      const rr=12+ph*30;
+      const ag=ctx.createRadialGradient(px,py,0,px,py,rr);
+      ag.addColorStop(0,hexA(gasColor,alpha*(1-ph)));
+      ag.addColorStop(1,hexA(gasColor,0));
+      ctx.fillStyle=ag;
+      ctx.beginPath();
+      ctx.arc(px,py,rr,0,Math.PI*2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  if(v.temp>62&&v.volume>2&&v.activeGas&&v.activeGas.life>0){
+    const inten=clamp((v.temp-62)/38,0,1);
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    for(let i=0;i<6;i++){
+      const ph=(t*0.9+i*0.37)%1;
+      const px=v.cx+Math.sin(ph*6+i*2.1)*15;
+      const py=v.y-6-ph*70;
+      const rr=6+ph*22;
+      const ag=ctx.createRadialGradient(px,py,0,px,py,rr);
+      ag.addColorStop(0,'rgba(220,245,255,'+(0.16*inten*(1-ph))+')');
+      ag.addColorStop(1,'rgba(220,245,255,0)');
+      ctx.fillStyle=ag;
+      ctx.beginPath();
+      ctx.arc(px,py,rr,0,Math.PI*2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  if(v.thermic&&v.thermicT>0){
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    const opacity=Math.min(1,v.thermicT/2)*0.4;
+    const col=v.thermic==='exo'?'rgba(255,80,30,':'rgba(60,180,255,';
+    const glow=ctx.createRadialGradient(v.cx,v.y+v.h*0.5,10,v.cx,v.y+v.h*0.5,Math.max(v.w,v.h)*0.9);
+    glow.addColorStop(0,col+(opacity)+')');
+    glow.addColorStop(1,col+'0)');
+    ctx.fillStyle=glow;
+    ctx.beginPath();
+    ctx.arc(v.cx,v.y+v.h*0.5,Math.max(v.w,v.h)*0.9,0,Math.PI*2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  if(state.gasTubeArmed&&state.gasTubeSource!==v&&state.gasTubeSource){
+    ctx.save();
+    ctx.strokeStyle='rgba(255,184,77,'+(0.6+0.4*Math.sin(t*6))+')';
+    ctx.lineWidth=3;
+    ctx.setLineDash([8,6]);
+    ctx.lineDashOffset=-t*20;
+    ctx.beginPath();
+    ctx.arc(v.cx,v.y+v.h/2,Math.max(v.w,v.h)*0.65,0,Math.PI*2);
+    ctx.stroke();
+    ctx.restore();
+  }
+  if(state.gasTubeArmed&&state.gasTubeSource===v){
+    ctx.save();
+    ctx.strokeStyle='rgba(46,204,113,'+(0.75+0.25*Math.sin(t*6))+')';
+    ctx.lineWidth=3.5;
+    ctx.beginPath();
+    ctx.arc(v.cx,v.y+v.h/2,Math.max(v.w,v.h)*0.68,0,Math.PI*2);
+    ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+function drawVesselNumber(v,idx){
+  const op=v.opening;
+  const x=op.x;
+  const y=op.y-22;
+  const isExo=v.thermic==='exo'&&v.thermicT>0;
+  const isEndo=v.thermic==='endo'&&v.thermicT>0;
+  ctx.save();
+  if(isExo||isEndo){
+    ctx.beginPath();
+    ctx.arc(x,y,17,0,Math.PI*2);
+    ctx.strokeStyle=isExo?'rgba(255,90,40,.95)':'rgba(60,180,255,.95)';
+    ctx.lineWidth=3;
+    ctx.shadowColor=isExo?'#ff5a28':'#3cb4ff';
+    ctx.shadowBlur=16;
+    ctx.stroke();
+    ctx.shadowBlur=0;
+  }
+  ctx.beginPath();
+  ctx.arc(x,y,12,0,Math.PI*2);
+  const g=ctx.createRadialGradient(x,y,2,x,y,12);
+  g.addColorStop(0,'#a8f0ff');
+  g.addColorStop(1,'#5fc8ee');
+  ctx.fillStyle=g;
+  ctx.shadowColor='#7fe3ff';
+  ctx.shadowBlur=12;
+  ctx.fill();
+  ctx.shadowBlur=0;
+  ctx.strokeStyle='rgba(255,255,255,.95)';
+  ctx.lineWidth=2;
+  ctx.stroke();
+  ctx.fillStyle='#051018';
+  ctx.font='bold 13px Consolas,monospace';
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.fillText(String(idx),x,y+1);
+  if(isExo||isEndo){
+    ctx.beginPath();
+    ctx.arc(x+14,y-14,9,0,Math.PI*2);
+    ctx.fillStyle=isExo?'rgba(255,90,40,.9)':'rgba(60,180,255,.9)';
+    ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,.9)';
+    ctx.lineWidth=1.4;
+    ctx.stroke();
+    ctx.fillStyle='#fff';
+    ctx.font='bold 11px Tahoma';
+    ctx.fillText(isExo?'🔥':'❄️',x+14,y-14);
+  }
+  if(v.gasAmount>0){
+    const barX=x-16;
+    const barY=y+18;
+    const barW=32;
+    const barH=4;
+    ctx.save();
+    ctx.beginPath();
+    ctx.roundRect(barX,barY,barW,barH,2);
+    ctx.fillStyle='rgba(0,0,0,.55)';
+    ctx.fill();
+    const gasCol=v.gasType?({
+      CO2:'#7fe3ff',SO2:'#fff0a8',H2S:'#c8c8c8',HCl:'#ffffff',
+      NO:'#f5f5f5',NO2:'#d2691e',NH3:'#a5f3a5',Br2:'#ff8c00',I2:'#c466ff',O2:'#e0f4ff',Cl2:'#c4e8a5'
+    }[v.gasType]||'#7fe3ff'):'#7fe3ff';
+    ctx.beginPath();
+    ctx.roundRect(barX,barY,barW*(v.gasAmount/100),barH,2);
+    ctx.fillStyle=gasCol;
+    ctx.shadowColor=gasCol;
+    ctx.shadowBlur=8;
+    ctx.fill();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+function drawTubes(t){
+  for(const tube of tubes){
+    const a=tube.from,b=tube.to;
+    if(!vessels.includes(a)||!vessels.includes(b))continue;
+    const oa=a.opening,ob=b.opening;
+    ctx.save();
+    const cpx=(oa.x+ob.x)/2;
+    const cpy=Math.min(oa.y,ob.y)-70;
+    ctx.strokeStyle='rgba(0,0,0,.55)';
+    ctx.lineWidth=11;
+    ctx.lineCap='round';
+    ctx.lineJoin='round';
+    ctx.beginPath();
+    ctx.moveTo(oa.x,oa.y);
+    ctx.quadraticCurveTo(cpx,cpy,ob.x,ob.y);
+    ctx.stroke();
+    ctx.strokeStyle='rgba(200,240,255,.85)';
+    ctx.lineWidth=7;
+    ctx.beginPath();
+    ctx.moveTo(oa.x,oa.y);
+    ctx.quadraticCurveTo(cpx,cpy,ob.x,ob.y);
+    ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,.5)';
+    ctx.lineWidth=2;
+    ctx.beginPath();
+    ctx.moveTo(oa.x,oa.y-2);
+    ctx.quadraticCurveTo(cpx,cpy-2,ob.x,ob.y-2);
+    ctx.stroke();
+    [oa,ob].forEach(p=>{
+      ctx.strokeStyle='rgba(255,184,77,.95)';
+      ctx.lineWidth=3;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,6,0,Math.PI*2);
+      ctx.stroke();
+    });
+    if(a.activeGas&&a.activeGas.life>0&&a.reactionStarted&&state.running){
+      const gasColor={
+        CO2:'#f5f5f5',SO2:'#fff0a8',H2S:'#c8c8c8',HCl:'#ffffff',
+        NO:'#f5f5f5',NO2:'#d2691e',NH3:'#a5f3a5',Br2:'#ff8c00',I2:'#c466ff',O2:'#e0f4ff',Cl2:'#c4e8a5'
+      }[a.activeGas.type]||'#f5f5f5';
+      for(let i=0;i<10;i++){
+        const ph=((t*0.5+i/10)%1);
+        const px=(1-ph)*(1-ph)*oa.x+2*(1-ph)*ph*cpx+ph*ph*ob.x;
+        const py=(1-ph)*(1-ph)*oa.y+2*(1-ph)*ph*cpy+ph*ph*ob.y;
+        ctx.beginPath();
+        ctx.arc(px,py,5,0,Math.PI*2);
+        ctx.fillStyle=hexA(gasColor,0.95);
+        ctx.fill();
+        ctx.strokeStyle=hexA(gasColor,1);
+        ctx.lineWidth=1.2;
+        ctx.stroke();
+      }
+    }
+    ctx.restore();
+  }
+}
+
+function drawPaperStrip(p,t){
+  const base=PAPERS[p.paperId];
+  if(!base)return;
+  ctx.save();
+  const bob=Math.sin(t*1.6+p.animT)*0.5;
+  let scale=1;
+  if(p.isMystery&&p.spawnScale!==undefined&&p.spawnScale<1){
+    const elapsed=performance.now()-(p.spawnTime||0);
+    p.spawnScale=Math.min(1,elapsed/600);
+    scale=1+Math.sin(p.spawnScale*Math.PI)*0.5;
+    scale*=p.spawnScale;
+  }
+  ctx.translate(p.x+p.w/2,p.y+p.h/2+bob);
+  ctx.rotate(p.angle);
+  if(scale!==1)ctx.scale(scale,scale);
+
+  let drawColor=p.color;
+  if(p.isMystery&&!p.burning){
+    const hue=(t*60)%360;
+    drawColor='hsl('+hue+',80%,60%)';
+  }
+  if(p.burning){
+    drawColor=lerpColor(drawColor,'#1a1a1a',p.burnProgress);
+  }
+  ctx.save();
+  ctx.shadowColor=p.isMystery?'rgba(168,85,247,.7)':'rgba(0,0,0,.55)';
+  ctx.shadowBlur=p.isMystery?20:14;
+  ctx.shadowOffsetY=6;
+  ctx.beginPath();
+  ctx.roundRect(-p.w/2,-p.h/2,p.w,p.h,5);
+  const pg=ctx.createLinearGradient(0,-p.h/2,0,p.h/2);
+  pg.addColorStop(0,drawColor);
+  pg.addColorStop(1,lerpColor(drawColor,'#000000',0.22));
+  ctx.fillStyle=pg;
+  ctx.fill();
+  ctx.restore();
+  ctx.strokeStyle=p.isMystery?'rgba(168,85,247,.95)':'rgba(0,0,0,.4)';
+  ctx.lineWidth=p.isMystery?2.5:1.3;
+  ctx.beginPath();
+  ctx.roundRect(-p.w/2,-p.h/2,p.w,p.h,5);
+  ctx.stroke();
+
+  if(p.isMystery&&!p.burning){
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    for(let i=0;i<5;i++){
+      const ph=(t*1.5+i*0.25)%1;
+      const px=Math.sin(ph*6+i*1.8)*p.w*0.35;
+      const py=Math.cos(ph*6+i*1.8)*p.h*0.35;
+      const rr=8+Math.sin(t*3+i)*3;
+      const ag=ctx.createRadialGradient(px,py,0,px,py,rr*2);
+      ag.addColorStop(0,'rgba(196,107,255,0.55)');
+      ag.addColorStop(1,'rgba(196,107,255,0)');
+      ctx.fillStyle=ag;
+      ctx.beginPath();
+      ctx.arc(px,py,rr*2,0,Math.PI*2);
+      ctx.fill();
+    }
+    if(p.gasFlash>0){
+      const intensity=p.gasFlash;
+      const flashPulse=0.55+0.45*Math.abs(Math.sin(t*8));
+      ctx.globalCompositeOperation='lighter';
+      const halo=ctx.createRadialGradient(0,0,5,0,0,p.w*1.8);
+      halo.addColorStop(0,'rgba(255,255,255,'+(0.9*intensity*flashPulse)+')');
+      halo.addColorStop(0.35,'rgba(236,72,153,'+(0.7*intensity*flashPulse)+')');
+      halo.addColorStop(0.7,'rgba(168,85,247,'+(0.45*intensity*flashPulse)+')');
+      halo.addColorStop(1,'rgba(168,85,247,0)');
+      ctx.fillStyle=halo;
+      ctx.beginPath();
+      ctx.arc(0,0,p.w*1.8,0,Math.PI*2);
+      ctx.fill();
+      ctx.fillStyle='rgba(255,255,255,'+(0.55*intensity*flashPulse)+')';
+      ctx.beginPath();
+      ctx.roundRect(-p.w/2,-p.h/2,p.w,p.h,5);
+      ctx.fill();
+      for(let i=0;i<4;i++){
+        const ph=(t*2+i*0.25)%1;
+        const px=Math.sin(ph*8+i*2.1)*p.w*0.6;
+        const py=Math.cos(ph*8+i*2.1)*p.h*0.6;
+        const rr=5+Math.sin(t*4+i)*2;
+        const sg=ctx.createRadialGradient(px,py,0,px,py,rr*2.5);
+        sg.addColorStop(0,'rgba(255,255,255,'+(0.85*intensity)+')');
+        sg.addColorStop(1,'rgba(255,255,255,0)');
+        ctx.fillStyle=sg;
+        ctx.beginPath();
+        ctx.arc(px,py,rr*2.5,0,Math.PI*2);
+        ctx.fill();
+      }
+    }
+    ctx.restore();
+  }
+
+  if(p.burning){
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    for(let i=0;i<6;i++){
+      const ph=(t*3+i*0.3)%1;
+      const px=(Math.random()-0.5)*p.w;
+      const py=p.h/2-ph*p.h;
+      const rr=6+Math.random()*10;
+      const ag=ctx.createRadialGradient(px,py,0,px,py,rr);
+      ag.addColorStop(0,'rgba(255,220,100,'+(1-ph)*0.9+')');
+      ag.addColorStop(.5,'rgba(255,120,30,'+(1-ph)*0.6+')');
+      ag.addColorStop(1,'rgba(255,60,0,0)');
+      ctx.fillStyle=ag;
+      ctx.beginPath();
+      ctx.arc(px,py,rr,0,Math.PI*2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  if(p.reacted&&!p.burning&&!p.isMystery){
+    ctx.save();
+    ctx.strokeStyle='rgba(255,214,107,.95)';
+    ctx.lineWidth=2.4;
+    ctx.shadowColor='#ffd66b';
+    ctx.shadowBlur=14;
+    ctx.beginPath();
+    ctx.roundRect(-p.w/2-3,-p.h/2-3,p.w+6,p.h+6,6);
+    ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+function drawThermometer(){
+  if(!state.showThermo)return;
+  const x=W-95,top=165,bot=415;
+  let maxT=25;
+  for(const v of vessels)if(v.volume>0)maxT=Math.max(maxT,v.temp);
+  const frac=clamp(maxT/120,0,1);
+  ctx.save();
+  ctx.beginPath();
+  ctx.roundRect(x-9,top,18,bot-top,9);
+  ctx.fillStyle='rgba(230,250,255,.14)';
+  ctx.fill();
+  ctx.strokeStyle='rgba(190,235,255,.55)';
+  ctx.lineWidth=2;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(x,bot+14,14,0,Math.PI*2);
+  ctx.fillStyle='rgba(230,250,255,.16)';
+  ctx.fill();
+  ctx.strokeStyle='rgba(190,235,255,.55)';
+  ctx.stroke();
+  const mh=frac*(bot-top-14);
+  const mg=ctx.createLinearGradient(0,bot+14,0,top);
+  mg.addColorStop(0,'#ff4d4d');
+  mg.addColorStop(.5,'#ff7043');
+  mg.addColorStop(1,'#ffca28');
+  ctx.fillStyle=mg;
+  ctx.beginPath();
+  ctx.roundRect(x-5,bot-mh,10,mh+6,5);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(x,bot+14,10,0,Math.PI*2);
+  ctx.fill();
+  ctx.fillStyle='#9fe9ff';
+  ctx.font='bold 10px Tahoma';
+  ctx.textAlign='center';
+  ctx.fillText('°C',x,top-10);
+  ctx.restore();
+}
+
+function drawWire(){
+  if(!state.showBurner||!state.wire.active)return;
+  const b=state.burner;
+  const x=b.x,y=b.base-96-40;
+  ctx.save();
+  ctx.strokeStyle='#d8dee4';
+  ctx.lineWidth=2.4;
+  ctx.lineCap='round';
+  ctx.beginPath();
+  ctx.moveTo(x+95,y-70);
+  ctx.quadraticCurveTo(x+50,y-58,x+2,y-6);
+  ctx.stroke();
+  ctx.fillStyle='#37474f';
+  ctx.beginPath();
+  ctx.roundRect(x+88,y-84,16,34,5);
+  ctx.fill();
+  const c=state.wire.loaded?(FLAME_TEST[state.wire.loaded]?FLAME_TEST[state.wire.loaded].color:'#ffffff'):'#e0e0e0';
+  ctx.beginPath();
+  ctx.arc(x+2,y-5,4.5,0,Math.PI*2);
+  ctx.fillStyle=c;
+  ctx.fill();
+  ctx.shadowColor=c;
+  ctx.shadowBlur=14;
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawDroplets(dt){
+  for(const d of droplets){
+    if(d.dead)continue;
+    d.vy+=620*dt;
+    d.y+=d.vy*dt;
+    if(d.y>=d.target){d.dead=true;continue;}
+    ctx.beginPath();
+    ctx.ellipse(d.x,d.y,d.r*0.85,d.r*1.5,0,0,Math.PI*2);
+    ctx.fillStyle=hexA(d.color,d.alpha);
+    ctx.fill();
+  }
+  droplets=droplets.filter(d=>!d.dead);
+}
+
+function drawPourDrips(dt){
+  for(const d of pourDrips){
+    if(d.dead)continue;
+    d.vy+=700*dt;
+    d.y+=d.vy*dt;
+    d.x+=d.vx*dt;
+    if(d.y>d.target){d.dead=true;continue;}
+    ctx.beginPath();
+    ctx.ellipse(d.x,d.y,d.r*0.85,d.r*1.5,0,0,Math.PI*2);
+    ctx.fillStyle=d.color;
+    ctx.fill();
+  }
+  pourDrips=pourDrips.filter(d=>!d.dead);
+}
+
+function drawSmokeClouds(dt){
+  for(const s of smokeClouds){
+    s.life-=dt;
+    if(s.life<=0)continue;
+    const alpha=s.life/s.maxLife;
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    const t=performance.now()/1000;
+    for(let i=0;i<8;i++){
+      const ph=(t*0.4+i*0.15)%1;
+      const px=s.x+Math.sin(ph*4+i*1.5)*35;
+      const py=s.y-ph*60;
+      const rr=15+ph*40;
+      const ag=ctx.createRadialGradient(px,py,0,px,py,rr);
+      ag.addColorStop(0,'rgba(255,255,255,'+(alpha*0.5*(1-ph))+')');
+      ag.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.fillStyle=ag;
+      ctx.beginPath();
+      ctx.arc(px,py,rr,0,Math.PI*2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+  smokeClouds=smokeClouds.filter(s=>s.life>0);
+}
+
+function drawSparks(dt){
+  for(const s of sparks){
+    s.life-=dt;
+    if(s.life<=0)continue;
+    s.vy+=180*dt;
+    s.x+=s.vx*dt;
+    s.y+=s.vy*dt;
+    const alpha=s.life/s.maxLife;
+    ctx.save();
+    ctx.globalCompositeOperation='lighter';
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r*alpha,0,Math.PI*2);
+    ctx.fillStyle=hexA(s.color,alpha);
+    ctx.fill();
+    ctx.restore();
+  }
+  sparks=sparks.filter(s=>s.life>0);
+}
+
+function updatePaperReaction(p,dt){
+  if(p.dead)return;
+
+  if(p.gasFlash>0&&!p.gasPassed){
+    p.gasFlash=Math.max(0,p.gasFlash-dt*1.8);
+  }
+
+  if(p.burning){
+    p.burnProgress=Math.min(1,p.burnProgress+dt*0.8);
+    if(Math.random()<dt*15)spawnSparks(p.x+p.w/2,p.y+p.h/2,2);
+    if(p.burnProgress>=1){
+      p.burning=false;
+      p.burnt=true;
+      p.dead=true;
+      if(p.isMystery&&p.gasPassed&&!p.easterShown){
+        p.easterShown=true;
+        showEasterEgg();
+      }
+    }
+    return;
+  }
+
+  if(p.isMystery){
+    let nearest=null,minDist=150;
+    for(const v of vessels){
+      if(!v.activeGas||v.activeGas.life<=0)continue;
+      if(!state.running)continue;
+      if(v.activeGas.type!=='CO2')continue;
+      const dx=(p.x+p.w/2)-v.cx,dy=(p.y+p.h/2)-v.y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<minDist){minDist=d;nearest=v;}
+    }
+    if(nearest){
+      p.gasPassed=true;
+      p.gasFlash=1;
+    }
+    if(state.showBurner&&state.burnerOn){
+      const b=state.burner;
+      const dx=(p.x+p.w/2)-b.x;
+      const dy=(p.y+p.h/2)-(b.base-78);
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<115){
+        p.burning=true;
+        p.burnProgress=0.05;
+        playFizz(1.5);
+        spawnSparks(p.x+p.w/2,p.y+p.h/2,15);
+      }
+    }
+    return;
+  }
+
+  if(state.showBurner&&state.burnerOn){
+    const b=state.burner;
+    const dx=(p.x+p.w/2)-b.x;
+    const dy=(p.y+p.h/2)-(b.base-78);
+    const dist=Math.sqrt(dx*dx+dy*dy);
+    if(dist<115){
+      p.burning=true;
+      p.burnProgress=0.05;
+      addLog('🔥 الورقة اقتربت من اللهب — بدأت تحترق');
+      setVesselEquation({id:'burn_'+p.paperId},
+        'ورقة '+PAPERS[p.paperId].label+'(s) + O₂(g) --احتراق--> CO₂(g)↑ + H₂O(g)↑ + رماد',
+        'احتراق كامل — اختفت الورقة');
+      playFizz(1.5);
+      spawnSparks(p.x+p.w/2,p.y+p.h/2,15);
+    }
+  }
+
+  let nearest=null,minDist=130;
+  for(const v of vessels){
+    if(!v.activeGas||v.activeGas.life<=0)continue;
+    if(!state.running)continue;
+    const dx=(p.x+p.w/2)-v.cx,dy=(p.y+p.h/2)-v.y;
+    const d=Math.sqrt(dx*dx+dy*dy);
+    if(d<minDist){minDist=d;nearest=v;}
+  }
+  if(!nearest){p.contactGas=null;return;}
+  const gasType=nearest.activeGas.type;
+  const test=(GAS_TESTS[gasType]||{})[p.paperId];
+  if(!test)return;
+  p.contactGas=gasType;
+  if(p.reacted){if(p.color!==test.color)p.color=test.color;return;}
+  p.progress=Math.min(1,p.progress+dt/2.4);
+  p.color=lerpColor(PAPERS[p.paperId].color,test.color,p.progress);
+  if(p.progress>=1){
+    p.reacted=true;
+    addLog('📜 '+PAPERS[p.paperId].ar+' + '+gasType+': '+test.note);
+    setVesselEquation(nearest,test.eq||(gasType+' + '+PAPERS[p.paperId].label+' → تغيّر لوني'),test.note);
+    playDing();
+    playFizz(0.8);
+  }
+}
+
+function formatSingleLine(line){
+  let s=line;
+  s=s.replace(/--Δ-->/g,'\u2401')
+     .replace(/--ضوء-->/g,'\u2402')
+     .replace(/--احتراق-->/g,'\u2403')
+     .replace(/--اهتزاز-->/g,'\u2407')
+     .replace(/-->/g,'\u2404')
+     .replace(/→/g,'\u2405')
+     .replace(/⇌/g,'\u2406');
+  let html=s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  html=html.replace(/\u2401/g,'<span class="heat">--Δ--&gt;</span>')
+           .replace(/\u2402/g,'<span class="light">--ضوء--&gt;</span>')
+           .replace(/\u2403/g,'<span class="burn">--احتراق--&gt;</span>')
+           .replace(/\u2407/g,'<span class="eq">--اهتزاز--&gt;</span>')
+           .replace(/\u2404/g,'<span class="ar">--&gt;</span>')
+           .replace(/\u2405/g,'<span class="ar">→</span>')
+           .replace(/\u2406/g,'<span class="eq">⇌</span>');
+  html=html.replace(/\((s|l|g|aq)\)/g,'<sub>($1)</sub>');
+  html=html.replace(/↑/g,'<span class="g">↑</span>');
+  html=html.replace(/↓/g,'<span class="p">↓</span>');
+  return html;
+}
+
+function formatEquationHTML(eq){
+  return String(eq).split('\n').map(formatSingleLine).join('<br>');
+}
+
+function renderEquations(){
+  const eqbar=document.getElementById('eqbar');
+  const oldContent=eqbar.querySelectorAll('.eq-line,.eq-list');
+  oldContent.forEach(l=>l.remove());
+  const noteEl=document.getElementById('eqnote');
+  const active=vessels.map(function(v,i){return{v:v,i:i};})
+                     .filter(function(x){return x.v.contents.length>0;});
+  if(!active.length){
+    const div=document.createElement('div');
+    div.className='eq-line';
+    if(state.equation){
+      div.innerHTML=formatEquationHTML(state.equation.eq);
+      noteEl.textContent=state.equation.note||'';
+    }else{
+      div.textContent='— المعادلة ستظهر هنا —';
+      noteEl.textContent='';
+    }
+    eqbar.insertBefore(div,noteEl);
+    return;
+  }
+  if(active.length===1){
+    const x=active[0];
+    const div=document.createElement('div');
+    div.className='eq-line';
+    if(x.v.lastEq){
+      div.innerHTML=formatEquationHTML(x.v.lastEq);
+    }else{
+      div.textContent='— بانتظار التفاعل —';
+    }
+    eqbar.insertBefore(div,noteEl);
+    noteEl.textContent=x.v.lastNote||'';
+    return;
+  }
+  const wrap=document.createElement('div');
+  wrap.className='eq-list';
+  for(const x of active){
+    const idx=x.i+1;
+    const item=document.createElement('div');
+    item.className='eq-list-item';
+    const num=document.createElement('span');
+    num.className='eq-num';
+    num.textContent=idx;
+    const eq=document.createElement('span');
+    eq.className='eq-line-inline';
+    if(x.v.lastEq){
+      eq.innerHTML=formatEquationHTML(x.v.lastEq);
+    }else{
+      eq.textContent='— بانتظار التفاعل —';
+      eq.style.color='#6a8fa3';
+      eq.style.fontStyle='italic';
+    }
+    item.appendChild(num);
+    item.appendChild(eq);
+    wrap.appendChild(item);
+  }
+  eqbar.insertBefore(wrap,noteEl);
+  noteEl.textContent='';
+}
+
+function setVesselEquation(v,eq,note){
+  state.equation={eq,note:note||''};
+  if(v&&vessels.indexOf(v)>=0){
+    v.lastEq=eq;
+    v.lastNote=note||'';
+  }
+  addToHistory(eq,note);
+  renderEquations();
+}
+
+function addToHistory(eq,note){
+  reactionHistory.unshift({eq,note:note||''});
+  if(reactionHistory.length>30)reactionHistory.pop();
+  renderHistory();
+}
+
+function renderHistory(){
+  const el=document.getElementById('historyList');
+  if(!el)return;
+  if(!reactionHistory.length){
+    el.innerHTML='<div class="history-empty">لا توجد تفاعلات بعد</div>';
+    return;
+  }
+  let html='';
+  for(const r of reactionHistory){
+    html+='<div class="history-item">';
+    html+='<div class="hi-eq">'+formatEquationHTML(r.eq)+'</div>';
+    if(r.note)html+='<div class="hi-note">'+r.note+'</div>';
+    html+='</div>';
+  }
+  el.innerHTML=html;
+}
+
+let last=performance.now();
+
+function loop(now){
+  try{
+    const dt=Math.min(0.05,(now-last)/1000);
+    last=now;
+    state.time=now/1000;
+    const t=state.time;
+    update(dt,t);
+    ctx.clearRect(0,0,W,H);
+    drawBackdrop(t);
+    drawBench();
+    drawBurner(t);
+    drawTubes(t);
+    for(const v of vessels)drawVessel(v,t);
+    for(const v of vessels)drawStopper(v,t);
+    if(vessels.length>=2){
+      for(let i=0;i<vessels.length;i++){
+        drawVesselNumber(vessels[i],i+1);
+      }
+    }
+    for(const p of papers)drawPaperStrip(p,t);
+    drawThermometer();
+    drawWire();
+    drawDroplets(dt);
+    drawPourDrips(dt);
+    drawSmokeClouds(dt);
+    drawSparks(dt);
+  }catch(err){
+    showError('خطأ: '+err.message);
+  }
+  requestAnimationFrame(loop);
+}
+
+function update(dt,t){
+  const b=state.burner;
+
+  if(mysteryShaking){
+    const elapsed=performance.now()-mysteryShaking.startTime;
+    const v=mysteryShaking.vessel;
+    if(!vessels.includes(v)){
+      mysteryShaking=null;
+    }else if(elapsed>=mysteryShaking.duration){
+      vanishVesselAndSpawnPaper(v);
+      mysteryShaking=null;
+    }
+  }
+
+  for(const tube of tubes){
+    const a=tube.from,bv=tube.to;
+    if(!vessels.includes(a)||!vessels.includes(bv))continue;
+    if(!a.reactionStarted)continue;
+    if(a.activeGas&&a.activeGas.life>0){
+      if(bv.gasAmount<100){
+        bv.gasAmount=Math.min(100,bv.gasAmount+dt*18);
+      }
+      bv.gasType=a.activeGas.type;
+      bv.activeGas={type:a.activeGas.type,life:25,viaTube:true};
+      if(bv.contents.length===0){
+        bv.hasStopper=false;
+      }else{
+        const targetIds=bv.contents.map(c=>c.id);
+        for(const id of targetIds){
+          const key=a.activeGas.type+'|'+id;
+          const reaction=GAS_LIQUID_REACTIONS[key];
+          if(reaction&&!bv.reactedGases[key]){
+            bv.reactedGases[key]=true;
+            applyGasReaction(bv,reaction,a.activeGas.type);
+          }
+        }
+      }
+    }
+  }
+
+  for(const v of vessels){
+    v.dispVol=lerp(v.dispVol,v.volume,Math.min(1,dt*6));
+    if(v.colorTarget){
+      const s=Math.min(1,dt*1.2);
+      v.color.r=lerp(v.color.r,v.colorTarget.r,s);
+      v.color.g=lerp(v.color.g,v.colorTarget.g,s);
+      v.color.b=lerp(v.color.b,v.colorTarget.b,s);
+      v.color.a=lerp(v.color.a,v.colorTarget.a,s);
+      const dr=Math.abs(v.color.r-v.colorTarget.r);
+      const dg=Math.abs(v.color.g-v.colorTarget.g);
+      const db=Math.abs(v.color.b-v.colorTarget.b);
+      const da=Math.abs(v.color.a-v.colorTarget.a)*255;
+      if(dr+dg+db+da<4)v.colorTarget=null;
+    }
+    v.precipAmt=lerp(v.precipAmt,v.precipTarget,Math.min(1,dt*1.4));
+    if(v.shakeT>0){
+      const speed=(v.shakeT>1.5)?0.3:0.65;
+      v.shakeT=Math.max(0,v.shakeT-dt/speed);
+    }
+    if(v.thermicT>0)v.thermicT=Math.max(0,v.thermicT-dt);
+
+    const hasIncoming=tubes.some(function(tb){return tb.to===v&&tb.from.activeGas&&tb.from.activeGas.life>0&&tb.from.reactionStarted;});
+
+    if(v.gasAmount>0&&!v.hasStopper&&!hasIncoming){
+      v.gasAmount=Math.max(0,v.gasAmount-dt*18);
+      if(v.gasAmount<=0&&!v.gasConsumed){
+        v.gasConsumed=true;
+        v.activeGas=null;
+        v.gasType=null;
+      }
+    }
+
+    if(v.activeGas){
+      if(v.hasStopper){
+        v.activeGas.life=25;
+      }else if(v.activeGas.viaTube){
+        if(hasIncoming&&state.running){
+          v.activeGas.life=25;
+        }else{
+          v.activeGas.life-=dt*3;
+          if(v.activeGas.life<=0)v.activeGas=null;
+        }
+      }else if(v.gasAmount>0){
+        v.activeGas.life=25;
+      }else if(!state.running){
+        v.activeGas.life-=dt*0.4;
+        if(v.activeGas.life<=0)v.activeGas=null;
+      }else if(v.contents.length>0&&!v.gasConsumed){
+        v.activeGas.life=Math.max(v.activeGas.life,20);
+      }else{
+        v.activeGas.life-=dt*2.5;
+        if(v.activeGas.life<=0)v.activeGas=null;
+      }
+    }
+
+    if(v.activeGas&&v.activeGas.type==='CO2'&&v.precip&&v.precip.formula==='CaCO₃'&&state.running&&v.gasAmount>0){
+      v.dissolveTimer+=dt;
+      if(v.dissolveTimer>12&&v.co2DissolveStage===0){
+        v.co2DissolveStage=1;
+        addLog('🔵 بدأ الراسب الأبيض يذوب تدريجيًا — تكوّن Ca(HCO₃)₂ الذائب');
+        setVesselEquation(v,'CaCO₃(s) + H₂O(l) + CO₂(g) → Ca(HCO₃)₂(aq)','الراسب الأبيض يذوب بمرور CO₂ الطويل');
+        playDing();
+      }
+      if(v.co2DissolveStage===1){
+        v.precipTarget=Math.max(0,1-(v.dissolveTimer-12)/18);
+      }
+      if(v.dissolveTimer>30&&v.co2DissolveStage===1){
+        v.precip=null;
+        v.precipTarget=0;
+        v.colorTarget={r:200,g:232,b:250,a:0.20};
+        v.co2DissolveStage=2;
+        addLog('🔵 زال تعكر ماء الجير تمامًا — Ca(HCO₃)₂ ذائب في الماء');
+        setVesselEquation(v,'CaCO₃(s) + H₂O(l) + CO₂(g) → Ca(HCO₃)₂(aq)','زال التعكر تمامًا — الراسب اختفى');
+        playDing();
+      }
+    }
+  }
+
+  if(!state.running){
+    updateThermoPanel();
+    return;
+  }
+
+  for(const v of vessels){
+    const nearFlame=state.burnerOn&&state.showBurner&&
+      v.cx>b.x-70&&v.cx<b.x+70&&
+      v.bottom>b.base-140&&v.bottom<b.base+40;
+    v.heating=nearFlame;
+    if(nearFlame){
+      v.temp=Math.min(105,v.temp+dt*38);
+    }else if(v.thermicT>0&&v.thermic==='exo'){
+      v.temp=Math.min(120,v.temp+dt*6);
+    }else if(v.thermicT>0&&v.thermic==='endo'){
+      v.temp=Math.max(5,v.temp-dt*5);
+    }else{
+      v.temp=lerp(v.temp,25,Math.min(1,dt*0.3));
+    }
+
+    if(v.contents.length&&nearFlame&&v.temp>70){
+      let hr=null;
+      for(const c of v.contents){
+        if(HEAT_REACTIONS[c.id]){hr=HEAT_REACTIONS[c.id];break;}
+      }
+      if(hr){
+        v.naturalHeatTimer+=dt;
+        if(v.naturalHeatTimer>1.2){
+          if(hr.gas){v.activeGas={type:hr.gas,life:25,viaTube:false};v.gasType=hr.gas;}
+          if(hr.tint)v.colorTarget=Object.assign({},hexToRgb(hr.tint),{a:0.35});
+          if(hr.thermic){
+            v.thermic=hr.thermic;
+            v.thermicT=8;
+          }
+          if(!v.heatReactionDone){
+            setVesselEquation(v,hr.eq,hr.note);
+            addLog('🔥 تسخين: '+hr.note);
+            if(hr.thermic==='endo')addLog('❄️ تفاعل ماص للحرارة (حراري)');
+            v.heatReactionDone=true;
+          }
+        }
+      }
+    }else if(!nearFlame){
+      v.naturalHeatTimer=0;
+      v.heatReactionDone=false;
+    }
+
+    if(!v.reactionStarted)continue;
+
+    if(v.reactionQueue.length){
+      v.reactionTimer+=dt;
+      if(v.reactionTimer>3.5)applyNextReaction(v);
+    }
+
+    if(v.precip){
+      if(v.precip.onHeat&&!v.onHeatTriggered&&v.temp>55){
+        v.heatTimer+=dt;
+        if(v.heatTimer>2){
+          v.onHeatTriggered=true;
+          const newColor=v.precip.onHeat.color;
+          const newArColor=v.precip.onHeat.arColor||colorName(newColor);
+          v.precip=Object.assign({},v.precip,{color:newColor,arColor:newArColor});
+          addLog('🔥 تسخين: '+v.precip.formula+' — اللون أصبح '+newArColor);
+          setVesselEquation(v,v.precip.onHeat.eq||(v.precip.formula+' --Δ--> ناتج'),v.precip.onHeat.note);
+          playDing();
+          playFizz(0.6);
+          if(v.precip.onHeat.eq&&v.precip.onHeat.eq.indexOf('CO₂')>=0){v.activeGas={type:'CO2',life:25,viaTube:false};v.gasType='CO2';}
+        }
+      }else if(!v.precip.onHeat){
+        v.heatTimer=0;
+      }
+      if(v.precip.onStand&&!v.onStandTriggered){
+        v.standTimer+=dt;
+        if(v.standTimer>8){
+          v.onStandTriggered=true;
+          const newColor=v.precip.onStand.color;
+          const newArColor=v.precip.onStand.arColor||colorName(newColor);
+          v.precip=Object.assign({},v.precip,{color:newColor,arColor:newArColor});
+          addLog('⏳ بالوقوف: '+v.precip.formula+' — اللون أصبح '+newArColor);
+          setVesselEquation(v,v.precip.formula+' → ... (تحول تلقائي)',v.precip.onStand.note);
+          playDing();
+        }
+      }
+      if(v.precip.oxidize&&!v.oxidized){
+        v.oxidizeTimer+=dt;
+        if(v.oxidizeTimer>3){
+          v.oxidized=true;
+          v.precip=Object.assign({},v.precip,{color:'#a83232',arColor:'بني محمر'});
+          addLog('🌫️ الأكسدة بالهواء: اللون أصبح بني محمر');
+        }
+      }
+    }
+
+    if(v.temp>88&&v.volume>2&&Math.random()<dt*14){
+      v.bubbles.push({
+        x:v.x+8+Math.random()*(v.w-16),
+        y:v.y+v.h-8,
+        r:1.6+Math.random()*2.6,
+        vy:-(35+Math.random()*45),
+        a:0.9
+      });
+    }
+    if(v.activeGas&&v.activeGas.life>0&&v.volume>1&&Math.random()<dt*20){
+      v.bubbles.push({
+        x:v.x+8+Math.random()*(v.w-16),
+        y:v.y+v.h-10-Math.random()*12,
+        r:1.5+Math.random()*3,
+        vy:-(45+Math.random()*60),
+        a:1
+      });
+    }
+
+    const lvlTop=v.y+v.h-Math.min(v.h-8,(v.dispVol/v.cap)*(v.h-10));
+    for(const bb of v.bubbles){
+      bb.y+=bb.vy*dt;
+      bb.x+=Math.sin(t*5+bb.y*0.08)*0.4;
+      if(bb.y<lvlTop+3)bb.a-=dt*2.2;
+    }
+    v.bubbles=v.bubbles.filter(bb=>bb.a>0.05&&bb.y>v.y-4);
+  }
+
+  for(const p of papers)updatePaperReaction(p,dt);
+  for(let i=papers.length-1;i>=0;i--){
+    if(papers[i].dead)papers.splice(i,1);
+  }
+
+  updateThermoPanel();
+}
+
+function updateThermoPanel(){
+  if(!state.showThermo)return;
+  let maxT=25;
+  for(const v of vessels)if(v.volume>0)maxT=Math.max(maxT,v.temp);
+  const tv=document.getElementById('tempVal');
+  if(tv)tv.textContent=Math.round(maxT);
+  const fill=document.getElementById('tempFill');
+  if(fill){
+    fill.style.width=clamp(maxT/120*100,4,100)+'%';
+    fill.style.background=maxT>80?'linear-gradient(90deg,#ff7043,#ff1744)'
+      :maxT>45?'linear-gradient(90deg,#ffb300,#ff7043)'
+      :'linear-gradient(90deg,#2196f3,#4dd0e1)';
+  }
+  const trendEl=document.getElementById('tempTrend');
+  if(!trendEl)return;
+  const trends=[];
+  vessels.forEach(function(v,i){
+    if(v.thermic&&v.thermicT>0){
+      trends.push({idx:i+1,type:v.thermic});
+    }
+  });
+  if(!trends.length){
+    trendEl.innerHTML='<div class="empty">لا يوجد تفاعل حراري حالي</div>';
+    return;
+  }
+  let html='';
+  for(const tr of trends){
+    if(tr.type==='exo'){
+      html+='<div class="tag exo"><span class="ico">🔥</span><span class="lbl">تفاعل طارد</span><span class="num">أنبوب '+tr.idx+'</span></div>';
+    }else{
+      html+='<div class="tag endo"><span class="ico">❄️</span><span class="lbl">تفاعل ماص</span><span class="num">أنبوب '+tr.idx+'</span></div>';
+    }
+  }
+  trendEl.innerHTML=html;
+}
+
+function applyGasReaction(vessel,reaction,gasType){
+  if(reaction.precip){
+    vessel.precip={
+      formula:reaction.precip.formula,
+      color:reaction.precip.color,
+      ar:reaction.precip.ar,
+      note:reaction.note,
+      progressive:reaction.progressive,
+      arColor:reaction.precip.arColor
+    };
+    vessel.precipTarget=1;
+    vessel.precipAmt=Math.max(vessel.precipAmt,0.15);
+    vessel.co2DissolveStage=0;
+    vessel.dissolveTimer=0;
+    if(reaction.progressive){
+      vessel.colorTarget={r:242,g:246,b:252,a:0.52};
+    }
+  }
+  if(reaction.tint){
+    vessel.colorTarget=Object.assign({},hexToRgb(reaction.tint),{a:reaction.tint==='#f5f5f5'?0.22:1});
+  }
+  if(reaction.smoke){
+    smokeClouds.push({x:vessel.cx,y:vessel.y-20,life:6,maxLife:6});
+  }
+  if(reaction.precip)addLog('🧪 راسب '+reaction.precip.formula+' — لونه: '+(reaction.precip.arColor||colorName(reaction.precip.color)));
+  if(reaction.tint&&reaction.tint!=='#f5f5f5')addLog('🎨 لون المحلول: '+colorName(reaction.tint));
+  if(reaction.thermic){
+    vessel.thermic=reaction.thermic;
+    vessel.thermicT=8;
+    if(reaction.thermic==='exo')addLog('🔥 تفاعل طارد للحرارة');
+    else if(reaction.thermic==='endo')addLog('❄️ تفاعل ماص للحرارة');
+  }
+  setVesselEquation(vessel,reaction.eq,reaction.note);
+  playDing();
+  playFizz(1.2);
+}
+
+function hitTestVessel(p){
+  for(let i=vessels.length-1;i>=0;i--){
+    const v=vessels[i];
+    let lx=p.x,ly=p.y;
+    if(Math.abs(v.angle)>0.001){
+      const c=Math.cos(-v.angle),s=Math.sin(-v.angle);
+      const dx=p.x-v.cx,dy=p.y-v.bottom;
+      lx=v.cx+dx*c-dy*s;
+      ly=v.bottom+dx*s+dy*c;
+    }
+    if(lx>=v.x-14&&lx<=v.x+v.w+14&&ly>=v.y-14&&ly<=v.y+v.h+6){
+      return{vessel:v,localX:lx,localY:ly};
+    }
+  }
+  return null;
+}
+function hitTestPaper(p){
+  for(let i=papers.length-1;i>=0;i--){
+    const pp=papers[i];
+    if(p.x>=pp.x-8&&p.x<=pp.x+pp.w+8&&p.y>=pp.y-8&&p.y<=pp.y+pp.h+8)return pp;
+  }
+  return null;
+}
+function hitTestBurner(p){
+  if(!state.showBurner)return false;
+  const b=state.burner;
+  return p.x>b.x-50&&p.x<b.x+50&&p.y>b.base-120&&p.y<b.base+20;
+}
+function hitTestTube(p){
+  for(let i=tubes.length-1;i>=0;i--){
+    const tube=tubes[i];
+    const a=tube.from,b=tube.to;
+    if(!vessels.includes(a)||!vessels.includes(b))continue;
+    const oa=a.opening,ob=b.opening;
+    const cpx=(oa.x+ob.x)/2;
+    const cpy=Math.min(oa.y,ob.y)-70;
+    for(let t=0;t<=1.001;t+=0.08){
+      const px=(1-t)*(1-t)*oa.x+2*(1-t)*t*cpx+t*t*ob.x;
+      const py=(1-t)*(1-t)*oa.y+2*(1-t)*t*cpy+t*t*ob.y;
+      const dx=p.x-px,dy=p.y-py;
+      if(dx*dx+dy*dy<225)return{tube,index:i};
+    }
+  }
+  return null;
+}
+
+const shelf=document.getElementById('shelf');
+const shelfTabs=document.getElementById('shelfTabs');
+const dragGhost=document.getElementById('dragGhost');
+const shelfArrowLeft=document.getElementById('shelfArrowLeft');
+const shelfArrowRight=document.getElementById('shelfArrowRight');
+
+function updateArrows(){
+  if(!shelf||!shelfArrowLeft||!shelfArrowRight)return;
+  const overflow=shelf.scrollWidth>shelf.clientWidth+2;
+  shelfArrowLeft.style.display=overflow?'flex':'none';
+  shelfArrowRight.style.display=overflow?'flex':'none';
+}
+
+function buildShelf(tab){
+  shelf.innerHTML='<div class="shelf-label">'+(
+    tab==='pap'?'الأوراق':tab==='rea'?'كواشف':tab==='cat'?'كاتيونات':'أنيونات'
+  )+'</div>';
+  if(tab==='pap'){
+    for(const id in PAPERS){
+      const P=PAPERS[id];
+      if(id==='mysteryPaper')continue;
+      const el=document.createElement('div');
+      el.className='paper-item';
+      el.dataset.id=id;
+      el.innerHTML='<div class="sheet" style="background:linear-gradient(180deg,'+P.color+','+P.color+'dd);border-color:'+P.cap+'"></div>'+
+        '<div class="name">'+P.label+'</div><div class="ar">'+P.ar+'</div>';
+      el.addEventListener('pointerdown',function(e){onShelfPointerDown(e,id,'paper');});
+      shelf.appendChild(el);
+    }
+  }else{
+    let items;
+    if(tab==='g1')items=ANIONS_G1;
+    else if(tab==='g2')items=ANIONS_G2;
+    else if(tab==='g3')items=ANIONS_G3;
+    else if(tab==='cat')items=CATIONS;
+    else items=REAGENTS;
+    for(const id in items){
+      const R=items[id];
+      const el=document.createElement('div');
+      el.className='bottle-item';
+      el.dataset.id=id;
+      el.innerHTML='<div class="cap" style="background:'+R.cap+'"></div>'+
+        '<div class="neck"></div>'+
+        '<div class="body"><div class="liq" style="background:linear-gradient(180deg,'+R.glass+','+R.c+')"></div></div>'+
+        '<div class="name">'+(R.label||R.ion||'')+'</div>'+
+        '<div class="ar">'+(R.ar||'')+'</div>';
+      el.addEventListener('pointerdown',function(e){onShelfPointerDown(e,id,'bottle');});
+      shelf.appendChild(el);
+    }
+  }
+  requestAnimationFrame(updateArrows);
+}
+
+shelfTabs.addEventListener('click',function(e){
+  const target=e.target.closest('button');
+  if(!target)return;
+  const btns=shelfTabs.querySelectorAll('button');
+  for(let i=0;i<btns.length;i++)btns[i].classList.remove('active');
+  target.classList.add('active');
+  state.currentTab=target.dataset.tab;
+  buildShelf(state.currentTab);
+  shelf.scrollLeft=0;
+  setTimeout(updateArrows,50);
+});
+buildShelf('g1');
+
+shelfArrowLeft.addEventListener('click',function(){
+  shelf.scrollBy({left:200,behavior:'smooth'});
+});
+shelfArrowRight.addEventListener('click',function(){
+  shelf.scrollBy({left:-200,behavior:'smooth'});
+});
+shelf.addEventListener('scroll',updateArrows);
+window.addEventListener('resize',function(){setTimeout(updateArrows,100);});
+
+let dragItem=null;
+const POUR_AMOUNT=12;
+const MAX_SUBSTANCES=4;
+
+function onShelfPointerDown(e,id,kind){
+  if(state.wire.active&&kind==='bottle'){
+    e.preventDefault();
+    A();
+    loadWire(id);
+    return;
+  }
+  e.preventDefault();
+  A();
+  beginDragFromShelf(e.clientX,e.clientY,id,kind);
+}
+
+function beginDragFromShelf(clientX,clientY,id,kind){
+  dragItem={id,kind,clientX,clientY,canvasX:0,canvasY:0,hover:null,hasPoured:false};
+  const c=toCanvas(clientX,clientY);
+  dragItem.canvasX=c.x;
+  dragItem.canvasY=c.y;
+  buildDragGhost(dragItem);
+  updateGhostPosition(dragItem);
+  window.addEventListener('pointermove',onDragMove);
+  window.addEventListener('pointerup',onDragUp);
+  window.addEventListener('pointercancel',onDragUp);
+}
+
+function buildDragGhost(d){
+  if(d.kind==='bottle'){
+    const R=findItem(d.id);
+    dragGhost.innerHTML='<div class="g-bottle">'+
+      '<div class="g-cap" style="background:'+R.cap+'"></div>'+
+      '<div class="g-neck"></div>'+
+      '<div class="g-body"><div class="g-liq" style="background:linear-gradient(180deg,'+R.glass+','+R.c+')"></div></div>'+
+      '</div>';
+  }else{
+    const P=PAPERS[d.id];
+    dragGhost.innerHTML='<div class="g-sheet" style="background:linear-gradient(180deg,'+P.color+','+P.color+'dd)"></div>';
+  }
+  dragGhost.style.display='block';
+}
+
+function updateGhostPosition(d){
+  const gw=dragGhost.offsetWidth||(d.kind==='bottle'?56:60);
+  const gh=dragGhost.offsetHeight||(d.kind==='bottle'?106:76);
+  const left=d.clientX-gw/2;
+  const top=d.clientY+6;
+  let rot=0;
+  if(d.hover&&d.kind==='bottle'){
+    const r=cvs.getBoundingClientRect();
+    const hsx=r.left+(d.hover.cx/W)*r.width;
+    const diff=hsx-d.clientX;
+    rot=clamp(diff*0.5,-70,70);
+  }
+  dragGhost.style.transform='translate('+left+'px,'+top+'px) rotate('+rot+'deg)';
+}
+
+function onDragMove(e){
+  if(!dragItem)return;
+  dragItem.clientX=e.clientX;
+  dragItem.clientY=e.clientY;
+  const c=toCanvas(e.clientX,e.clientY);
+  dragItem.canvasX=c.x;
+  dragItem.canvasY=c.y;
+  let hover=null;
+  for(let i=vessels.length-1;i>=0;i--){
+    const v=vessels[i];
+    const dx=c.x-v.cx,dy=c.y-(v.y+v.h/2);
+    if(Math.abs(dx)<v.w/2+55&&Math.abs(dy)<v.h/2+70){hover=v;break;}
+  }
+  dragItem.hover=hover;
+  if(hover&&dragItem.kind==='bottle'&&!dragItem.hasPoured){
+    pourFromDrag(dragItem,hover);
+    dragItem.hasPoured=true;
+    setTimeout(function(){
+      if(dragItem&&dragItem.hasPoured){
+        onDragUp({clientX:dragItem.clientX,clientY:dragItem.clientY});
+      }
+    },100);
+    return;
+  }
+  updateGhostPosition(dragItem);
+}
+
+function pourFromDrag(d,v){
+  if(v.volume>=v.cap-1)return;
+  if(v.reactionStarted){
+    showError('⚠️ التفاعل بدأ — اضغط "تفريغ" ثم أعد ملء الوعاء');
+    return;
+  }
+  const existing=v.contents.find(c=>c.id===d.id);
+  if(!existing&&v.contents.length>=MAX_SUBSTANCES){
+    showError('الحد الأقصى '+MAX_SUBSTANCES+' مواد لكل وعاء قبل بدء التفاعل');
+    return;
+  }
+  const amount=POUR_AMOUNT;
+  if(existing)existing.vol+=amount;
+  else v.contents.push({id:d.id,vol:amount});
+  v.volume=Math.min(v.cap,v.volume+amount);
+  v.mixed=false;
+  if(!v.colorTarget)v.color=mixColor(v.contents);
+  v.precipAmt=0;
+  v.precipTarget=0;
+  v.reactionQueue=[];
+  v.co2DissolveStage=0;
+  v.dissolveTimer=0;
+  v.reactedGases={};
+  v.heatReactionDone=false;
+  v.naturalHeatTimer=0;
+  v.discIon=null;
+  v.discPrecip=null;
+  v.lastEq=null;
+  v.lastNote=null;
+  v.gasConsumed=false;
+  const hadGas=v.gasAmount>0&&v.hasStopper;
+  const gasTypeSnapshot=v.gasType;
+  if(v.hasStopper){
+    v.hasStopper=false;
+    v.gasConsumed=false;
+    v.thermicT=8;
+  }
+  spawnDroplets(v,d.id);
+  playPour();
+  const c=v.color;
+  for(let i=0;i<5;i++){
+    pourDrips.push({
+      x:v.cx+(Math.random()-0.5)*10,
+      y:v.y-20-Math.random()*10,
+      vx:(Math.random()-0.5)*15,
+      vy:60+Math.random()*40,
+      r:1.5+Math.random()*1.8,
+      color:'rgb('+c.r+','+c.g+','+c.b+')',
+      target:v.y+10,
+      dead:false
+    });
+  }
+  if(hadGas&&gasTypeSnapshot&&v.contents.length>=1){
+    v.reactionStarted=true;
+    let reactedSomething=false;
+    for(const cont of v.contents){
+      const key=gasTypeSnapshot+'|'+cont.id;
+      const reaction=GAS_LIQUID_REACTIONS[key];
+      if(reaction&&!v.reactedGases[key]){
+        v.reactedGases[key]=true;
+        applyGasReaction(v,reaction,gasTypeSnapshot);
+        reactedSomething=true;
+        break;
+      }
+    }
+    if(reactedSomething)addLog('⚗️ تفاعل الغاز المخزّن مع المادة المضافة');
+  }
+  if(state.running&&v.contents.length>=2&&!v.reactionStarted){
+    v.shakeT=0.6;
+    v.mixed=true;
+    v.reactionStarted=true;
+    startReactions(v);
+  }
+  renderIonDisplay();
+  renderEquations();
+}
+
+function onDragUp(e){
+  window.removeEventListener('pointermove',onDragMove);
+  window.removeEventListener('pointerup',onDragUp);
+  window.removeEventListener('pointercancel',onDragUp);
+  if(!dragItem)return;
+  dragGhost.style.display='none';
+  const c=toCanvas(e.clientX,e.clientY);
+  if(dragItem.kind==='paper'){
+    let hover=null;
+    for(let i=vessels.length-1;i>=0;i--){
+      const v=vessels[i];
+      if(c.x>v.x-30&&c.x<v.x+v.w+30&&c.y>v.y-40&&c.y<v.y+v.h+30){hover=v;break;}
+    }
+    if(hover)testPaperDirect(hover,dragItem.id);
+    else if(c.y>60&&c.y<BENCH_TOP-4&&c.x>8&&c.x<W-8){
+      const maxY=BENCH_TOP-24;
+      papers.push(new PaperStrip(dragItem.id,c.x,clamp(c.y,60,maxY)));
+    }
+  }
+  dragItem=null;
+}
+
+function testPaperDirect(v,paperId){
+  if(!v.activeGas||v.activeGas.life<=0)return;
+  if(!state.running)return;
+  const gasType=v.activeGas.type;
+  const test=(GAS_TESTS[gasType]||{})[paperId];
+  if(!test)return;
+  const pp=new PaperStrip(paperId,v.cx+(Math.random()-0.5)*40,clamp(v.y+90,60,BENCH_TOP-24));
+  pp.reacted=true;
+  pp.color=test.color;
+  pp.progress=1;
+  papers.push(pp);
+  addLog('📜 '+PAPERS[paperId].ar+' + '+gasType+': '+test.note);
+  setVesselEquation(v,test.eq||(gasType+' + '+PAPERS[paperId].label+' → تغيّر لوني'),test.note);
+  playDing();
+  playFizz(0.8);
+}
+
+let canvasDrag=null;
+let paperClickTimes={};
+let vesselClickTimes={};
+let tubeClickTimes={};
+
+cvs.addEventListener('pointerdown',function(e){
+  A();
+  const p=toCanvas(e.clientX,e.clientY);
+
+  if(state.gasTubeArmed){
+    const vh=hitTestVessel(p);
+    if(vh){
+      const v=vh.vessel;
+      if(!state.gasTubeSource){
+        state.gasTubeSource=v;
+        playDing();
+      }else if(state.gasTubeSource!==v){
+        tubes.push({from:state.gasTubeSource,to:v});
+        playDing();
+        state.gasTubeArmed=false;
+        state.gasTubeSource=null;
+        document.querySelector('.tool-btn[data-action="gas-tube"]').classList.remove('armed');
+      }
+    }
+    return;
+  }
+
+  const tubeHit=hitTestTube(p);
+  if(tubeHit){
+    const key='tube_'+tubeHit.index+'_'+tubeHit.tube.from.id+'_'+tubeHit.tube.to.id;
+    const now=Date.now();
+    if(tubeClickTimes[key]&&now-tubeClickTimes[key]<450){
+      const removed=tubes.splice(tubeHit.index,1)[0];
+      delete tubeClickTimes[key];
+      if(removed){
+        const target=removed.to;
+        if(target&&target.gasAmount>0&&target.contents.length===0){
+          target.hasStopper=true;
+          target.activeGas={type:target.gasType,life:25,viaTube:false};
+          showError('🔗 أُزيل الأنبوب — السدادة مُركّبة على الغاز المُخزَّن');
+        }else if(target&&target.activeGas&&target.activeGas.viaTube){
+          target.activeGas.viaTube=false;
+          showError('🔗 أُزيل الأنبوب — توقف تدفق الغاز، التفاعل يستمر بالغاز المخزّن');
+        }else{
+          showError('🔗 أُزيل أنبوب التوصيل');
+        }
+      }
+      playDing();
+      return;
+    }
+    tubeClickTimes[key]=now;
+    return;
+  }
+
+  if(hitTestBurner(p)){
+    state.burnerOn=!state.burnerOn;
+    playDing();
+    return;
+  }
+
+  const paperHit=hitTestPaper(p);
+  if(paperHit){
+    const idx=papers.indexOf(paperHit);
+    const key='paper_'+idx;
+    const now=Date.now();
+    if(paperClickTimes[key]&&now-paperClickTimes[key]<450){
+      if(idx>=0)papers.splice(idx,1);
+      delete paperClickTimes[key];
+      playDing();
+      showError('🗑️ حُذفت الورقة');
+      return;
+    }
+    paperClickTimes[key]=now;
+    canvasDrag={mode:'move',obj:paperHit,objType:'paper',ox:p.x-paperHit.x,oy:p.y-paperHit.y,moved:false};
+    cvs.setPointerCapture(e.pointerId);
+    return;
+  }
+
+  const vh=hitTestVessel(p);
+  if(vh){
+    const v=vh.vessel;
+    const key='vessel_'+v.id;
+    const now=Date.now();
+    if(vesselClickTimes[key]&&now-vesselClickTimes[key]<450){
+      const idx=vessels.indexOf(v);
+      if(idx>=0)vessels.splice(idx,1);
+      for(let i=tubes.length-1;i>=0;i--){
+        if(tubes[i].from===v||tubes[i].to===v)tubes.splice(i,1);
+      }
+      delete vesselClickTimes[key];
+      renderIonDisplay();
+      renderEquations();
+      playDing();
+      showError('🗑️ حُذف الوعاء رقم '+(idx+1));
+      return;
+    }
+    vesselClickTimes[key]=now;
+    const topZone=v.y+v.h*0.35;
+    const mode=vh.localY<topZone?'tilt':'move';
+    canvasDrag={mode,obj:v,objType:'vessel',ox:0,oy:0,moved:false};
+    if(mode==='move'){
+      canvasDrag.ox=vh.localX-v.x;
+      canvasDrag.oy=vh.localY-v.y;
+    }
+    cvs.setPointerCapture(e.pointerId);
+    return;
+  }
+});
+
+cvs.addEventListener('pointermove',function(e){
+  if(!canvasDrag)return;
+  const p=toCanvas(e.clientX,e.clientY);
+  const o=canvasDrag.obj;
+  canvasDrag.moved=true;
+  if(canvasDrag.mode==='move'){
+    o.x=clamp(p.x-canvasDrag.ox,6,W-o.w-6);
+    o.y=clamp(p.y-canvasDrag.oy,55,BENCH_TOP-o.h+4);
+  }else{
+    const dx=p.x-o.cx,dy=p.y-o.bottom;
+    let ang=Math.atan2(dx,-dy);
+    if(dy>10)ang=0;
+    o.angle=clamp(ang,-Math.PI/2+0.08,Math.PI/2-0.08);
+  }
+});
+cvs.addEventListener('pointerup',function(){canvasDrag=null;});
+cvs.addEventListener('pointercancel',function(){canvasDrag=null;});
+
+document.getElementById('toolbar').addEventListener('click',function(e){
+  const btn=e.target.closest('button');
+  if(!btn||btn.disabled)return;
+  handleAction(btn.dataset.action,btn);
+});
+
+document.getElementById('clearHistoryBtn').addEventListener('click',function(){
+  reactionHistory.length=0;
+  renderHistory();
+  playDing();
+});
+
+document.getElementById('clearLogBtn').addEventListener('click',function(){
+  logEl.innerHTML='';
+  playDing();
+});
+
+function updateReactBtn(){
+  const btn=document.getElementById('reactToggle');
+  if(!btn)return;
+  if(state.running){
+    btn.innerHTML='<span class="ico">⏸️</span>إيقاف';
+    btn.classList.remove('primary');
+    btn.classList.add('stop');
+  }else{
+    btn.innerHTML='<span class="ico">▶️</span>ابدأ';
+    btn.classList.remove('stop');
+    btn.classList.add('primary');
+  }
+}
+
+function handleAction(action,btn){
+  A();
+  if(action==='add-tube'){
+    let count=0;
+    for(const v of vessels)if(v.type==='tube')count++;
+    if(count>=6)return;
+    vessels.push(new Vessel({
+      id:'tube_'+Date.now(),
+      type:'tube',
+      x:120+Math.random()*Math.max(200,W-260),
+      y:200,
+      w:68,
+      h:232,
+      cap:60
+    }));
+    playDing();
+    renderIonDisplay();
+    renderEquations();
+  }
+  else if(action==='add-beaker'){
+    let count=0;
+    for(const v of vessels)if(v.type==='beaker')count++;
+    if(count>=3)return;
+    vessels.push(new Vessel({
+      id:'beaker_'+Date.now(),
+      type:'beaker',
+      x:120+Math.random()*Math.max(200,W-300),
+      y:305,
+      w:116,
+      h:127,
+      cap:140
+    }));
+    playDing();
+    renderIonDisplay();
+    renderEquations();
+  }
+  else if(action==='add-burner'){
+    state.showBurner=!state.showBurner;
+    if(!state.showBurner){state.burnerOn=false;state.wire.active=false;}
+    btn.classList.toggle('on',state.showBurner);
+    const flameBtn=document.querySelector('.tool-btn[data-action="flame-test"]');
+    if(flameBtn){
+      flameBtn.disabled=!state.showBurner;
+      if(!state.showBurner){
+        flameBtn.classList.remove('on');
+        state.wire.active=false;
+        state.wire.loaded=null;
+        state.wire.color=null;
+      }
+    }
+  }
+  else if(action==='add-thermo'){
+    state.showThermo=!state.showThermo;
+    btn.classList.toggle('on',state.showThermo);
+    document.getElementById('thermoCard').style.display=state.showThermo?'block':'none';
+  }
+  else if(action==='flame-test'){
+    if(!state.showBurner)return;
+    state.wire.active=!state.wire.active;
+    if(!state.wire.active){
+      state.wire.loaded=null;
+      state.wire.color=null;
+      state.burnerOn=false;
+    }else{
+      state.burnerOn=true;
+      state.wire.loaded=null;
+      state.wire.color=null;
+    }
+    btn.classList.toggle('on',state.wire.active);
+  }
+  else if(action==='gas-tube'){
+    state.gasTubeArmed=!state.gasTubeArmed;
+    state.gasTubeSource=null;
+    btn.classList.toggle('armed',state.gasTubeArmed);
+    playDing();
+  }
+  else if(action==='react-toggle'){
+    if(state.running){
+      state.running=false;
+    }else{
+      let anyUnstarted=false;
+      for(const v of vessels){
+        if(v.volume>0&&v.contents.length>=2&&!v.reactionStarted){anyUnstarted=true;break;}
+      }
+      if(anyUnstarted)state.equation=null;
+      state.running=true;
+      for(const v of vessels){
+        if(v.volume>0&&v.contents.length>=2&&!v.reactionStarted){
+          v.shakeT=0.6;
+          v.mixed=true;
+          v.reactionStarted=true;
+          startReactions(v);
+        }
+      }
+    }
+    updateReactBtn();
+    playDing();
+  }
+  else if(action==='straight'){
+    for(const v of vessels)v.angle=0;
+    playDing();
+  }
+  else if(action==='reset-reaction'){
+    for(const v of vessels){
+      resetVesselReaction(v);
+    }
+    state.running=false;
+    state.equation=null;
+    updateReactBtn();
+    renderEquations();
+    renderIonDisplay();
+    showError('🔄 أُعيد ضبط حالة التفاعل — يمكنك إضافة مواد جديدة (الحد الأقصى 4)');
+    playDing();
+  }
+  else if(action==='clean'){
+    for(const v of vessels){
+      v.contents=[];
+      v.volume=0;
+      v.dispVol=0;
+      v.temp=25;
+      v.color={r:220,g:235,b:245,a:0};
+      v.colorTarget=null;
+      v.precip=null;
+      v.precipAmt=0;
+      v.precipTarget=0;
+      v.bubbles=[];
+      v.mixed=true;
+      v.activeGas=null;
+      v.angle=0;
+      v.heatReacted=false;
+      v.smokeStarted=false;
+      v.dissolveTimer=0;
+      v.exposed=false;
+      v.heatTimer=0;
+      v.standTimer=0;
+      v.onHeatTriggered=false;
+      v.onStandTriggered=false;
+      v.oxidizeTimer=0;
+      v.oxidized=false;
+      v.reactionStarted=false;
+      v.reactedGases={};
+      v.co2DissolveStage=0;
+      v.reactionQueue=[];
+      v.reactionTimer=0;
+      v.heatReactionDone=false;
+      v.naturalHeatTimer=0;
+      v.discIon=null;
+      v.discPrecip=null;
+      v.lastEq=null;
+      v.lastNote=null;
+      v.gasAmount=0;
+      v.gasType=null;
+      v.hasStopper=false;
+      v.thermic=null;
+      v.thermicT=0;
+      v.gasConsumed=false;
+    }
+    papers.length=0;
+    state.equation=null;
+    state.running=false;
+    renderEquations();
+    renderIonDisplay();
+    droplets=[];
+    pourDrips=[];
+    smokeClouds=[];
+    sparks=[];
+    tubes.length=0;
+    const ionEl=document.getElementById('ionDisplay');
+    ionEl.classList.add('empty');
+    ionEl.textContent='— لم يُكتشف بعد —';
+    document.getElementById('lightBtn').classList.remove('show');
+    updateReactBtn();
+    playDing();
+  }
+  else if(action==='clear-all'){
+    vessels.length=0;
+    papers.length=0;
+    mysteryComboActivated=false;
+    easterEggTriggered=false;
+    mysteryShaking=null;
+    const eggOv=document.getElementById('easterEggOverlay');
+    if(eggOv)eggOv.classList.remove('show');
+    tubes.length=0;
+    droplets=[];
+    pourDrips=[];
+    smokeClouds=[];
+    sparks=[];
+    state.wire.active=false;
+    state.wire.loaded=null;
+    state.wire.color=null;
+    state.burnerOn=false;
+    state.showBurner=false;
+    state.showThermo=false;
+    state.gasTubeArmed=false;
+    state.gasTubeSource=null;
+    state.running=false;
+    state.equation=null;
+    reactionHistory.length=0;
+    renderEquations();
+    renderIonDisplay();
+    renderHistory();
+    logEl.innerHTML='';
+    document.querySelectorAll('.tool-btn').forEach(b=>b.classList.remove('on','armed'));
+    const soundBtn=document.querySelector('.tool-btn[data-action="sound"]');
+    if(soundBtn&&soundOn)soundBtn.classList.add('on');
+    const flameBtn=document.querySelector('.tool-btn[data-action="flame-test"]');
+    if(flameBtn)flameBtn.disabled=true;
+    document.getElementById('thermoCard').style.display='none';
+    document.getElementById('lightBtn').classList.remove('show');
+    const ionEl=document.getElementById('ionDisplay');
+    ionEl.classList.add('empty');
+    ionEl.textContent='— لم يُكتشف بعد —';
+    updateReactBtn();
+    playDing();
+  }
+  else if(action==='sound'){
+    soundOn=!soundOn;
+    btn.classList.toggle('on',soundOn);
+    const ic=btn.querySelector('.ico');
+    if(ic)ic.textContent=soundOn?'🔔':'🔕';
+    if(soundOn)playDing();
+  }
+}
+
+function loadWire(id){
+  const ft=FLAME_TEST[id];
+  if(!ft){playDing();return;}
+  state.wire.loaded=id;
+  state.wire.color=ft.color;
+  state.burnerOn=true;
+  playDing();
+  playFizz(0.7);
+  setVesselEquation(
+    vessels[0]||{id:'flame'},
+    'العيّنة: '+(findItem(id).label||findItem(id).ion)+'  →  '+ft.ion,
+    ft.note
+  );
+}
+
+const logEl=document.getElementById('log');
+
+function addLog(msg){
+  const d=document.createElement('div');
+  d.textContent=msg;
+  logEl.prepend(d);
+  while(logEl.children.length>20)logEl.lastChild.remove();
+}
+function showError(msg){
+  const box=document.getElementById('errorBox');
+  box.textContent=msg;
+  box.classList.add('show');
+  setTimeout(function(){box.classList.remove('show');},4000);
+}
+
+async function boot(){
+  resize();
+  renderEquations();
+  renderIonDisplay();
+  renderHistory();
+  updateReactBtn();
+  await new Promise(function(r){requestAnimationFrame(r);});
+  resize();
+  requestAnimationFrame(loop);
+  document.getElementById('app').classList.add('show');
+  requestAnimationFrame(updateArrows);
+}
+
+if(typeof ResizeObserver!=='undefined'){
+  const ro=new ResizeObserver(function(){resize();updateArrows();});
+  ro.observe(document.getElementById('canvasWrap'));
+}else{
+  window.addEventListener('resize',function(){setTimeout(resize,100);setTimeout(updateArrows,100);});
+}
+
+
+</script>
+</body>
+</html>
